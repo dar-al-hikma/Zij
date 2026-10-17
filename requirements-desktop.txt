@@ -1,0 +1,20 @@
+# Desktop launcher and PyInstaller build only (desktop_launcher.py, icon.py,
+# build.spec). Everything the app itself needs comes from requirements.txt, so
+# this file includes it rather than restating the pins -- one place to change a
+# runtime version, and no way for the built binary to ship a different
+# Streamlit than the tested one.
+-r requirements.txt
+
+# Pinned from Executable/.venv, the venv the desktop build uses.
+pywebview==6.2.1
+pillow==12.3.0
+
+# Windows-only: pywebview's Qt backend uses PyQt6 on Linux and PySide6 there,
+# so these have no local install to read a version from. Pinned instead from
+# the "Install dependencies" step of the 2026-09-06 Actions build, which
+# resolved them on the real windows-latest runner under CPython 3.14.7.
+# shiboken6 is deliberately NOT listed: PySide6's own metadata requires
+# shiboken6==6.11.2 exactly, so a second pin here would only be something
+# else to forget when PySide6 moves.
+PySide6==6.11.2; sys_platform == "win32"
+qtpy==2.4.3; sys_platform == "win32"

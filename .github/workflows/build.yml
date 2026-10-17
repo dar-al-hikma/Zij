@@ -1,0 +1,209 @@
+name: Build Desktop App
+
+# Runs when a release tag (v*) is pushed, and can be started by hand from the
+# Actions tab. A push to main builds nothing: binaries are cut for releases,
+# not for every commit -- building both platforms on each push burned Actions
+# minutes and filled the account's storage with artifacts nobody downloaded.
+#
+# Two jobs. `build` makes the Windows and macOS zips and holds a read-only
+# token: it installs and runs third-party build tools, so it is given nothing
+# it could write with, and its checkout does not keep the token on disk.
+# `release` runs after both builds have succeeded, and only for a tag PUSH. It
+# is the only job that can write to the repository, and it runs no build tool:
+# it takes the two zips the builds handed over and creates one DRAFT release
+# for the tag with both attached, and SHA256SUMS, the SHA-256 of each, on
+# THIS repository, so the binary and the source it was built from are always
+# the same page (the licence requires the corresponding source to be
+# available with each binary). It writes no
+# release notes and publishes nothing: the maintainer writes the notes and
+# publishes the draft by hand. It never replaces an asset, and it refuses a
+# tag that already has a release, draft or published.
+#
+# On a manual run: the zips are kept as workflow artifacts for three days
+# for testing, and no release is made -- whatever ref the run was started on,
+# a tag included.
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+# Nothing at the top: each job asks for what it needs, and a job added
+# later without its own block gets no token permissions at all.
+permissions: {}
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false   # if the Windows build fails, still let macOS finish
+      matrix:
+        os: [windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          # 3.14 to match the venv the pins were resolved on and the test
+          # suite runs on. Keep the two workflows on the same version.
+          python-version: '3.14'
+
+      # Everything the build installs comes from this system's lock and is
+      # checked against the hashes there: the app's pins, every package pip
+      # would otherwise resolve for them, PyInstaller and its hooks. Each
+      # lock is made from requirements-desktop.txt (which includes
+      # requirements.txt) and requirements-build.txt for its system, and
+      # its header holds the one command that rewrites it; every version
+      # it shares with the set the tests run on is the same. Three packages
+      # publish no wheel for this Python and are built here from the
+      # source archives the lock hashes; the tools pip fetches to build
+      # them are not in the lock (docs/BUILD_NOTES.md).
+      - name: Install dependencies (Windows)
+        if: runner.os == 'Windows'
+        run: pip install --require-hashes -r requirements-build-windows.lock
+
+      - name: Install dependencies (macOS)
+        if: runner.os == 'macOS'
+        run: pip install --require-hashes -r requirements-build-macos.lock
+
+      # The suite runs on Linux only. Here each platform checks, with its own
+      # interpreter, that every errno name in the allowlist exists with the
+      # value the allowlist gives, and that the engine imports; then it runs
+      # that file's tests, among them the scan of every errno name a shipped
+      # module reads, before anything is built.
+      - name: Check the platform's errno names
+        run: python tests/test_mac1_platform_names_2026_10_14.py
+
+      - name: Scan the errno names the program reads
+        run: python -m pytest -q -p no:cacheprovider tests/test_mac1_platform_names_2026_10_14.py
+
+      - name: Build with PyInstaller
+        run: pyinstaller build.spec
+
+      # One zip per platform. Windows: the CONTENTS of the onedir folder,
+      # not the folder -- Explorer's "Extract All" already makes a folder
+      # named after the zip, so zipping the folder too put the .exe two
+      # folders deep (v1.2.0); now that one folder is the app folder, with
+      # Zij.exe at its top and _internal/ beside it.
+      # macOS: the .app bundle, zipped so its executable bits and internal
+      # symlinks survive: -y stores each link as a link. Without it zip
+      # stores a copy of whatever the link points at, which duplicates the
+      # bundle's cross-linked folders and breaks the seal its signature
+      # records.
+      - name: Package (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: Compress-Archive -Path dist/Zij/* -DestinationPath Zij-windows.zip
+
+      - name: Package (macOS)
+        if: runner.os == 'macOS'
+        shell: bash
+        run: |
+          cd dist
+          zip -qry ../Zij-macos.zip Zij.app
+
+      # Each download, as built, is started from its own zip with a fresh data
+      # folder and reached (its server answers on its own local address and its
+      # window opens); its server must refuse a session under a Host rebound to
+      # this computer, and one from another site's Origin, and open one under
+      # the window's own; and its window must be seen to show the app, not the
+      # refusal: the server's own metrics must come to show files the app's
+      # page hands its window, which only a session it lets in is given, while
+      # the check opens no session that runs the app. It is then stopped
+      # twice: once by closing its window as a reader does (Windows: a close
+      # message to the window; macOS: Quit), once by ending its launcher
+      # process alone. Then its server is
+      # started once more on its own, as the launcher starts it, with a key the
+      # check makes; a session opened as the window opens one types a place in
+      # the city search, spelt so that only the search's second, folded look
+      # finds it, and the place must be among the choices offered: the download
+      # finds its place atlas and reads it. Its first run must have drawn the
+      # example chart's Jupiter where the app draws it on the suite's system:
+      # the download's own build of Swiss Ephemeris computes as that one does.
+      # And a session with no key, and one with a key a letter off, must each be
+      # told the one sentence a session without the key is told, and shown
+      # nothing else. Each time no process of that launch may remain once its
+      # own bound and a margin have passed. It runs on manual runs as well as
+      # tag pushes, so it is proven before a tag exists; a failure fails this
+      # job, so nothing is uploaded and no release is drafted. A runner that
+      # cannot show the window fails it too: a check that skips is not a check.
+      - name: Start, reach and stop the download
+        timeout-minutes: 20
+        run: python .github/scripts/stop_check.py
+
+      # Tag pushes hand each platform's zip to the release job, which is the
+      # only place a release is made. Kept one day: the release job reads
+      # them within minutes, and the zips themselves live on the release.
+      - name: Hand the zip to the release job (tag pushes)
+        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: release-${{ runner.os }}
+          path: Zij-*.zip
+          if-no-files-found: error
+          retention-days: 1
+
+      # Manual runs keep the build as a short-lived artifact for testing.
+      # GitHub zips an artifact on download, so the Windows one is uploaded
+      # as the FOLDER (one zip to extract, the .exe at the top level); the
+      # macOS one has to stay a zip so the .app's executable bits and
+      # internal symlinks survive, which means one zip inside another there.
+      - name: Keep the build for testing (manual runs, Windows)
+        if: github.event_name == 'workflow_dispatch' && runner.os == 'Windows'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: Zij-Windows
+          path: dist/Zij/
+          retention-days: 3
+
+      - name: Keep the build for testing (manual runs, macOS)
+        if: github.event_name == 'workflow_dispatch' && runner.os == 'macOS'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: Zij-macOS
+          path: Zij-macos.zip
+          retention-days: 3
+
+  release:
+    # Both platforms must have built: a failed leg means no release at all,
+    # rather than a release with one zip missing.
+    needs: build
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write     # gh release create
+    # Two runs for one tag (a re-run, a tag pushed again) wait for each other
+    # here instead of both reaching the create.
+    concurrency:
+      group: release-${{ github.ref }}
+      cancel-in-progress: false
+
+    steps:
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          pattern: release-*
+          merge-multiple: true
+
+      - name: Create the draft release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          tag="${GITHUB_REF_NAME}"
+          # Create only: a tag that already has a release, draft or
+          # published, is refused, so nothing published is ever replaced.
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo "::error::$tag already has a release; nothing was changed."
+            exit 1
+          fi
+          # The SHA-256 of each zip as this job received it, made once the
+          # last of them has arrived; a zip missing stops the step here.
+          sha256sum Zij-windows.zip Zij-macos.zip > SHA256SUMS
+          # A draft, with no notes: the maintainer writes them and publishes.
+          # The two zips and their checksums are its only files.
+          gh release create "$tag" Zij-windows.zip Zij-macos.zip SHA256SUMS --draft --verify-tag --title "Zīj (زِيج) $tag" --notes ""

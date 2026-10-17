@@ -1,0 +1,560 @@
+"""Regression harness for Executable/engine.py and Executable/app.py.
+
+The app is two files: ``engine.py``, the calculation engine, and ``app.py``,
+which takes it whole through ``from engine import *`` and carries the
+Streamlit pages from the marker ``# 4. STREAMLIT UI INTEGRATION`` onward.
+Two ways in:
+
+* ``engine`` -- ``engine.py`` imported as a module and handed to the test as
+  its namespace, so constants and evaluators can be inspected without a
+  Streamlit run.
+* ``make_app()`` -- ``streamlit.testing.v1.AppTest`` driving the whole script
+  headless: no browser, no port. One call renders ONE page (Streamlit runs
+  the script once per page), so tests parametrise over pages.
+
+Both files are located relative to this file, so the suite runs from any
+checkout or CI runner. (It used to hard-code the developer's absolute path
+to dodge a stale ``app.py`` one directory up; that file is gone.)
+"""
+from __future__ import annotations
+
+import ast
+import json
+import os
+import re
+import sys
+from collections import Counter
+from datetime import time
+from pathlib import Path
+
+import pytest
+from streamlit import config as _st_config
+
+# Same option as Executable/.streamlit/config.toml (2026-09-15), set directly
+# so the suite renders with magic off regardless of the working directory
+# AppTest is invoked from.
+_st_config.set_option("runner.magicEnabled", False)
+
+EXECUTABLE_DIR = Path(__file__).resolve().parents[1]
+APP_PATH = EXECUTABLE_DIR / "app.py"
+ENGINE_PATH = EXECUTABLE_DIR / "engine.py"
+UI_MARKER = "# 4. STREAMLIT UI INTEGRATION"
+
+
+import source_list  # noqa: E402  (tests/source_list.py: the program's source modules)
+
+# app.py finds engine.py beside it because Streamlit puts the running
+# script's own directory on sys.path (so does the frozen launcher). The
+# suite is not run from there, so it puts the same directory on the path
+# itself, once, for the `engine` fixture and for the app's own import.
+if str(EXECUTABLE_DIR) not in sys.path:
+    sys.path.insert(0, str(EXECUTABLE_DIR))
+# A skip the run cannot account for fails it: tests/skip_guard.py, a plugin
+# pytest.ini loads (pytest_configure below refuses a run without it). The
+# corpus key is read from the Git configuration under the reader's own home,
+# so it is resolved here, before the data-folder redirect below moves HOME
+# on macOS; every later import of corpus_paths in this process gets this
+# resolution. An xdist worker is another process, started with HOME already
+# moved: the run hands it this resolution (pytest_configure_node below), and
+# the worker takes it in place of its own before it collects a test. A
+# process a test starts resolves for itself, under whatever HOME it is given.
+import corpus_paths  # noqa: E402,F401
+
+CORPUS_HANDOVER = "zij_corpus"      # the key in a worker's input that carries the resolution
+
+FIXTURE_DIR = Path(__file__).parent / "fixtures"
+TABLES_FIXTURE = FIXTURE_DIR / "tables.json"
+
+# Saved charts live in the user's data folder. Point it at a scratch
+# directory so a test run can never read or write the real file.
+#
+# SE-04 of the security sweep (ruling 157): this was setdefault, and Linux's
+# variable alone, so a run started with XDG_DATA_HOME already set -- or any
+# run on macOS or Windows, whose folders are not read from it -- used the
+# reader's own data folder. The variable each platform's folder is read from
+# is now set, whatever it held: XDG_DATA_HOME on Linux, APPDATA on Windows,
+# HOME on macOS (Application Support is under the home).
+#
+# One process keeps the value it was given: a test's own child, which a test
+# starts with a data folder of its own and which imports this file too. It
+# is known by what only the harness puts in its environment -- the harness's
+# mark, naming this harness's scratch folder, which the top-level run sets
+# below, and pytest's PYTEST_CURRENT_TEST, which is there only while a test
+# runs. Where the value lies says nothing: a TMPDIR at the home made the
+# reader's own folder look like scratch. The program itself gains no switch
+# for any of this; the mark is the harness's and is read only here.
+HARNESS_DATA_HOME = Path(__file__).resolve().parent / ".xdg-scratch"
+HARNESS_MARK = "ZIJ_HARNESS_SCRATCH"
+
+
+def _a_tests_own_child(scratch, environ):
+    return bool(environ.get("PYTEST_CURRENT_TEST")) and environ.get(HARNESS_MARK) == str(scratch)
+
+
+def harness_data_environment(platform=None, scratch=HARNESS_DATA_HOME, environ=None):
+    """The variable `platform`'s data folder is read from (sys.platform's
+    when not given), set to `scratch`, and the harness's mark naming it.
+    Only a test's own child (_a_tests_own_child, read in `environ`,
+    os.environ when not given) keeps a value it was given."""
+    platform = sys.platform if platform is None else platform
+    environ = os.environ if environ is None else environ
+    name = {"win32": "APPDATA", "darwin": "HOME"}.get(platform, "XDG_DATA_HOME")
+    kept = environ.get(name) if _a_tests_own_child(scratch, environ) else None
+    return {name: kept or str(scratch), HARNESS_MARK: str(scratch)}
+
+
+os.environ.update(harness_data_environment())
+# Preferences (2026-09-10) are neither read nor written under the harness, so a
+# reading set in one test cannot leak into the next; tests of the preferences
+# themselves delete this variable and point XDG_DATA_HOME at a tmp_path.
+os.environ.setdefault("ALMUTEN_NO_PREFERENCES", "1")
+
+# The fixture writer in test_pages_render.py is session-scoped and collects
+# only the slots its own process rendered. Under xdist every worker is its
+# own session, each writes the slots it happened to get, and the last one to
+# finish overwrites the rest: six charts and eight pages came out as two and
+# three (2026-09-15). So an update run refuses to start with workers.
+def pytest_configure(config):
+    if not config.pluginmanager.has_plugin("skip_guard"):
+        raise pytest.UsageError("the skip guard (tests/skip_guard.py) is not loaded: pytest.ini names it "
+                                "with -p skip_guard; a run without it cannot say what it skipped")
+    handed = getattr(config, "workerinput", {}).get(CORPUS_HANDOVER)
+    if handed:                      # an xdist worker: the run's resolution, not one under the moved HOME
+        corpus_paths.CORPUS_DIR, corpus_paths.CORPUS_SOURCE = Path(handed[0]), handed[1]
+    if os.environ.get("UPDATE_TABLE_FIXTURE") != "1":
+        return
+    workers = os.environ.get("PYTEST_XDIST_WORKER") or getattr(config.option, "numprocesses", None)
+    if workers:
+        raise pytest.UsageError(
+            "UPDATE_TABLE_FIXTURE=1 must run without xdist (no -n): each worker would write only "
+            "its own slots to tests/fixtures/tables.json. Run  UPDATE_TABLE_FIXTURE=1 "
+            "python -m pytest tests/test_pages_render.py  (about forty seconds).")
+
+
+@pytest.hookimpl(optionalhook=True)
+def pytest_configure_node(node):
+    """xdist, in the process that starts the run, for each worker before it
+    starts: the corpus as this process resolved it, carried in the worker's
+    input rather than in its environment, so no process a test starts sees it."""
+    node.workerinput[CORPUS_HANDOVER] = [str(corpus_paths.CORPUS_DIR), corpus_paths.CORPUS_SOURCE]
+
+
+# --- Charts and pages ----------------------------------------------------
+# All Florence, LMT, 14:30. Between them they populate the conditional
+# tables that are empty on the default chart.
+CHARTS = {
+    "1240-05-23": "the app default",
+    "1240-05-25": "Reception by nature (Sun/Moon in aversion)",
+    "1240-05-26": "Reflection of Light and Favor & Recompense",
+    "1240-09-18": "dense Returning and Prevented connections",
+    "1240-10-05": "retreating quadrants, a retrograde planet",
+    # Added 2026-09-07 when the Egyptian-bounds fix emptied Favor & Recompense
+    # on 1240-05-26 (its only row had come from the transposed Gemini bound).
+    # The Sun at 21 Capricorn (degree 22, a Well degree) with Saturn, its
+    # domicile lord, connected -- a Saturn-helped Favor, which no other chart
+    # has; the others' Favor rows were all Jupiter-helped.
+    "1240-01-04": "Favor & Recompense (Sun in a Well, favored by Saturn)",
+}
+FLORENCE = (43.7792, 11.2463)
+LOCAL_TIME = time(14, 30)
+
+# url_path of every st.Page, in navigation order. (The Configurations page's
+# three-way view control went on 2026-09-10; the reading depth, a store key
+# like the switches, decides where Abu Ma'shar's tables sit. Since
+# 2026-09-13 the depth also decides whether some render at all -- the Book V
+# degrees, the father Lot's second form, Figure 64's column on the
+# Reference page -- so the multiset differs between depths.)
+PAGES = ["chart", "dignities", "findings", "configurations", "lots", "victors", "timing", "releaser", "days", "fardar",
+         "reference", "sources"]
+READING_DEPTHS = ["Course text", "Course text and supplement"]
+
+# The configurable readings (one entry per switch; the matrix test
+# takes their cross-product, so each new switch doubles it). Since the 2026-09-06 UI restructure each
+# control renders on the page and table it affects, and the engine reads
+# its value at the top level from a store key that _persist() keeps across
+# navigation. Tests set the STORE key through session_state before the run
+# (the widget-first read at the top level falls back to it); the widget
+# itself is located by label prefix on its page so a reworded or moved
+# control fails loudly.
+SWITCHES = {
+    # name: (store key, alternatives, page, view, widget kind, label prefix)
+    "connection": ("_connection_rule", ["Sahl", "Abu Ma'shar"], "configurations", None, "radio", "Connection test"),
+    "eastern": ("_eastern_rule", ["hemisphere", "VII.2 band"], "configurations", None, "radio", "Gr. Intr. VII.6, 27/45"),
+    "moon_rays": ("_moon_rays_15", [False, True], "chart", None, "checkbox", "Moon under the rays"),
+    "mars_west": ("_mars_west_18", [False, True], "chart", None, "checkbox", "Mars under the rays"),
+    "domain": ("_domain_rule", ["Abu Ma'shar", "Masha'allah"], "dignities", None, "radio", "Domain (hayz)"),
+    "lot_cusp": ("_lot_house_cusp", ["whole-sign place", "quadrant cusp"], "lots", None, "radio", "House-based Lot construction"),
+    "fitting": ("_fitting_infortune", [False, True], "configurations", None, "checkbox", "Fitting infortune"),
+}
+
+
+def page_slots():
+    """Every (page, view) a test should render. view is always None now;
+    the pair is kept so slot names and fixtures read as before."""
+    return [(page, None) for page in PAGES]
+
+
+def slot_name(page, view):
+    return page if view is None else f"{page}/{view}"
+
+
+# --- The app under AppTest ----------------------------------------------
+
+# engine.py resolves SAVED_CHARTS_PATH and PREFERENCES_PATH once, where
+# _user_data_dir() reads the environment. While the engine was the top half
+# of app.py every AppTest run re-executed those two lines, so a test that
+# re-pointed XDG_DATA_HOME at a tmp_path got a fresh path for free; an
+# imported module is cached in sys.modules and would hand the next test the
+# first test's directory. So the harness re-imports the engine whenever the
+# environment those paths are read from has moved -- which is something
+# tests do and a served app never does, its environment being fixed for the
+# life of the process either way.
+_ENGINE_ENVIRONMENT = ("XDG_DATA_HOME", "APPDATA", "ALMUTEN_NO_PREFERENCES")
+
+
+def sync_engine_to_environment():
+    import importlib
+
+    module = sys.modules.get("engine")
+    if module is None:
+        return
+    environment = tuple(os.environ.get(name) for name in _ENGINE_ENVIRONMENT)
+    if getattr(module, "_harness_environment", None) == environment:
+        return
+    importlib.reload(module)._harness_environment = environment
+
+
+def make_app(date="1240-05-23", page=None, view=None, switches=None, timeout=60):
+    """Build an AppTest for one chart and one page, unrun.
+
+    Sidebar inputs that carry a session_state key are set through the key
+    (that is how the app's own saved-chart loader does it). The page is
+    selected the way st.navigation selects it: by the hash of the
+    st.Page url_path, which is what AppTest.switch_page() computes for
+    file-based pages -- there is no public equivalent for function pages.
+    """
+    from streamlit.testing.v1 import AppTest
+    from streamlit.util import calc_hash
+
+    sync_engine_to_environment()
+    at = AppTest.from_file(str(APP_PATH), default_timeout=timeout)
+    at.session_state["manual_coords_key"] = True
+    at.session_state["manual_lat_key"] = FLORENCE[0]
+    at.session_state["manual_lon_key"] = FLORENCE[1]
+    at.session_state["date_input_key"] = date
+    at.session_state["time_input_key"] = LOCAL_TIME
+    if view is not None:
+        # The Configurations view control is gone (2026-09-10); a caller
+        # passing one of the old view names gets the depth that shows it.
+        at.session_state["_reading_depth"] = "Course text and supplement" if view != "Sahl (course text)" else "Course text"
+    if page is not None:
+        at._page_hash = calc_hash(page)
+    if switches:
+        apply_switches(at, switches)
+    return at
+
+
+def find_page_widget(at, kind, label_prefix):
+    """The one widget of `kind` on the rendered page whose label starts
+    with `label_prefix`."""
+    widgets = getattr(at.main, kind)
+    hits = [w for w in widgets if w.label.startswith(label_prefix)]
+    assert len(hits) == 1, (
+        f"expected exactly one page {kind} labelled '{label_prefix}...', "
+        f"found {[w.label for w in widgets]}")
+    return hits[0]
+
+
+def apply_switches(at, switches):
+    """switches: {name: value} using the names in SWITCHES. Sets the store
+    key the engine reads; call before at.run()."""
+    for name, value in switches.items():
+        store, alternatives = SWITCHES[name][0], SWITCHES[name][1]
+        assert value in alternatives, f"{name}: {value!r} not in {alternatives}"
+        at.session_state[store] = value
+    return at
+
+
+def assert_no_exception(at, context=""):
+    if len(at.exception):
+        details = "\n\n".join(e.value for e in at.exception)
+        pytest.fail(f"{context}: the app raised\n{details}")
+
+
+# --- Table identity -----------------------------------------------------
+
+NOTES_EXPANDER_LABEL = "Sources and editorial notes"
+NOTES_EXPANDER_ICON = ":material/menu_book:"
+
+
+def _is_notes_expander(node):
+    """An expander that is a notes panel, not a table heading: labelled
+    "Sources and editorial notes" or carrying the book icon. AppTest
+    builds an expander WITH an icon as a Status node (type "status") and
+    one without as an Expander (type "expander"); both come from the same
+    Expandable proto and both carry .label and .icon, so the walker
+    reads the two types alike. `.icon` is the raw string as passed to
+    st.expander(icon=...), e.g. ":material/menu_book:", not a normalised
+    form (Streamlit 1.62.0)."""
+    if getattr(node, "type", None) not in ("expander", "status"):
+        return False
+    return node.label == NOTES_EXPANDER_LABEL or node.icon == NOTES_EXPANDER_ICON
+
+
+def table_nodes(at):
+    """Every st.dataframe on the rendered page, in order, as (heading,
+    node). The heading is the nearest preceding st.subheader or expander
+    label; a notes expander (see _is_notes_expander) is skipped -- it
+    follows its table, or holds a lookup table of its own, and is not a
+    heading for what comes next."""
+    found = []
+    heading = None
+    for node in at.main:          # Block.__iter__ walks the tree in order
+        kind = getattr(node, "type", None)
+        if kind == "subheader":
+            heading = node.value
+        elif kind in ("expander", "status") and not _is_notes_expander(node):
+            heading = node.label
+        elif kind == "dataframe":
+            found.append((heading or "(no heading)", node))
+    return found
+
+
+def table_inventory(at):
+    """Every st.dataframe on the rendered page, in order, as
+    (heading, columns), keyed as table_nodes() keys them."""
+    return [(heading, list(node.value.columns)) for heading, node in table_nodes(at)]
+
+
+def find_table(at, heading):
+    """The first st.dataframe element under exactly this heading, keyed
+    as table_nodes() keys headings."""
+    for found, node in table_nodes(at):
+        if found == heading:
+            return node
+    raise LookupError(f"no dataframe found under heading {heading!r}")
+
+
+# --- Components ---------------------------------------------------------
+# The Chart page's wheel is an st.components.v2 mount rather than an
+# st.image. AppTest renders one as an element of type "bidi_component"
+# whose proto carries the component's name and the JSON envelope it was
+# mounted with, which is where the SVG is read from now.
+
+def component_mounts(node, name, found=None):
+    """Every mount of the component `name` under a rendered node."""
+    found = [] if found is None else found
+    for child in getattr(node, "children", {}).values():
+        if getattr(child, "type", None) == "bidi_component" and child.proto.component_name == name:
+            found.append(child)
+        else:
+            component_mounts(child, name, found)
+    return found
+
+
+def natal_wheel_envelope(node):
+    """The one natal_wheel mount's data envelope: {'svg', 'width', 'signs'}."""
+    mounts = component_mounts(node, "natal_wheel")
+    assert len(mounts) == 1, f"expected one natal_wheel mount under {node}, found {len(mounts)}"
+    return json.loads(mounts[0].proto.json)
+
+
+def _key(entry):
+    heading, columns = entry
+    return (heading, tuple(columns))
+
+
+def describe_table_diff(expected, actual):
+    """A readable account of which tables went missing, appeared, or
+    changed multiplicity. Compares multisets, not counts."""
+    exp, act = Counter(map(_key, expected)), Counter(map(_key, actual))
+    lines = []
+    for key in sorted(set(exp) | set(act)):
+        e, a = exp[key], act[key]
+        if e == a:
+            continue
+        heading, columns = key
+        if a == 0:
+            lines.append(f"  MISSING   {heading!r} (expected {e}x) columns={list(columns)}")
+        elif e == 0:
+            lines.append(f"  UNEXPECTED {heading!r} ({a}x) columns={list(columns)}")
+        else:
+            lines.append(f"  COUNT     {heading!r}: expected {e}x, rendered {a}x")
+    return "\n".join(lines)
+
+
+def dump_fixture(data):
+    """One table per line, so a diff of the fixture reads as which table
+    appeared or went missing."""
+    out = ["{"]
+    dates = list(data)
+    for i, d in enumerate(dates):
+        out.append(f' "{d}": {{')
+        slots = list(data[d])
+        for j, s in enumerate(slots):
+            out.append(f"  {json.dumps(s, ensure_ascii=False)}: [")
+            rows = data[d][s]
+            for k, row in enumerate(rows):
+                out.append("   " + json.dumps(row, ensure_ascii=False) + ("," if k < len(rows) - 1 else ""))
+            out.append("  ]" + ("," if j < len(slots) - 1 else ""))
+        out.append(" }" + ("," if i < len(dates) - 1 else ""))
+    out.append("}")
+    return "\n".join(out) + "\n"
+
+
+# The 2026-09-16 labels branch renamed two columns of the aspects table
+# (Astra F10): the directed-agency column and the connection verdict, which
+# is now a named state rather than Yes/No. The guards that compare this
+# fixture with main's bring main's copy forward through the rename, so they
+# go on pinning every other column of every other table.
+LABEL_RENAMES_2026_09_16 = {"Applying Planet": "Connecting planet", "Connected": "Connection"}
+
+
+def with_2026_09_16_renames(inventory):
+    """A tables.json structure with those two column names brought forward."""
+    if isinstance(inventory, dict):
+        return {key: with_2026_09_16_renames(value) for key, value in inventory.items()}
+    if isinstance(inventory, list):
+        return [with_2026_09_16_renames(value) for value in inventory]
+    return LABEL_RENAMES_2026_09_16.get(inventory, inventory)
+
+
+def load_table_fixture():
+    if not TABLES_FIXTURE.exists():
+        pytest.fail(f"{TABLES_FIXTURE} is missing; run  UPDATE_TABLE_FIXTURE=1 pytest tests/test_pages_render.py")
+    return json.loads(TABLES_FIXTURE.read_text())
+
+
+# --- The engine as a module ---------------------------------------------
+
+def source_files():
+    """Every source module of the program, in the list's order
+    (source_modules.txt; engine.py and app.py when there is none). A scan
+    of the whole program walks these, never two names: a module split out
+    of engine.py is read without another edit, and a scan written against
+    the pair cannot pass because it stopped reading moved code."""
+    return source_list.files(EXECUTABLE_DIR)
+
+
+def engine_files():
+    """The source modules but app.py: the engine, however many files it is."""
+    return [path for path in source_files() if path.name != APP_PATH.name]
+
+
+def engine_source():
+    """The engine, whole: every source module but app.py, in the list's
+    order, joined by a newline (engine.py alone while it is the only one)."""
+    return "\n".join(path.read_text() for path in engine_files())
+
+
+def ui_source():
+    """The pages: app.py from the marker on. Its few lines above the marker
+    are the docstring, the imports and the star import, which no page
+    prints and no source scan has ever read."""
+    src = APP_PATH.read_text()
+    return src[src.index(UI_MARKER):]
+
+
+def app_source():
+    """The whole app as one text, which before the split of this file into
+    two was one file's ``read_text()``. Every scan written against that --
+    the citation scans, the prose guards, the dead-function check -- reads
+    every source module here rather than one, so nothing it guarded went
+    unguarded when the engine moved out, or goes unguarded when a module
+    moves out of the engine."""
+    return engine_source() + ui_source()
+
+
+def _refuse_raw_text(self, *_spec):
+    raise TypeError(
+        f"{self.status} result reached page text raw ({self.reason!r}); "
+        "pass it through _display_result at the page boundary")
+
+
+@pytest.fixture(autouse=True)
+def _unresolved_results_refuse_raw_text():
+    """The sweep of 2026-09-22, made lasting: an UnresolvedResult has no
+    truth value (its own __bool__ raises), and under the tests it has no
+    text either -- str() and format() of one raise, so a value that reaches
+    an f-string, a join or a markdown call without _display_result fails at
+    the leak instead of printing the dataclass's repr (the F8 wheel crash
+    and the F10 Planetary Condition line were both this class). repr is
+    left alone for pytest's own output. Patched per test because the engine
+    module is reloaded when the environment changes."""
+    module = sys.modules.get("engine")
+    if module is None:
+        import importlib
+        module = importlib.import_module("engine")
+    cls = module.UnresolvedResult
+    had_str, had_format = "__str__" in cls.__dict__, "__format__" in cls.__dict__
+    old_str, old_format = cls.__dict__.get("__str__"), cls.__dict__.get("__format__")
+    cls.__str__ = _refuse_raw_text
+    cls.__format__ = _refuse_raw_text
+    yield
+    cls = sys.modules["engine"].UnresolvedResult
+    for name, had, old in (("__str__", had_str, old_str), ("__format__", had_format, old_format)):
+        if had:
+            setattr(cls, name, old)
+        elif name in cls.__dict__:
+            delattr(cls, name)
+
+
+@pytest.fixture(scope="session")
+def engine():
+    """engine.py imported as a module, handed over as its namespace (the
+    same mapping shape the exec'd half used to return, so the tests that
+    index it by name are untouched)."""
+    import importlib
+
+    module = importlib.import_module("engine")
+    sync_engine_to_environment()
+    return vars(module)
+
+
+def function_source(name):
+    """Source text of one top-level function in the engine, by AST -- the
+    scans around it read source text, not the imported module. Each engine
+    module is parsed by itself, so the function is found wherever it lives."""
+    for path in engine_files():
+        src = path.read_text()
+        for node in ast.parse(src).body:
+            if isinstance(node, ast.FunctionDef) and node.name == name:
+                return ast.get_source_segment(src, node)
+    raise LookupError(f"no top-level function {name!r} in the engine half")
+
+
+def cited_paragraphs(text, lo, hi):
+    """Paragraph numbers between lo and hi that appear as trailing
+    citations in string literals: '... (83)', '(93, 99)', '(106, 119-123)'.
+    Docstrings and comments cite ranges too, so this only reads quoted
+    strings."""
+    found = set()
+    for literal in re.findall(r"""(?:'(?:[^'\\\n]|\\.)*'|"(?:[^"\\\n]|\\.)*")""", text):
+        for group in re.findall(r"\(([^()]*)\)", literal):
+            # leading run of numbers: "84; ...", "93, 99", "106, 119-123"
+            m = re.match(r"\s*(\d{2,3}(?:\s*[-,;]\s*\d{2,3})*)", group)
+            if not m:
+                continue
+            for n in map(int, re.findall(r"\d+", m.group(1))):
+                if lo <= n <= hi:
+                    found.add(n)
+    return found
+
+
+NUMBER_WORDS = {
+    "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6,
+    "seven": 7, "eight": 8, "nine": 9, "ten": 10, "eleven": 11,
+    "twelve": 12, "thirteen": 13, "fourteen": 14, "fifteen": 15,
+    "sixteen": 16, "seventeen": 17, "eighteen": 18, "nineteen": 19, "twenty": 20,
+}
+
+
+def prose_number(pattern, text=None):
+    """The number word captured by `pattern` (one group) in the UI source.
+    Fails loudly if the phrase has been reworded, which is the point: a
+    prose count and the structure it describes must be updated together."""
+    text = ui_source() if text is None else text
+    m = re.search(pattern, text)
+    assert m, f"prose phrase not found in the UI source: /{pattern}/ -- reworded? update the test with it"
+    word = m.group(1).lower()
+    return NUMBER_WORDS.get(word) if word in NUMBER_WORDS else int(word)

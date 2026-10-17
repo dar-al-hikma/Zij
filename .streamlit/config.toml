@@ -1,0 +1,41 @@
+[runner]
+# The app has no bare expressions, so magic does nothing but cost: parsing and
+# rewriting the script is over half of every AppTest render.
+magicEnabled = false
+
+[client]
+# The Deploy button and the toolbar are not for a study companion.
+toolbarMode = "minimal"
+# No outer page may steer the app when it is framed.
+allowedOrigins = []
+
+[server]
+# A source run serves this computer only: Streamlit's default is every
+# interface. The desktop launcher passes the same address as a flag, with the
+# rest of its server options.
+address = "127.0.0.1"
+# A session opens only under the name a source run prints and opens:
+# Streamlit's default takes any Host, so a page whose own name is made to
+# point at this computer could open one. Streamlit applies this list to the
+# session's connection only, and ignores the port.
+allowedHosts = ["127.0.0.1"]
+# The check of a session's Origin stays on, whatever another config file says.
+enableCORS = true
+# Whatever another config file says: no site beyond this computer is trusted,
+# uploads keep their token and its cookie stays with this site, no route runs
+# the script outside a session, and no folder is served as files.
+corsAllowedOrigins = []
+enableXsrfProtection = true
+xsrfCookieSameSite = "lax"
+scriptHealthCheckEnabled = false
+enableStaticServing = false
+
+[browser]
+# The address a source run prints, opens and trusts; no usage statistics.
+serverAddress = "127.0.0.1"
+gatherUsageStats = false
+
+[global]
+# Neither development nor test mode: either lets a session stop the app.
+developmentMode = false
+e2eTest = false

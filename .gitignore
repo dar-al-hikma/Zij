@@ -1,0 +1,37 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# PyInstaller build output (CI regenerates these -- don't commit them)
+build/
+dist/
+*.spec.bak
+
+# Personal saved-chart data (generated at runtime, not project source)
+saved_charts.json
+
+# The desktop window's log: written in the app's data folder now, and never
+# a file of the project wherever an older launcher left it
+webview_debug.log
+
+# Editor/OS cruft
+.DS_Store
+.idea/
+.vscode/
+Python-*.tar.xz
+
+# Test scratch (saved-charts redirect during pytest)
+tests/.xdg-scratch/
+
+# Agent tooling (skills, agent definitions, launch config, notes): the
+# maintainer's own working setup, not part of the app
+.claude/
+.agents/
+.codex/
+AGENTS.md
+CLAUDE.local.md
+GEMINI.md
+.cursorrules
+copilot-instructions.md

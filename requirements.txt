@@ -1,0 +1,24 @@
+# Runtime and test dependencies, pinned to the development virtual environment
+# (Python 3.14) -- the one interpreter the app and its test suite both run on.
+# Only packages the code imports directly are listed, with the two data
+# packages whose releases decide answers (the time-zone database and the
+# zone boundaries); pip resolves the rest, and the locks made from the files
+# below pin it, with hashes. Two files build on this one and each includes
+# it: the desktop/PyInstaller build needs more (requirements-desktop.txt),
+# and so does the suite, which inspects things the app only hands to a
+# browser (requirements-dev.txt -- what CI installs).
+streamlit==1.62.0
+pyswisseph==2.10.3.2
+pandas==3.0.5
+timezonefinder==8.3.0
+# The zone boundaries timezonefinder answers from, a distribution of its own
+# whose releases would otherwise change the zone a place is given.
+timezonefinder-data==1.2026.3
+# The time-zone database, read from this package alone on every platform and
+# never from the computer's own files: tzdata 2026.5 is the IANA time-zone
+# release 2026e.
+tzdata==2026.5
+
+# Test suite (tests/): streamlit.testing.v1.AppTest, headless.
+pytest==9.1.1
+pytest-xdist==3.8.0
