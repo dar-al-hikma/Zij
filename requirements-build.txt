@@ -1,0 +1,14 @@
+# The build tools only: what turns the app into the Windows and macOS
+# folders (build.spec). The release workflow installs them from each
+# system's lock made from this file and requirements-desktop.txt
+# (requirements-build-windows.lock, requirements-build-macos.lock), where
+# their own dependencies are pinned too. Nothing here is imported by the app.
+#
+# Pinned exactly, so a manual test build and the tag build of the same
+# commit run the same PyInstaller and the same hooks. No PyInstaller is
+# installed in the local venv, so these are the versions the last
+# successful release build installed and reported, on both runners
+# ("PyInstaller: 6.22.3, contrib hooks: 2026.7"). Move them only together,
+# and only with a test build of both platforms.
+pyinstaller==6.22.3
+pyinstaller-hooks-contrib==2026.7

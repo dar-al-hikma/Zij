@@ -1,0 +1,8 @@
+# The program's source modules, one file name per line, in the order they are
+# read as one text; app.py, the script the app runs, comes last. The build
+# bundles each of them, and every check that reads the program's source reads
+# every one (tests/source_list.py).
+ephemeris.py
+time_zones.py
+engine.py
+app.py

@@ -1,0 +1,309 @@
+{
+ "about": "For each errno name the program may read, the line that defines it on Linux, macOS and Windows, verbatim from the source named, at the tag in its URL. Windows is the C runtime's errno.h in mingw-w64's copy; for EWOULDBLOCK, CPython's errno module drops the C runtime's value and adds the name as WSAEWOULDBLOCK, whose value winerror.h gives. Lines are listed in the order a compiler reads them.",
+ "sources": {
+  "linux-errno-base": {
+   "url": "https://raw.githubusercontent.com/torvalds/linux/v7.2/include/uapi/asm-generic/errno-base.h",
+   "sha256": "2c148e92b8318deeb767fabd60822113e575ee664ff09a1873aed8f7a495793c"
+  },
+  "linux-errno": {
+   "url": "https://raw.githubusercontent.com/torvalds/linux/v7.2/include/uapi/asm-generic/errno.h",
+   "sha256": "66a5ad60566fdd62e41701bcfc42bfeca5e5696ad1d47d78981575e0c51622be"
+  },
+  "xnu-errno": {
+   "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/bsd/sys/errno.h",
+   "sha256": "b16e5eb195f153793b14c3826e6b04db945e9ed6a37c5a9046196555bded6906"
+  },
+  "mingw-errno": {
+   "url": "https://raw.githubusercontent.com/mingw-w64/mingw-w64/v14.0.0/mingw-w64-headers/crt/errno.h",
+   "sha256": "c2aabe39033f8b140bf229c58d9c25eba532d2b08937938c390364a4efde9a4f"
+  },
+  "mingw-winerror": {
+   "url": "https://raw.githubusercontent.com/mingw-w64/mingw-w64/v14.0.0/mingw-w64-headers/include/winerror.h",
+   "sha256": "8d9557ea7c589ff0e52005d3ce08c0bbf8d189a6c37a1b31b977a5ac07d3e431"
+  },
+  "cpython-errnomodule": {
+   "url": "https://raw.githubusercontent.com/python/cpython/v3.14.8/Modules/errnomodule.c",
+   "sha256": "0a516529786898f4fdb7691bff46fc9a6f5277a75966126fecb0837b28a83226"
+  }
+ },
+ "names": {
+  "EPERM": {
+   "linux": [
+    {
+     "source": "linux-errno-base",
+     "line": 5,
+     "text": "#define\tEPERM\t\t 1\t/* Operation not permitted */"
+    }
+   ],
+   "macos": [
+    {
+     "source": "xnu-errno",
+     "line": 90,
+     "text": "#define EPERM           1               /* Operation not permitted */"
+    }
+   ],
+   "windows": [
+    {
+     "source": "mingw-errno",
+     "line": 24,
+     "text": "#define EPERM 1"
+    }
+   ]
+  },
+  "ENOENT": {
+   "linux": [
+    {
+     "source": "linux-errno-base",
+     "line": 6,
+     "text": "#define\tENOENT\t\t 2\t/* No such file or directory */"
+    }
+   ],
+   "macos": [
+    {
+     "source": "xnu-errno",
+     "line": 91,
+     "text": "#define ENOENT          2               /* No such file or directory */"
+    }
+   ],
+   "windows": [
+    {
+     "source": "mingw-errno",
+     "line": 25,
+     "text": "#define ENOENT 2"
+    }
+   ]
+  },
+  "EAGAIN": {
+   "linux": [
+    {
+     "source": "linux-errno-base",
+     "line": 15,
+     "text": "#define\tEAGAIN\t\t11\t/* Try again */"
+    }
+   ],
+   "macos": [
+    {
+     "source": "xnu-errno",
+     "line": 131,
+     "text": "#define EAGAIN          35              /* Resource temporarily unavailable */"
+    }
+   ],
+   "windows": [
+    {
+     "source": "mingw-errno",
+     "line": 35,
+     "text": "#define EAGAIN 11"
+    }
+   ]
+  },
+  "EACCES": {
+   "linux": [
+    {
+     "source": "linux-errno-base",
+     "line": 17,
+     "text": "#define\tEACCES\t\t13\t/* Permission denied */"
+    }
+   ],
+   "macos": [
+    {
+     "source": "xnu-errno",
+     "line": 103,
+     "text": "#define EACCES          13              /* Permission denied */"
+    }
+   ],
+   "windows": [
+    {
+     "source": "mingw-errno",
+     "line": 37,
+     "text": "#define EACCES 13"
+    }
+   ]
+  },
+  "EEXIST": {
+   "linux": [
+    {
+     "source": "linux-errno-base",
+     "line": 21,
+     "text": "#define\tEEXIST\t\t17\t/* File exists */"
+    }
+   ],
+   "macos": [
+    {
+     "source": "xnu-errno",
+     "line": 109,
+     "text": "#define EEXIST          17              /* File exists */"
+    }
+   ],
+   "windows": [
+    {
+     "source": "mingw-errno",
+     "line": 40,
+     "text": "#define EEXIST 17"
+    }
+   ]
+  },
+  "ENOTDIR": {
+   "linux": [
+    {
+     "source": "linux-errno-base",
+     "line": 24,
+     "text": "#define\tENOTDIR\t\t20\t/* Not a directory */"
+    }
+   ],
+   "macos": [
+    {
+     "source": "xnu-errno",
+     "line": 112,
+     "text": "#define ENOTDIR         20              /* Not a directory */"
+    }
+   ],
+   "windows": [
+    {
+     "source": "mingw-errno",
+     "line": 43,
+     "text": "#define ENOTDIR 20"
+    }
+   ]
+  },
+  "EINVAL": {
+   "linux": [
+    {
+     "source": "linux-errno-base",
+     "line": 26,
+     "text": "#define\tEINVAL\t\t22\t/* Invalid argument */"
+    }
+   ],
+   "macos": [
+    {
+     "source": "xnu-errno",
+     "line": 114,
+     "text": "#define EINVAL          22              /* Invalid argument */"
+    }
+   ],
+   "windows": [
+    {
+     "source": "mingw-errno",
+     "line": 64,
+     "text": "#define EINVAL 22"
+    }
+   ]
+  },
+  "EFBIG": {
+   "linux": [
+    {
+     "source": "linux-errno-base",
+     "line": 31,
+     "text": "#define\tEFBIG\t\t27\t/* File too large */"
+    }
+   ],
+   "macos": [
+    {
+     "source": "xnu-errno",
+     "line": 119,
+     "text": "#define EFBIG           27              /* File too large */"
+    }
+   ],
+   "windows": [
+    {
+     "source": "mingw-errno",
+     "line": 48,
+     "text": "#define EFBIG 27"
+    }
+   ]
+  },
+  "EROFS": {
+   "linux": [
+    {
+     "source": "linux-errno-base",
+     "line": 34,
+     "text": "#define\tEROFS\t\t30\t/* Read-only file system */"
+    }
+   ],
+   "macos": [
+    {
+     "source": "xnu-errno",
+     "line": 122,
+     "text": "#define EROFS           30              /* Read-only file system */"
+    }
+   ],
+   "windows": [
+    {
+     "source": "mingw-errno",
+     "line": 51,
+     "text": "#define EROFS 30"
+    }
+   ]
+  },
+  "EDEADLK": {
+   "linux": [
+    {
+     "source": "linux-errno",
+     "line": 7,
+     "text": "#define\tEDEADLK\t\t35\t/* Resource deadlock would occur */"
+    }
+   ],
+   "macos": [
+    {
+     "source": "xnu-errno",
+     "line": 100,
+     "text": "#define EDEADLK         11              /* Resource deadlock avoided */"
+    }
+   ],
+   "windows": [
+    {
+     "source": "mingw-errno",
+     "line": 55,
+     "text": "#define EDEADLK 36"
+    }
+   ]
+  },
+  "EWOULDBLOCK": {
+   "linux": [
+    {
+     "source": "linux-errno",
+     "line": 22,
+     "text": "#define\tEWOULDBLOCK\tEAGAIN\t/* Operation would block */"
+    }
+   ],
+   "macos": [
+    {
+     "source": "xnu-errno",
+     "line": 132,
+     "text": "#define EWOULDBLOCK     EAGAIN          /* Operation would block */"
+    }
+   ],
+   "windows": [
+    {
+     "source": "mingw-errno",
+     "line": 166,
+     "text": "#define EWOULDBLOCK 140"
+    },
+    {
+     "source": "cpython-errnomodule",
+     "line": 45,
+     "text": "#  undef EWOULDBLOCK"
+    },
+    {
+     "source": "mingw-winerror",
+     "line": 2794,
+     "text": "#define WSABASEERR 10000"
+    },
+    {
+     "source": "mingw-winerror",
+     "line": 2801,
+     "text": "#define WSAEWOULDBLOCK (WSABASEERR + 35)"
+    },
+    {
+     "source": "cpython-errnomodule",
+     "line": 275,
+     "text": "#ifdef WSAEWOULDBLOCK"
+    },
+    {
+     "source": "cpython-errnomodule",
+     "line": 276,
+     "text": "    add_errcode(\"EWOULDBLOCK\", WSAEWOULDBLOCK, \"Operation would block\");"
+    }
+   ]
+  }
+ }
+}

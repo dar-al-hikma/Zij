@@ -1,0 +1,11 @@
+# The outline data file is published byte for byte (its SHA-256 is pinned in
+# the tests): no line-ending conversion on any checkout.
+data/mean_time_outlines.json -text
+# So is the list of the places whose zone is not the zone boundaries' own.
+data/place_zones.tsv -text
+# The place atlas is a database, never text: no conversion and no text diff
+# (its SHA-256 is pinned too).
+atlas.db binary
+# The fixed-star catalogue is checked against the SHA-256 the engine records:
+# no line-ending conversion on any checkout.
+ephe/sefstars.txt -text

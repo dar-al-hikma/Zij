@@ -1,0 +1,1006 @@
+#!/usr/bin/env bash
+# Refuse any push to the PUBLIC repository unless it is a deliberate release drop.
+#
+# `public` is the published project: one commit per release, and nothing else.
+# A push there is irreversible publication of whatever the commit carries, and
+# the public repository's history is itself public — a commit message written
+# there is as permanent as a file. Development belongs on the private
+# development repository, by pull request.
+#
+# A release drop is cut as docs/RELEASING.md step 3 says: in a fresh clone of
+# the development repository, standing at a commit on its main, and pushed
+# with its tag, both in one push:
+#
+#     ZIJ_PUBLIC_DROP=1 git push --atomic public "+$drop:refs/heads/main" "refs/tags/v$version"
+#
+# Step 3 also runs this file to read the development-only paths the drop
+# leaves out (pre-push --private-paths, below), so that the drop and the
+# checks here read the list one way.
+#
+# Install (once per clone):
+#
+#     git config core.hooksPath tools/git-hooks
+#
+# git passes the remote NAME as $1 and its URL as $2; the refs being pushed
+# arrive on stdin. Matching the URL as well as the name means `git push <url>`
+# is caught too.
+#
+# Every check below fails CLOSED: when the hook cannot tell whether a drop is
+# safe, it refuses, and says what to do.
+
+set -uo pipefail
+
+remote_name="${1:-}"
+remote_url="${2:-}"
+
+# A URL reduced to the owner/name GitHub reads from it: any query or fragment
+# (from the first "?" or "#") cut off, before and after each round of
+# percent-decoding, case folded, doubled slashes and dot segments taken out,
+# and any trailing "/", ".git" or ".wiki" dropped (the wiki of a public
+# repository is public too). Fails when the decoding does not settle.
+normalise_url() {
+    local u="$1" prev i
+    u="${u%%[#?]*}"
+    for i in 1 2 3 4 5 6 7 8 9; do
+        prev="$u"
+        u="$(printf '%s' "$u" | sed 's/%\([0-9A-Fa-f][0-9A-Fa-f]\)/\\x\1/g')"
+        u="$(printf '%b' "$u")"
+        u="${u%%[#?]*}"
+        [ "$u" = "$prev" ] && break
+        [ "$i" = 9 ] && return 1
+    done
+    u="$(printf '%s' "$u" | tr '[:upper:]' '[:lower:]' | tr -s '/')"
+    for i in 1 2 3 4 5 6 7 8 9; do
+        prev="$u"
+        u="$(printf '%s' "$u" | sed -e 's#/\./#/#g' -e 's#:\./#:#' -e 's#/\.$##' \
+                                    -e 's#/[^/:]*/\.\./#/#' -e 's#:[^/:]*/\.\./#:#' -e 's#/[^/:]*/\.\.$##')"
+        u="${u%/}"; u="${u%.git}"; u="${u%.wiki}"
+        [ "$u" = "$prev" ] && break
+        [ "$i" = 9 ] && return 1
+    done
+    printf '%s' "$u"
+}
+
+# The public repository by owner and name -- NOT the private development
+# repository or the private mirror, whose names share its prefix. GitHub reads
+# owner and name without regard to case, so this does too, whatever the
+# transport (https, ssh, an ssh alias). A URL that does not normalise counts as
+# public.
+is_public_url() {
+    local u
+    u="$(normalise_url "$1")" || return 0
+    case "$u" in
+        */dar-al-hikma/zij|*:dar-al-hikma/zij) return 0 ;;
+        # the redirect left behind by the move to the organisation
+        */pantheosis/zij|*:pantheosis/zij) return 0 ;;
+        *) return 1 ;;
+    esac
+}
+
+refuse() {   # refuse <heading> [<detail>...] <what to do>: the last line always says what to do
+    {
+        echo
+        echo "  =========================================================================="
+        echo "  REFUSED: $1"
+        shift
+        for ln in "$@"; do echo "  $ln"; done
+        echo "  =========================================================================="
+        echo
+    } >&2
+    exit 1
+}
+
+# --- the development-only paths: one reader of tools/private-paths.txt -------
+# Every use of the list reads it here: step 3, which builds the drop, and the
+# checks below, which build the expected tree, find the files the lists take
+# out and say whether a path is private. Full-line comments and blank lines
+# are skipped. Every other line is one path from the repository's top, taken
+# literally; a trailing "/" names a folder and is dropped, so that Git and the
+# checks below read the same name: the folder and everything under it, or a
+# file of that name. Any other line refuses the whole list, naming it: one
+# with a space at either end, a "#" (a comment after a path), a control
+# character or one outside ASCII (a no-break space, a byte-order mark, a
+# letter that looks like another: the drop carries no such path), a ":" or
+# "/" first, a backslash, a quote, a glob character (* ? [), or an empty,
+# "." or ".." part. The entries are written out NUL-terminated, for
+# git --literal-pathspecs ... --pathspec-file-nul, and their number is left
+# in n_entries.
+n_entries=0
+private_path_fault() {   # private_path_fault <line>: why it is not a plain path, or nothing
+    local e="$1"
+    case "$e" in
+        "") echo "it is empty" ;;
+        [[:space:]]*) echo "it begins with whitespace" ;;
+        *[[:space:]]) echo "it ends with whitespace" ;;
+        *[[:cntrl:]]*) echo "it holds a control character" ;;
+        *[![:print:]]*) echo "it holds a character outside ASCII" ;;
+        *"#"*) echo "it holds a \"#\"; a comment goes on a line of its own" ;;
+        :*) echo "it begins with \":\", which Git reads as pathspec magic" ;;
+        /*) echo "it begins with \"/\"; a path is written from the repository's top" ;;
+        *\\*) echo "it holds a backslash" ;;
+        *[\"\']*) echo "it holds a quote" ;;
+        *[*?[]*) echo "it holds a glob character (* ? [)" ;;
+        *)  case "/${e%/}/" in
+                *//*) echo "it holds an empty part (//)" ;;
+                */./*|*/../*) echo "it holds a \".\" or \"..\" part" ;;
+            esac ;;
+    esac
+}
+private_paths() {   # private_paths <list> <what>: its entries on stdout, NUL-terminated; or refuse
+    local list="$1" what="$2" line why shown nuls ends n=0 bad=""
+    local -a entries=()
+    { [ -f "$list" ] && [ -r "$list" ]; } \
+        && nuls="$(tr -dc '\000' < "$list" | wc -c)" \
+        && ends="$(wc -l < "$list")" \
+        || refuse "cannot read $what." \
+                  "Make sure TMPDIR (or /tmp) has room and git can read the clone, then cut the drop again (docs/RELEASING.md step 3)."
+    [ "${nuls//[[:space:]]/}" = 0 ] \
+        || refuse "$what holds a NUL byte, so its lines cannot be read as paths." \
+                  "Write the list as plain text on main by pull request, and cut the drop again (docs/RELEASING.md step 3)."
+    while IFS= read -r line || [ -n "$line" ]; do
+        n=$((n + 1))
+        [[ "$line" =~ ^[[:space:]]*(#|$) ]] && continue
+        why="$(private_path_fault "$line")"
+        if [ -n "$why" ]; then
+            case "$line" in *[[:cntrl:]]*) shown="$(printf '%q' "$line")" ;; *) shown="\"$line\"" ;; esac
+            bad="${bad}line $n, $shown: $why"$'\n'
+        else
+            entries+=("${line%/}")
+        fi
+    done < "$list"
+    # every line read: one per newline, and perhaps a last one without
+    ends="${ends//[[:space:]]/}"
+    [[ "$ends" =~ ^[0-9]+$ ]] && [ "$n" -ge "$ends" ] && [ "$n" -le $((ends + 1)) ] \
+        || refuse "cannot read $what whole: $n of its lines were read." \
+                  "Make sure TMPDIR (or /tmp) has room and git can read the clone, then cut the drop again (docs/RELEASING.md step 3)."
+    [ -z "$bad" ] || refuse "$what is refused whole: these lines are not plain paths." "" \
+        "$(printf '%s' "$bad" | sed 's/^/    /')" "" \
+        "Write each entry as one path from the repository's top, alone on its line, with a trailing / for a folder; fix the list on main by pull request, and cut the drop again (docs/RELEASING.md step 3)."
+    n_entries=${#entries[@]}
+    [ "$n_entries" -eq 0 ] || printf '%s\0' "${entries[@]}" \
+        || refuse "cannot write out the entries of $what." \
+                  "Make sure TMPDIR (or /tmp) has room, then cut the drop again (docs/RELEASING.md step 3)."
+}
+
+# Step 3's own reading of the two lists, by the reader the checks below use:
+#
+#     pre-push --private-paths <origin/main's list> <the tested commit's list>
+#
+# prints the entries of both, NUL-terminated, or refuses as the push would.
+# git runs this file with two arguments, never three, so no push comes here.
+if [ "${1:-}" = --private-paths ]; then
+    export LC_ALL=C
+    [ "$#" -eq 3 ] \
+        || refuse "--private-paths reads two lists, origin/main's tools/private-paths.txt and the tested commit's." \
+                  "Run it as docs/RELEASING.md step 3 does, with the two lists' files after it."
+    private_paths "$2" "$2"
+    [ "$n_entries" -gt 0 ] \
+        || refuse "$2 lists nothing, so the drop cannot be checked for it." \
+                  "Restore the list's entries on main by pull request, git fetch origin, and cut the drop again."
+    private_paths "$3" "$3"
+    exit 0
+fi
+
+if ! { [ "$(printf '%s' "$remote_name" | tr '[:upper:]' '[:lower:]')" = "public" ] \
+       || is_public_url "$remote_url"; }; then
+    exit 0
+fi
+
+if [ "${ZIJ_PUBLIC_DROP:-}" != "1" ]; then
+    cat >&2 <<'EOF'
+
+  ==========================================================================
+  REFUSED: this push targets the PUBLIC repository.
+
+  That repository takes one source drop per release and nothing else.
+  Everything in the commits being pushed becomes public permanently:
+  the source, the commit messages, and anything the tree carried.
+
+  Before a drop, confirm:
+    - nothing from the private texts, verbatim or paraphrased beyond a
+      locator citation
+    - no dates, internal identifiers, filenames or build-process language
+      in user-facing page text OR in the commit messages
+    - the full suite green WITH the texts present (CI cannot see them)
+
+  If this really is the release drop, cut it as docs/RELEASING.md step 3
+  says and push it from there with ZIJ_PUBLIC_DROP=1.
+
+  Ordinary development goes to the private development repository, by
+  pull request. See docs/RELEASING.md.
+  ==========================================================================
+
+EOF
+    exit 1
+fi
+top="$(git rev-parse --show-toplevel 2>/dev/null)" \
+    || refuse "not inside a checkout; cannot check the drop." \
+              "Push the drop from the throwaway clone docs/RELEASING.md step 3 makes, not from outside a checkout."
+tmp="$(mktemp -d)" || refuse "cannot make a temporary directory to check the drop in." \
+    "Make sure TMPDIR (or /tmp) exists and is writable, then push again."
+trap 'rm -rf "$tmp"' EXIT
+cat > "$tmp/refs" \
+    || refuse "cannot read the refs being pushed." \
+              "Make sure TMPDIR (or /tmp) has room, then push again."
+
+# --- the copy that judges: origin/main's ----------------------------------------
+# The hook git runs is this checkout's copy, so a drop cut from an older commit
+# on main would be judged by that commit's older hook. Instead, the hook fetches
+# origin's main and, when main's copy differs from this one, runs main's copy,
+# with the same arguments and the refs buffered above. That run carries the
+# blob it runs in ZIJ_HOOK_FROM_MAIN and never runs another. Fails closed: with
+# no fetch or no copy, no drop.
+self="${BASH_SOURCE[0]}"
+main_hook=refs/remotes/origin/main:tools/git-hooks/pre-push
+if [ -n "${ZIJ_HOOK_FROM_MAIN+set}" ]; then       # set at all, even empty: never run another
+    { [ "$(git hash-object --no-filters -- "$self" 2>/dev/null)" = "$ZIJ_HOOK_FROM_MAIN" ] \
+      && [ "$(git rev-parse --verify -q "$main_hook" 2>/dev/null)" = "$ZIJ_HOOK_FROM_MAIN" ]; } \
+        || refuse "ZIJ_HOOK_FROM_MAIN is set, but the hook running is not origin/main's copy." \
+                  "Unset ZIJ_HOOK_FROM_MAIN and push again; the hook sets it itself when it runs main's copy."
+else
+    git fetch -q --no-tags origin "+refs/heads/main:refs/remotes/origin/main" 2>/dev/null \
+        || refuse "cannot fetch origin, so main's copy of this hook cannot check the drop." \
+                  "Make sure origin is the development repository and reachable (git fetch origin), then push again."
+    main_blob="$(git rev-parse --verify -q "$main_hook" 2>/dev/null)" \
+        && [ "$(git cat-file -t "$main_blob" 2>/dev/null)" = blob ] \
+        && git cat-file blob "$main_blob" > "$tmp/pre-push.main" 2>/dev/null \
+        || refuse "origin/main has no tools/git-hooks/pre-push, so main's copy of this hook cannot check the drop." \
+                  "Restore tools/git-hooks/pre-push on main by pull request, then cut the drop again (docs/RELEASING.md step 3)."
+    [ -s "$tmp/pre-push.main" ] \
+        || refuse "origin/main's tools/git-hooks/pre-push is empty, so main's copy of this hook cannot check the drop." \
+                  "Restore tools/git-hooks/pre-push on main by pull request, then cut the drop again (docs/RELEASING.md step 3)."
+    if [ "$(git hash-object --no-filters -- "$self" 2>/dev/null)" != "$main_blob" ]; then
+        echo "pre-push: this checkout's hook is not origin/main's -- running main's copy." >&2
+        ZIJ_HOOK_FROM_MAIN="$main_blob" bash "$tmp/pre-push.main" "$@" < "$tmp/refs"
+        exit $?
+    fi
+fi
+echo "pre-push: ZIJ_PUBLIC_DROP=1 set -- checking the drop." >&2
+pushed="$(cat "$tmp/refs")"          # the refs being pushed; read by every check below
+export LC_ALL=C            # the checks below compare bytes, not characters
+
+# --- what the push does to the public refs -------------------------------------
+# Exactly two moves: the public main created, or replaced by a drop; a release
+# tag, refs/tags/v<version>, created. Any deletion, any other ref, and any
+# change to a tag already there are refused, whatever they carry: a release tag
+# names its commit for good (docs/RELEASING.md, withdrawing a release). A line
+# git did not write whole is refused too; a push of no ref at all publishes
+# nothing and passes. The two moves come together, in one push (section 6).
+SHA_RE='^([0-9a-f]{40}|[0-9a-f]{64})$'
+moves=""; n_refs=0; main_sha=""; release_tags=""
+while read -r local_ref local_sha remote_ref remote_sha extra; do
+    [ -z "${local_ref}${local_sha:-}${remote_ref:-}${remote_sha:-}${extra:-}" ] && continue
+    n_refs=$((n_refs + 1))
+    if [ -n "${extra:-}" ] || ! [[ "${local_sha:-}" =~ $SHA_RE && "${remote_sha:-}" =~ $SHA_RE ]] \
+       || [[ "${remote_ref:-}" != refs/* ]]; then
+        moves="$moves${local_ref:-?} -> ${remote_ref:-?}: not a line git writes"$'\n'
+        continue
+    fi
+    case "$local_sha" in
+        *[!0]*) ;;
+        *) moves="$moves$remote_ref would be deleted"$'\n'; continue ;;
+    esac
+    case "$remote_ref" in
+        refs/heads/main) main_sha="$local_sha" ;;
+        refs/tags/v*)
+            case "$remote_sha" in
+                *[!0]*) moves="$moves$remote_ref is already there and would be moved"$'\n' ;;
+            esac
+            release_tags="$release_tags$remote_ref $local_sha"$'\n' ;;
+        *) moves="$moves$remote_ref is neither main nor a release tag"$'\n' ;;
+    esac
+done <<< "$pushed"
+[ "$n_refs" -gt 0 ] || exit 0
+[ -n "$moves" ] && refuse "this push would delete or move a public ref, or write one other than main and a release tag." "" \
+    "$(printf '%s' "$moves" | sed 's/^/    /')" "" \
+    "A drop creates or replaces the public main and creates its release tag, nothing else (docs/RELEASING.md step 3); a release tag is never moved or deleted."
+
+# --- 0. the name and address the drop is published under ---------------------
+# The owner chooses the name, once, in the global setting zij.dropName; never
+# what the machine happens to supply (an account's login or full name). The
+# address is set once beside it, in zij.dropEmail, and must be a GitHub noreply
+# address. The drop's author, committer and tagger must carry exactly that name
+# and exactly that address (checked per ref below).
+drop_name="$(git config --global --get zij.dropName 2>/dev/null)" || drop_name=""
+[ -n "$drop_name" ] \
+    || refuse "no published name is set (git config --global zij.dropName), so the drop's author cannot be checked." \
+              "The owner chooses the name every drop is published under. Once it is chosen, set it once with" \
+              "git config --global zij.dropName \"<the chosen name>\", and cut the drop again (docs/RELEASING.md step 3)."
+login_needle="apo""thic"                 # the owner's local login, assembled so no published file spells it
+here_login="$(id -un 2>/dev/null)" || here_login=""
+case "${drop_name,,}" in
+    *"$login_needle"*) bad_name=1 ;;
+    *) bad_name="" ;;
+esac
+[ -n "$here_login" ] && [ "${drop_name,,}" = "${here_login,,}" ] && bad_name=1
+[ -z "$bad_name" ] \
+    || refuse "the published name set in zij.dropName is this machine's login, which is private." \
+              "The owner chooses a name for the public record; set it with git config --global zij.dropName \"<the chosen name>\"."
+NOREPLY_RE='^[0-9]+\+[A-Za-z0-9-]+@users\.noreply\.github\.com$'
+drop_email="$(git config --global --get zij.dropEmail 2>/dev/null)" || drop_email=""
+[ -n "$drop_email" ] \
+    || refuse "no published address is set (git config --global zij.dropEmail), so the drop's author cannot be checked." \
+              "Set your GitHub noreply address once with git config --global zij.dropEmail" \
+              "\"<your GitHub noreply address>\", and cut the drop again (docs/RELEASING.md step 3)."
+# Values counted by their NUL ends, so that a value holding a newline is not
+# taken for two; that one is refused under its own heading, since a value is
+# compared byte for byte and never trimmed.
+n_values="$(git config --global --get-all -z zij.dropEmail 2>/dev/null | tr -cd '\000' | wc -c)" || n_values=""
+[ "${n_values// /}" = 1 ] \
+    || refuse "zij.dropEmail holds more than one address, so the address the drop is published under is unclear." \
+              "Keep exactly one with git config --global --replace-all zij.dropEmail" \
+              "\"<your GitHub noreply address>\", and cut the drop again (docs/RELEASING.md step 3)."
+email_value="$(git config --global --get -z zij.dropEmail 2>/dev/null | tr -d '\000'; printf x)"
+[[ "${email_value%x}" != *$'\n'* ]] \
+    || refuse "zij.dropEmail holds more than one line, so the address the drop is published under is unclear." \
+              "Set it again on one line with git config --global zij.dropEmail" \
+              "\"<your GitHub noreply address>\", and cut the drop again (docs/RELEASING.md step 3)."
+[[ "$drop_email" =~ $NOREPLY_RE ]] \
+    || refuse "the published address set in zij.dropEmail is not a GitHub noreply address." \
+              "Set it to your GitHub noreply address (<id>+<login>@users.noreply.github.com) with" \
+              "git config --global zij.dropEmail \"<your GitHub noreply address>\", and cut the drop again."
+
+# --- 1. where the drop is cut from: this checkout's HEAD, on origin/main ----
+# The drop's tree must be a tested, merged commit less the development-only
+# paths. That commit is the one this checkout stands at (step 3 cuts the drop
+# in a fresh clone detached at it), and it must be on origin/main.
+main_ref=refs/remotes/origin/main
+git rev-parse --verify -q "$main_ref^{commit}" >/dev/null \
+    || refuse "this checkout has no origin/main, so the drop cannot be tied to a merged commit." \
+              "Cut the drop in a fresh clone of the development repository (docs/RELEASING.md step 3)."
+base="$(git rev-parse --verify -q 'HEAD^{commit}')" \
+    || refuse "this checkout has no HEAD commit, so the drop cannot be tied to a merged commit." \
+              "Cut the drop as docs/RELEASING.md step 3 says: in a fresh clone detached at the tested commit."
+git merge-base --is-ancestor "$base" "$main_ref" \
+    || refuse "this checkout stands at ${base:0:12}, which is not on origin/main." \
+              "A drop is cut at a tested, merged commit: git fetch origin, then follow" \
+              "docs/RELEASING.md step 3 from a commit on origin/main."
+
+# --- 2. the development-only paths: origin/main's list and the tested commit's
+# The drop leaves out, and the hook refuses, every path on either list:
+# origin/main's, read from the merged list, never from the working copy, which
+# an edit or a stale checkout could change; and the tested commit's own, so
+# that a path it listed stays out of its drop even after main has taken the
+# line off. Step 3 removes the same two lists, read by the same reader
+# (private_paths, above).
+git show "$main_ref:tools/private-paths.txt" > "$tmp/list.txt" 2>/dev/null \
+    || refuse "origin/main has no tools/private-paths.txt, so the drop cannot be checked for it." \
+              "Restore tools/private-paths.txt on main by pull request, git fetch origin, and cut the drop again."
+git show "$base:tools/private-paths.txt" > "$tmp/list.base.txt" 2>/dev/null \
+    || refuse "${base:0:12}, the commit this checkout stands at, has no tools/private-paths.txt of its own." \
+              "Release a later commit on origin/main, one that carries the list (docs/RELEASING.md step 3)."
+private_paths "$tmp/list.txt" "origin/main's tools/private-paths.txt" > "$tmp/private.main.nul" \
+    || refuse "cannot write out the entries of origin/main's tools/private-paths.txt." \
+              "Make sure TMPDIR (or /tmp) has room, then push again."
+[ "$n_entries" -gt 0 ] \
+    || refuse "origin/main's tools/private-paths.txt lists nothing, so the drop cannot be checked for it." \
+              "Restore the list's entries on main by pull request, git fetch origin, and cut the drop again."
+private_paths "$tmp/list.base.txt" "${base:0:12}'s tools/private-paths.txt" > "$tmp/private.base.nul" \
+    || refuse "cannot write out the entries of ${base:0:12}'s tools/private-paths.txt." \
+              "Make sure TMPDIR (or /tmp) has room, then push again."
+cat "$tmp/private.main.nul" "$tmp/private.base.nul" > "$tmp/private.nul" \
+    || refuse "cannot join the two lists of development-only paths." \
+              "Make sure TMPDIR (or /tmp) has room, then push again."
+private=()
+while IFS= read -r -d '' p; do
+    private+=("${p,,}")          # lowercase (ASCII: LC_ALL=C)
+done < "$tmp/private.nul"
+
+# A path is private when it, or the part of it before its first "#" or "?",
+# is a listed path, lies under a listed directory, or is an agent's notes:
+# CLAUDE.md, CLAUDE.local.md, AGENTS.md, GEMINI.md, .cursorrules or
+# copilot-instructions.md, or a copy of one under a longer name
+# (CLAUDE.md.bak), or anything under .claude/, .codex/ or .agents/, wherever
+# it sits. Compared without regard to case.
+is_private() {
+    local f="${1,,}"
+    listed "$f" || listed "${f%%[#?]*}"
+}
+listed() {
+    local f="$1" p
+    case "/$f" in
+        */claude.md|*/claude.md.*|*/claude.local.md|*/claude.local.md.*) return 0 ;;
+        */agents.md|*/agents.md.*|*/gemini.md|*/gemini.md.*) return 0 ;;
+        */.cursorrules|*/.cursorrules.*|*/copilot-instructions.md|*/copilot-instructions.md.*) return 0 ;;
+        */.claude/*|*/.codex/*|*/.agents/*) return 0 ;;
+    esac
+    [ -n "$f" ] || return 1
+    for p in "${private[@]}"; do
+        [ "$f" = "$p" ] && return 0
+        [[ "$f" == "$p"/* ]] && return 0
+    done
+    return 1
+}
+
+# --- 3. the expected tree: that commit less the two lists ---------------------
+# Built in a temporary index exactly as step 3 builds the drop: the same
+# entries, each read by Git as the literal path it is. Any other tree -- an
+# untracked file added, an uncommitted edit, a commit not on main -- is
+# refused, so nothing reaches the drop that the merged commit did not hold.
+expected="$(GIT_INDEX_FILE="$tmp/index" git read-tree "$base" \
+            && GIT_INDEX_FILE="$tmp/index" git --literal-pathspecs rm -r -q --cached --ignore-unmatch \
+                   --pathspec-file-nul --pathspec-from-file="$tmp/private.nul" \
+            && GIT_INDEX_FILE="$tmp/index" git write-tree)" && [ -n "$expected" ] \
+    || refuse "cannot build the expected tree from ${base:0:12} less the private paths." \
+              "Check that git can read the clone (git fsck), then cut the drop again in a fresh clone (docs/RELEASING.md step 3)."
+
+# The files the two lists take out of that commit, and their blobs: a file in
+# the drop with exactly the bytes of one of them, under any other name, is
+# refused below. An empty file is not compared, since it holds nothing.
+stripped="$(git diff-tree -r --no-renames --no-abbrev --diff-filter=D --raw "$base" "$expected")" \
+    && stripped_blobs="$(printf '%s\n' "$stripped" | awk 'NF { print $3 }' \
+                         | git cat-file --batch-check='%(objectname) %(objecttype) %(objectsize)')" \
+    || refuse "cannot read the files the two lists take out of ${base:0:12}." \
+              "Check that git can read the clone (git fsck), then cut the drop again in a fresh clone (docs/RELEASING.md step 3)."
+stripped_blobs=$'\n'"$(printf '%s\n' "$stripped_blobs" | awk '$2 == "blob" && $3 > 0 { print $1 }')"$'\n'
+stripped_name() {   # stripped_name <blob>: a path the two lists take out that holds it
+    printf '%s\n' "$stripped" | awk -v blob="$1" '$3 == blob { sub(/^[^\t]*\t/, ""); print; exit }'
+}
+
+# --- 4. what the drop may carry ----------------------------------------------
+# A page marker of the private texts: an emphasis mark, a bracket, a volume
+# name of up to sixty characters, "p." and a page number, arabic or roman,
+# with any spacing (a tab, a no-break space) or none, and an abbreviation
+# between them if one stands there ("p. seq. 12", an estimated page). Searched
+# in every file, binary ones too, and in the commit and tag messages; and, in
+# every file without a NUL byte, in the other spellings MARKER_SCAN reads.
+nbsp=$'\302\240'
+gap="[[:space:]${nbsp}]*"
+CORPUS_MARKER="[*_]${gap}\\[([^]]{0,59}[^]A-Za-z0-9_])?p\\.${gap}([A-Za-z]{1,6}\\.${gap})?[0-9ivxlcIVXLC]"
+
+# Binary files the drop may carry, by path and kind: the atlas, the app icons,
+# Swiss Ephemeris data files and font files, each only as the file ASSET_PINS
+# pins (below). Any other file holding a NUL byte
+# (a UTF-16 text, a compressed or packed file, a text file under ephe/ or
+# fonts/) is refused, since nothing can read it for the texts. A font or an
+# ephemeris file must also begin as one does (asset_kind_ok), so that a text
+# given such a name is refused too. Every asset is searched for the markers
+# as UTF-16 text as well, so that such a text inside one is found. A WOFF or
+# WOFF2 font is refused, by its name or its leading tag: its tables are
+# compressed, so a marker inside one cannot be read here.
+is_asset() {
+    case "$1" in
+        atlas.db|app_icon.icns|app_icon.ico|app_icon_source.png) return 0 ;;
+        ephe/*/*|fonts/*/*) return 1 ;;
+        ephe/*.se1) return 0 ;;
+        fonts/*.ttf|fonts/*.otf|fonts/*.woff|fonts/*.woff2) return 0 ;;
+        *) return 1 ;;
+    esac
+}
+
+# A font file begins with its format's tag (TrueType 00 01 00 00, OpenType
+# "OTTO", WOFF "wOFF", WOFF2 "wOF2"); a Swiss Ephemeris file with "SWISSEPH".
+# Reads the first eight bytes of the file named second, as hex.
+asset_kind_ok() {   # asset_kind_ok <path in the drop> <file holding its blob>
+    local head
+    head="$(head -c 8 -- "$2" | od -An -tx1 | tr -d ' \n')" || return 1
+    case "$1" in
+        ephe/*.se1) [ "${head:0:16}" = 5357495353455048 ] ;;
+        fonts/*) case "${head:0:8}" in 00010000|4f54544f|774f4646|774f4632) return 0 ;; *) return 1 ;; esac ;;
+        *) return 0 ;;
+    esac
+}
+
+# A compressed font: named .woff or .woff2, or beginning with WOFF's tag
+# ("wOFF") or WOFF2's ("wOF2") whatever its name.
+is_compressed_font() {   # is_compressed_font <path in the drop> <file holding its blob>
+    local head
+    case "$1" in
+        fonts/*.woff|fonts/*.woff2) return 0 ;;
+        fonts/*) ;;
+        *) return 1 ;;
+    esac
+    head="$(head -c 4 -- "$2" | od -An -tx1 | tr -d ' \n')" || return 0
+    case "$head" in 774f4646|774f4632) return 0 ;; *) return 1 ;; esac
+}
+
+# Every binary file a drop may carry, pinned path for path by its SHA-256 (as
+# sha256sum prints it): an asset is published only when its bytes are the ones
+# pinned here. The marker search cannot read inside a compressed file (an
+# icon's image data, a font's tables), so the pin is what holds each asset to
+# the bytes committed beside it: an asset changes, or a new one enters a drop,
+# only when its line here changes by pull request. A pin says which bytes were
+# merged with it, not that they are clean.
+ASSET_PINS='
+b28378e7ea7d23b355a38b9a373990b94d2d4062eff215ac19fcc14d35057314  app_icon.icns
+18ac416fb977457af8f30aa72f3f77b6eefa73c8ed6478824ffeca5391bdb319  app_icon.ico
+940828da1a116039f8562bd4c29461740a408bff4f7648309e6a3b4cc01fc1a1  app_icon_source.png
+61e4a28deba7a12040cfb7a8940bcc10b7992208a8118fff5097664eb4ac132d  atlas.db
+'
+asset_pinned() {   # asset_pinned <path in the drop> <file holding its blob>: 0 pinned, 1 not, 2 no digest
+    asset_sum=""
+    if command -v sha256sum >/dev/null 2>&1; then
+        asset_sum="$(sha256sum < "$2")" || return 2
+    elif command -v shasum >/dev/null 2>&1; then
+        asset_sum="$(shasum -a 256 < "$2")" || return 2
+    else
+        return 2
+    fi
+    asset_sum="${asset_sum%% *}"
+    [[ "$asset_sum" =~ ^[0-9a-f]{64}$ ]] || return 2
+    case "$ASSET_PINS" in *$'\n'"$asset_sum  $1"$'\n'*) return 0 ;; *) return 1 ;; esac
+}
+
+# The page markers in their other spellings, read by python3 -I (nothing from
+# the environment or the checkout): every file of the commit without a NUL
+# byte, with its HTML entities, \u and \x escapes, Markdown escapes and
+# emphasis tags undone, its compatibility forms folded (full-width brackets,
+# thin and narrow no-break spaces), its invisible characters taken out and its
+# line breaks joined, read as it stands and again with its adjacent quoted
+# strings joined ("abc" "def", over lines too); then every run of sixteen
+# base64 characters or more in it, so joined, and every block of such runs
+# wrapped over lines, quoted or not, joined across its line breaks (and again
+# without its first line, which may be a label above it), each decoded,
+# inflated where it is gzip or zlib (256 MiB in all, past which the scan
+# fails), and read the same way, two levels deep. A locator in brackets that
+# opens a line is a marker too, emphasised or not; inside a line it is a
+# citation the reader is shown. Prints <commit>:<path> for each file that
+# carries one, and fails when it cannot read the tree.
+MARKER_SCAN="$(cat <<'PY'
+import base64, html, re, subprocess, sys, unicodedata, zlib
+
+EMPHASISED = re.compile(r"[*_]\s*\[(?:[^\]]{0,59}[^\]A-Za-z0-9_])?p\.\s*(?:[A-Za-z]{1,6}\.\s*)?[0-9ivxlcIVXLC]")
+OPENS_A_LINE = re.compile(r"^[ \t]*\[[^\]\n]{0,59}[^\]A-Za-z0-9_\n]p\.[ \t]*(?:[A-Za-z]{1,6}\.[ \t]*)?"
+                          r"[0-9ivxlcIVXLC][^\]\n]{0,40}\]", re.M)
+ESCAPED = re.compile(r"\\u([0-9A-Fa-f]{4})|\\U([0-9A-Fa-f]{8})|\\x([0-9A-Fa-f]{2})")
+MARKDOWN = re.compile(r"\\([\[\]*_])")
+EMPHASIS = re.compile(r"</?(?:em|i|b|strong|cite)\b[^<>]{0,200}>", re.I)
+NON_ASCII = re.compile(r"[^\x00-\x7f]")
+SPACES = re.compile(r"\s+")
+BASE64 = re.compile(r"[A-Za-z0-9+/_-]{16,}")
+JOINED = re.compile(r"""(["'])[ \t]*(?:\+[ \t]*)?(?:\\?\r?\n[ \t]*(?:\+[ \t]*)?)?\1""")
+# A block of base64 wrapped over lines, quoted or not: lines that end in
+# sixteen base64 characters or more (then perhaps a quote, a comma, a plus or a
+# backslash), each going on into the next after its indent and perhaps a quote,
+# and the last line's run of any length. A block is cut at those breaks, each
+# beginning where a run ends, so that a run's own last "+" stays in it.
+BREAK = r"""["']?(?:[ \t]*[,+\\])?[ \t]*\r?\n[ \t]*["']?"""
+WRAPPED = re.compile(r"[A-Za-z0-9+/_-]{16,}(?:%s[A-Za-z0-9+/_-]{16,})*(?:%s[A-Za-z0-9+/_-]+)?" % (BREAK, BREAK))
+LINE_BREAK = re.compile(r"(?![A-Za-z0-9+/_-])" + BREAK)
+LIMIT = [1 << 28]       # what all inflating may yield, for the whole commit
+
+
+def char(m):
+    try:
+        return chr(int(m.group(1) or m.group(2) or m.group(3), 16))
+    except (ValueError, OverflowError):
+        return m.group(0)
+
+
+def visible(m):
+    return "" if unicodedata.category(m.group(0)) == "Cf" else m.group(0)
+
+
+def folded(text):
+    text = ESCAPED.sub(char, html.unescape(text))
+    text = NON_ASCII.sub(visible, unicodedata.normalize("NFKC", text))
+    return EMPHASIS.sub("*", MARKDOWN.sub(r"\1", text))
+
+
+def unpacked(data):
+    yield data
+    if data[:2] == b"\x1f\x8b" or (len(data) > 1 and data[0] & 15 == 8 and (data[0] * 256 + data[1]) % 31 == 0):
+        try:
+            inner = zlib.decompressobj(47).decompress(data, LIMIT[0] + 1)
+        except zlib.error:
+            return
+        LIMIT[0] -= len(inner)
+        if LIMIT[0] < 0:
+            sys.exit("its gzip or zlib data inflates past what the scan reads (256 MiB)")
+        yield inner
+
+
+def marked(data, depth):
+    text = data.decode("utf-8", "replace")
+    joined = JOINED.sub("", text)
+    plain = folded(text)
+    if OPENS_A_LINE.search(plain) or any(EMPHASISED.search(SPACES.sub(" ", t)) for t in (plain, folded(joined))):
+        return True
+    if depth == 2:
+        return False
+    runs = dict.fromkeys(m.group(0) for m in BASE64.finditer(joined))
+    for m in WRAPPED.finditer(joined):
+        lines = LINE_BREAK.split(m.group(0))
+        if len(lines) > 1:          # the block joined, and again without its first line (a label above it)
+            runs.update(dict.fromkeys(("".join(lines), "".join(lines[1:]))))
+    for run in runs:
+        run = run.replace("-", "+").replace("_", "/")
+        if len(run) % 4 == 1:
+            run = run[:-1]
+        try:
+            raw = base64.b64decode(run + "=" * (-len(run) % 4))
+        except ValueError:
+            continue
+        if any(marked(inner, depth + 1) for inner in unpacked(raw)):
+            return True
+    return False
+
+
+commit = sys.argv[1]
+listing = subprocess.run(["git", "ls-tree", "-r", "-z", commit], stdout=subprocess.PIPE, check=True).stdout
+blobs = []
+for entry in listing.split(b"\0"):
+    if entry:
+        meta, _, path = entry.partition(b"\t")
+        mode, kind, sha = meta.split(b" ")
+        if kind == b"blob":
+            blobs.append((sha, path))
+out = subprocess.run(["git", "cat-file", "--batch"], input=b"".join(s + b"\n" for s, _ in blobs),
+                     stdout=subprocess.PIPE, check=True).stdout
+at = 0
+for sha, path in blobs:
+    end = out.index(b"\n", at)
+    head = out[at:end].split(b" ")
+    if len(head) != 3 or head[0] != sha or head[1] != b"blob":
+        sys.exit("cannot read " + path.decode("utf-8", "replace"))
+    data = out[end + 1:end + 1 + int(head[2])]
+    at = end + 2 + int(head[2])
+    if b"\0" not in data and marked(data, 0):
+        sys.stdout.buffer.write(commit.encode() + b":" + path.replace(b"\n", b"?") + b"\n")
+PY
+)"
+
+# The version a drop's engine.py carries: exactly one line
+# APP_VERSION = "X.Y.Z" (section 0), whose value must be the version the
+# drop's messages and its tag name (docs/RELEASING.md step 2), so a working
+# tree's "-dev" is never published.
+app_version_of() {   # app_version_of <commit>: prints APP_VERSION's value, or fails
+    git cat-file blob "$1:engine.py" > "$tmp/engine.py" 2>/dev/null || return 1
+    [ "$(grep -c -E '^[[:space:]]*APP_VERSION[[:space:]]*(:[^=]*)?=' "$tmp/engine.py")" = 1 ] || return 1
+    sed -n -E 's/^APP_VERSION = "([0-9A-Za-z.+-]*)"$/\1/p' "$tmp/engine.py" | grep -E .
+}
+
+read_blob() {   # read_blob <sha> <path>: the blob into $tmp/blob, or refuse
+    git cat-file blob "$1" > "$tmp/blob" 2>"$tmp/blob.err" \
+        || refuse "cannot read $2 in $local_ref:" "$(cat "$tmp/blob.err")" \
+                  "Check that git can read the clone (git fsck), then cut the drop again (docs/RELEASING.md step 3)."
+}
+
+# The one message a drop's commit and tag carry.
+TITLE='Zīj (زِيج) v'
+is_release_message() {   # is_release_message <message> -> prints the version
+    local m="$1" v
+    m="${m%$'\n'}"
+    case "$m" in "$TITLE"*) ;; *) return 1 ;; esac
+    v="${m#"$TITLE"}"
+    [[ "$v" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || return 1
+    printf '%s' "$v"
+}
+is_release_message_exactly() {   # the one line ending in one newline: no blank line after, no bare end
+    local m="$1" nl=$'\n'
+    [ "${m%"$nl"}$nl" = "$m" ] && is_release_message "$m"
+}
+message_of() {   # message_of <object> <var>: the message, after the header, byte for byte, into <var>
+    local t m
+    t="$(git cat-file -t "$1")" || return 1
+    m="$(git cat-file "$t" "$1" && printf x)" || return 1
+    m="${m%x}"
+    case "$m" in *$'\n\n'*) ;; *) return 1 ;; esac
+    printf -v "$2" '%s' "${m#*$'\n\n'}"
+}
+
+# At most one author, one committer and one tagger line in an object's
+# header: check_ident reads the first, and git log shows the last.
+one_identity_each() {   # one_identity_each <object> <what>
+    local header field n
+    header="$(git cat-file "$(git cat-file -t "$1")" "$1" | sed -n '1,/^$/p')" \
+        || refuse "cannot read $2." \
+                  "Check that git can read the clone (git fsck), then cut the drop again (docs/RELEASING.md step 3)."
+    for field in author committer tagger; do
+        n="$(printf '%s\n' "$header" | grep -c "^$field ")"
+        [ "$n" -le 1 ] \
+            || refuse "$2 carries $n $field lines, so the $field it would be published under is unclear." \
+                      "Cut the drop again as docs/RELEASING.md step 3 says: commit-tree and tag -a write one of each."
+    done
+}
+
+# A drop's header holds only the lines step 3 writes, in their order, one of
+# each: a commit's tree, author and committer (no parent: a drop is a root
+# commit), a tag's object, type, name and tagger. Anything else there -- a
+# signature, an encoding, a merged tag, another field, a continuation line --
+# would be published with the drop. Each line is its field, one space and a
+# value with no control character and no space at its end; the header ends
+# with the blank line before the message. Read whole from a file, by lines of
+# any length, and a NUL byte anywhere in it is refused.
+own_fields_only() {   # own_fields_only <object> <commit|tag> <what> <line>...: appends to headers
+    # each <line> is a whole line ("tree <sha>") or a field alone ("author"),
+    # which then takes any value
+    local obj="$1" kind="$2" what="$3" n i want got
+    shift 3
+    n=$#
+    git cat-file "$kind" "$obj" > "$tmp/raw" 2>/dev/null \
+        && head -n "$((n + 1))" -- "$tmp/raw" > "$tmp/header" \
+        || refuse "cannot read $what." \
+                  "Check that git can read the clone (git fsck), then cut the drop again (docs/RELEASING.md step 3)."
+    if [ "$(tr -dc '\000' < "$tmp/header" | head -c 1 | wc -c)" -ne 0 ]; then
+        headers="$headers$what: its header holds a NUL byte"$'\n'
+        return
+    fi
+    local -a lines=()
+    mapfile -t lines < "$tmp/header"
+    for ((i = 0; i < n; i++)); do
+        want="$1"; shift
+        got="${lines[i]-}"
+        case "$want" in
+            *" "*) [ "$got" = "$want" ] ;;
+            *) [[ "$got" == "$want "?* ]] ;;
+        esac && [[ "$got" != *[[:cntrl:]]* && "$got" != *" " ]] || {
+            headers="$headers$what: header line $((i + 1)) is not its ${want%% *} line"$'\n'
+            return
+        }
+    done
+    if [ "${#lines[@]}" -le "$n" ]; then
+        headers="$headers$what: its header has no blank line after its ${want%% *} line"$'\n'
+    elif [ -n "${lines[n]}" ]; then
+        headers="$headers$what: its header goes on after its ${want%% *} line"$'\n'
+    fi
+}
+
+# The drop's author, committer and tagger: exactly the published name and
+# exactly the published address, byte for byte, on every line.
+check_ident() {   # check_ident <object> <header field> <what>: appends to idents
+    local line re='^(.*) <([^<>]*)> [0-9]+ [-+][0-9]{4}$' who addr
+    line="$(git cat-file "$(git cat-file -t "$1")" "$1" | sed -n "1,/^\$/s/^$2 //p" | head -1)"
+    if [[ "$line" =~ $re ]]; then
+        who="${BASH_REMATCH[1]}"; addr="${BASH_REMATCH[2]}"
+    else
+        idents="$idents$3: the $2 line cannot be read"$'\n'
+        return
+    fi
+    [ "$who" = "$drop_name" ] \
+        || idents="$idents$3: the $2 is '$who', not the published name zij.dropName sets"$'\n'
+    if ! [[ "$addr" =~ $NOREPLY_RE ]]; then
+        idents="$idents$3: the $2's address <$addr> is not a GitHub noreply address"$'\n'
+    elif [ "$addr" != "$drop_email" ]; then
+        idents="$idents$3: the $2's address <$addr> differs from <$drop_email>, the address zij.dropEmail sets"$'\n'
+    fi
+}
+
+carried=""; leaked=""; history=""; headers=""; mismatch=""; binary=""; compressed=""; messages=""; idents=""
+unpinned=""; versions=""; copies=""; foreign=""
+while read -r local_ref local_sha remote_ref remote_sha; do
+    cver=""; tver=""; aver=""
+    [ -z "${local_sha:-}" ] && continue
+    case "$local_sha" in *[!0]*) ;; *) continue ;; esac   # all-zero = a deletion, refused above
+    commit="$(git rev-parse --verify -q "$local_sha^{commit}")" \
+        || refuse "$local_ref does not name a commit; cannot check it." \
+                  "Push the drop commit and its annotated tag together, and nothing else, as docs/RELEASING.md step 3 does."
+
+    # one commit per release: nothing that carries history
+    # Commits this push would publish: those no public ref already has. A drop
+    # adds exactly one, with no parent; anything else is development history.
+    new="$(git rev-list "$commit" --not --remotes="$remote_name" 2>/dev/null)" \
+        || refuse "cannot list the commits $local_ref would publish." \
+                  "Check that git can read the clone (git fsck) and git fetch public, then push again."
+    n_new=$(printf '%s' "$new" | grep -c . || true)
+    if [ "$n_new" -gt 1 ]; then
+        history="$history$local_ref would publish $n_new commits"$'\n'
+    elif [ "$n_new" -eq 1 ] && [ "$(git rev-list --parents -n 1 "$commit" | wc -w)" -gt 1 ]; then
+        history="$history$local_ref's commit has a parent: build it with commit-tree"$'\n'
+    fi
+
+    # the tree, against the expected one
+    tree="$(git rev-parse --verify -q "$commit^{tree}")" \
+        || refuse "cannot read the tree of $local_ref." \
+                  "Check that git can read the clone (git fsck), then cut the drop again (docs/RELEASING.md step 3)."
+    if [ "$tree" != "$expected" ]; then
+        mismatch="$mismatch$local_ref differs from ${base:0:12} less the private paths:"$'\n'
+        mismatch="$mismatch$(git diff-tree -r --no-renames --name-status "$expected" "$tree" \
+                              | head -20 | sed 's/^/  /')"$'\n'
+    fi
+
+    # every file: private paths in any case, paths outside ASCII (where a
+    # letter of another alphabet can make one name look like another), copies
+    # of the files the lists take out, binary blobs outside the assets, assets
+    # that do not begin as their kind does. A blob that cannot be read is
+    # refused, never taken for text.
+    while IFS= read -r -d '' entry; do
+        meta="${entry%%$'\t'*}"; path="${entry#*$'\t'}"
+        is_private "$path" && carried="$carried$path"$'\n'
+        case "$path" in *[![:ascii:]]*) foreign="$foreign$path   (as bytes: $(printf '%q' "$path"))"$'\n' ;; esac
+        read -r _ type sha <<< "$meta"
+        [ "$type" = blob ] || continue
+        case "$stripped_blobs" in
+            *$'\n'"$sha"$'\n'*) copies="$copies$path   (the same bytes as $(stripped_name "$sha"))"$'\n' ;;
+        esac
+        if is_asset "$path"; then
+            read_blob "$sha" "$path"
+            asset_kind_ok "$path" "$tmp/blob" || binary="$binary$path (not a font or ephemeris file as named)"$'\n'
+            is_compressed_font "$path" "$tmp/blob" && compressed="$compressed$path"$'\n'
+            asset_pinned "$path" "$tmp/blob"
+            rc=$?
+            [ "$rc" -le 1 ] \
+                || refuse "cannot compute the SHA-256 of $path in $local_ref." \
+                          "Make sure sha256sum (or shasum) runs, then push again."
+            [ "$rc" -eq 0 ] || unpinned="$unpinned$path (its SHA-256: $asset_sum)"$'\n'
+            # A text in UTF-16, either byte order, inside any asset (behind a
+            # valid leading tag, or in the atlas or an icon): its NUL bytes
+            # taken out, it reads as the marker search reads.
+            tr -d '\000' < "$tmp/blob" > "$tmp/blob.text" \
+                || refuse "cannot read $path in $local_ref for page markers." \
+                          "Make sure TMPDIR (or /tmp) has room, then push again."
+            grep -a -q -E "$CORPUS_MARKER" "$tmp/blob.text"
+            rc=$?
+            [ "$rc" -le 1 ] \
+                || refuse "cannot search $path in $local_ref for page markers." \
+                          "Make sure TMPDIR (or /tmp) has room and grep runs, then push again."
+            [ "$rc" -eq 0 ] && leaked="$leaked$path"$'\n'
+            continue
+        fi
+        read_blob "$sha" "$path"
+        nul="$(tr -dc '\000' < "$tmp/blob" | head -c 1 | wc -c)"
+        [ "${nul:-1}" -eq 0 ] || binary="$binary$path"$'\n'
+    done < <(git ls-tree -r -z "$commit")
+
+    # page markers in any file, read as bytes (-a: binary files too)
+    hits="$(git grep -a -l -E "$CORPUS_MARKER" "$commit" -- . 2>"$tmp/grep.err")"
+    rc=$?
+    # any error, even with "no match" (1), means a file went unsearched
+    { [ "$rc" -le 1 ] && [ ! -s "$tmp/grep.err" ]; } \
+        || refuse "cannot search $local_ref for page markers:" "$(cat "$tmp/grep.err")" \
+                  "Fix what git grep reports above (git fsck if it cannot read an object), then push again."
+    # ... and in the other spellings, in every file without a NUL byte
+    more="$(python3 -I -c "$MARKER_SCAN" "$commit" 2>"$tmp/scan.err")" \
+        || refuse "cannot search $local_ref for page markers in their other spellings:" \
+                  "$(tail -n 4 "$tmp/scan.err")" \
+                  "Make sure python3 runs (it reads every file for the markers), then push again."
+    [ -n "$more" ] && hits="$hits${hits:+$'\n'}$more"
+    [ -n "$hits" ] && leaked="$leaked$hits"$'\n'
+
+    # the messages: exactly the release's one line, and no marker in them
+    message_of "$commit" cmsg || refuse "cannot read the commit message of $local_ref." \
+        "Check that git can read the clone (git fsck), then cut the drop again (docs/RELEASING.md step 3)."
+    cver="$(is_release_message_exactly "$cmsg")" \
+        || messages="$messages$local_ref: the commit message is not exactly '${TITLE}X.Y.Z'"$'\n'
+    printf '%s' "$cmsg" | grep -q -E "$CORPUS_MARKER" \
+        && messages="$messages$local_ref: the commit message carries a page marker"$'\n'
+    aver="$(app_version_of "$commit")" || aver=""
+    if [ -z "$aver" ]; then
+        versions="$versions$local_ref: engine.py has no one line APP_VERSION = \"X.Y.Z\" to read"$'\n'
+    elif [ -n "${cver:-}" ] && [ "$aver" != "$cver" ]; then
+        versions="$versions$local_ref: engine.py's APP_VERSION is $aver, not $cver, the version the commit names"$'\n'
+    fi
+    one_identity_each "$commit" "$local_ref's commit"
+    own_fields_only "$commit" commit "$local_ref's commit" "tree $tree" author committer
+    check_ident "$commit" author "$local_ref's commit"
+    check_ident "$commit" committer "$local_ref's commit"
+    # A tag, however it is named on the command line: pushed by its name, by
+    # its object name, or to a tag's name on the public side. It is checked
+    # under the name it is published as.
+    is_tag=""
+    case "$local_ref" in refs/tags/*) is_tag=1 ;; esac
+    case "$remote_ref" in refs/tags/*) is_tag=1 ;; esac
+    [ "$(git cat-file -t "$local_sha" 2>/dev/null)" = tag ] && is_tag=1
+    tag_name="${remote_ref#refs/tags/}"
+    case "$is_tag" in
+        1)
+            [ "$(git cat-file -t "$local_sha")" = tag ] \
+                && own_fields_only "$local_sha" tag "$local_ref" "object $commit" "type commit" \
+                       "tag $tag_name" tagger
+            if [ "$(git cat-file -t "$local_sha")" != tag ] \
+               || [ "$(git cat-file tag "$local_sha" | sed -n 's/^type //p' | head -1)" != commit ]; then
+                messages="$messages$local_ref: not an annotated tag of the drop commit (git tag -a)"$'\n'
+            else
+                message_of "$local_sha" tmsg || refuse "cannot read the message of $local_ref." \
+                    "Check that git can read the clone (git fsck), then tag the drop again (docs/RELEASING.md step 3)."
+                one_identity_each "$local_sha" "$local_ref"
+                check_ident "$local_sha" tagger "$local_ref"
+                tver="$(is_release_message_exactly "$tmsg")" \
+                    || messages="$messages$local_ref: the tag message is not exactly '${TITLE}X.Y.Z'"$'\n'
+                printf '%s' "$tmsg" | grep -q -E "$CORPUS_MARKER" \
+                    && messages="$messages$local_ref: the tag message carries a page marker"$'\n'
+                if [ -n "${tver:-}" ] && { [ "$tag_name" != "v$tver" ] \
+                                           || [ "${cver:-}" != "$tver" ]; }; then
+                    messages="$messages$local_ref: the tag's name, its message and the commit's message name different versions"$'\n'
+                fi
+                if [ -n "$aver" ] && [ "$tag_name" != "v$aver" ]; then
+                    versions="$versions$local_ref: engine.py's APP_VERSION is $aver, so its tag would be v$aver"$'\n'
+                fi
+            fi ;;
+    esac
+done <<< "$pushed"
+
+[ -n "$history" ] && refuse "this push would publish development history." "" \
+    "$(printf '%s' "$history" | sed 's/^/    /')" "" \
+    "A drop is ONE commit with no parent (docs/RELEASING.md step 3)."
+
+[ -n "$headers" ] && refuse "the drop's header holds lines other than its own, which would be published with it." "" \
+    "$(printf '%s' "$headers" | sed 's/^/    /')" "" \
+    "Cut the drop again as docs/RELEASING.md step 3 says: its commit holds only tree, author and committer, its tag only object, type, tag and tagger."
+
+[ -n "$mismatch" ] && refuse "the drop's tree is not the tested commit less the development-only paths." "" \
+    "$(printf '%s' "$mismatch" | sed 's/^/    /')" "" \
+    "Cut the drop again as docs/RELEASING.md step 3 says, in a fresh clone standing at the" \
+    "tested commit, and push it from there."
+
+[ -n "$carried" ] && refuse "the drop carries development-only paths (tools/private-paths.txt, in any case)." "" \
+    "$(printf '%s' "$carried" | sort -u | sed 's/^/    /')" "" \
+    "Take them out of main, or list them, and cut the drop again (docs/RELEASING.md step 3)."
+
+[ -n "$copies" ] && refuse "the drop carries copies of development-only files under other names (the same bytes as a file the two lists take out)." "" \
+    "$(printf '%s' "$copies" | sort -u | sed 's/^/    /')" "" \
+    "Take each copy out of main, or list it in tools/private-paths.txt, and cut the drop again (docs/RELEASING.md step 3)."
+
+[ -n "$foreign" ] && refuse "the drop carries paths with characters outside ASCII, which can pass for other names." "" \
+    "$(printf '%s' "$foreign" | sort -u | sed 's/^/    /')" "" \
+    "Rename each in plain ASCII on main by pull request, and cut the drop again (docs/RELEASING.md step 3)."
+
+[ -n "$binary" ] && refuse "the drop carries binary files outside the known assets, which cannot be read for the texts." "" \
+    "$(printf '%s' "$binary" | sort -u | sed 's/^/    /')" "" \
+    "Take them out of main, or, if one is a real asset, add it to is_asset in this hook by pull request."
+
+[ -n "$leaked" ] && refuse "the drop carries page markers from the private texts (verbatim translation):" "" \
+    "$(printf '%s' "$leaked" | sort -u | sed 's/^/    /')" "" \
+    "Take them out of main by pull request and cut the drop again. There is no override."
+
+[ -n "$compressed" ] && refuse "the drop carries WOFF or WOFF2 fonts, whose compressed tables cannot be searched for the texts." "" \
+    "$(printf '%s' "$compressed" | sort -u | sed 's/^/    /')" "" \
+    "Ship each as an uncompressed TrueType or OpenType font (.ttf, .otf), or take it out of main, and cut the drop again."
+
+[ -n "$unpinned" ] && refuse "the drop carries binary files that are not the ones this hook pins by their SHA-256." "" \
+    "$(printf '%s' "$unpinned" | sort -u | sed 's/^/    /')" "" \
+    "Restore the pinned file on main, or, if the change is meant (a rebuilt atlas, a new icon), pin its new SHA-256 in ASSET_PINS in this hook by pull request, and cut the drop again."
+
+[ -n "$messages" ] && refuse "the drop's messages are not the release's one line." "" \
+    "$(printf '%s' "$messages" | sed 's/^/    /')" "" \
+    "The commit and the tag each carry exactly '${TITLE}X.Y.Z', nothing more (docs/RELEASING.md step 3)."
+
+[ -n "$versions" ] && refuse "the drop's engine.py does not carry the version it is released as." "" \
+    "$(printf '%s' "$versions" | sed 's/^/    /')" "" \
+    "Set APP_VERSION in engine.py (section 0) to the release's version on main by pull request (docs/RELEASING.md step 2), and cut the drop again."
+
+[ -n "$idents" ] && refuse "the drop's author, committer or tagger is not the published name and noreply address." "" \
+    "$(printf '%s' "$idents" | sed 's/^/    /')" "" \
+    "Cut the drop again as docs/RELEASING.md step 3 says: it sets the name from zij.dropName and the" \
+    "address from zij.dropEmail for the commit and the tag alike."
+
+# --- 5. the release gate: the clock, judging the commit the drop is cut from ---
+# origin/main's copy of tools/state.py, not the working copy's, given that
+# commit: the checkout must stand at it, clean, with the texts present, a
+# register that describes it and no locator awaiting registration.
+git show "$main_ref:tools/state.py" > "$tmp/state.py" 2>/dev/null \
+    || refuse "origin/main has no tools/state.py, so the release gate cannot run." \
+              "Restore tools/state.py on main by pull request, git fetch origin, and cut the drop again."
+if ! gate="$(python3 "$tmp/state.py" --strict --release "$base" --engine "$top" 2>&1)"; then
+    flagged="$(printf '%s\n' "$gate" | grep -E '^ {16}(!! |   [^ ])|flagged|Error|error' | head -24 \
+               | sed 's/^ \{0,14\}//')"
+    [ -n "$flagged" ] \
+        || refuse "the clock (tools/state.py --strict --release ${base:0:12}) could not run; it flagged nothing. Its last lines:" \
+                  "" "$(printf '%s\n' "$gate" | tail -n 8 | sed 's/^/    /')" "" \
+                  "Make python3 run origin/main's tools/state.py (the lines above say what stopped it), then push again."
+    refuse "the clock (tools/state.py --strict --release ${base:0:12}) flags something; a release waits for it." \
+           "" "$flagged" "" \
+           "Settle each line flagged above (each says what to do), then cut the drop again from a commit on main."
+fi
+
+# --- 6. the release whole: the public main and its tag, in one push ----------
+# A release reaches the public repository in one push that carries both its
+# refs (step 3 pushes them with --atomic, so that both land or neither does):
+# the public main, created or replaced, and exactly one new release tag that
+# names, once peeled, the very commit main is set to -- the drop, with no
+# parent. main alone, a tag alone, two tags, or a tag of any other commit
+# (even one with the same tree, name and message) would split the release.
+n_tags="$(printf '%s' "$release_tags" | grep -c .)" || n_tags=0
+whole=""
+if [ -z "$main_sha" ]; then
+    whole="the push carries a release tag without the public main"
+elif [ "$n_tags" -eq 0 ]; then
+    whole="the push carries the public main without its release tag"
+elif [ "$n_tags" -gt 1 ]; then
+    whole="the push carries $n_tags release tags: $(printf '%s' "$release_tags" | cut -d ' ' -f 1 | tr '\n' ' ')"
+else
+    read -r tag_ref tag_sha <<< "$release_tags"
+    peeled="$(git rev-parse --verify -q "$tag_sha^{commit}" 2>/dev/null)" || peeled=""
+    parents="$(git rev-list --parents -n 1 "$main_sha" 2>/dev/null)" || parents=""
+    if [ "$peeled" != "$main_sha" ]; then
+        named="${peeled:0:12}"
+        whole="$tag_ref names ${named:-no commit}, not ${main_sha:0:12}, the commit main would be set to"
+    elif [ "$(printf '%s' "$parents" | wc -w)" -ne 1 ]; then
+        whole="main would be set to ${main_sha:0:12}, which is not a commit with no parent"
+    fi
+fi
+[ -z "$whole" ] || refuse "this push does not publish a release whole: the public main and one new release tag naming the same drop, together." "" \
+    "    $whole" "" \
+    "Push the drop and its tag together, in one push, as docs/RELEASING.md step 3 does: ZIJ_PUBLIC_DROP=1 git push --atomic public +<drop>:refs/heads/main refs/tags/vX.Y.Z."
+
+exit 0

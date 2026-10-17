@@ -1,0 +1,15 @@
+# The suite's own extras, on top of requirements.txt. Nothing here is
+# imported by the app, and nothing here goes into a build: these are the
+# packages a test needs to open and inspect something the running app only
+# ever hands to a browser. CI installs THIS file, not requirements.txt, so
+# that a check cannot pass by skipping.
+-r requirements.txt
+
+# Pinned from Executable/../.venv, the venv the suite runs on.
+#
+# tests/test_symbol_font_2026_09_15.py opens the two embedded WOFF2 faces
+# and asserts each maps exactly the code points glyph_font.COVERED claims
+# for it. fontTools reads the font; brotli is what its WOFF2 decoder calls,
+# and without it that test skips just as surely as without fontTools.
+fonttools==4.65.0
+brotli==1.2.0
