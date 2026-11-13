@@ -1,0 +1,18 @@
+# The outline data file is published byte for byte (its SHA-256 is pinned in
+# the tests): no line-ending conversion on any checkout.
+data/mean_time_outlines.json -text
+# So is the list of the places whose zone is not the zone boundaries' own.
+data/place_zones.tsv -text
+# And so is the table of the clocks particular places kept before 1970,
+# and the list of the documents its years name.
+data/place_clocks.tsv -text
+data/place_clock_sources.tsv -text
+# The star lists and the sky's source ids are checked as they are read, the same way.
+data/fixed_star_lists.tsv -text
+data/sky_source_ids.tsv -text
+# The fixed-star catalogue is checked against the SHA-256 the engine records:
+# no line-ending conversion on any checkout.
+ephe/sefstars.txt -text
+ephe/sefstars_added.txt -text
+# The sky's pinned scripts are checked against the SHA-256 the sky records, the same way.
+vendor/*.js -text

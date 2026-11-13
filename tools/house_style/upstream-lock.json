@@ -1,0 +1,238 @@
+{
+ "format": 2,
+ "fonttools": "4.65.0",
+ "brotli": "1.2.1",
+ "downloads": [
+  {
+   "file": "plex-sans-condensed-2.0.0.zip",
+   "url": "https://github.com/IBM/plex/releases/download/%40ibm/plex-sans-condensed%402.0.0/ibm-plex-sans-condensed.zip",
+   "sha256": "f86ba73abbeed7cf7690ead863192a87211dfc2b0cef0ac6bf4700533ec5ab9e"
+  },
+  {
+   "file": "plex-mono-2.5.0.zip",
+   "url": "https://github.com/IBM/plex/releases/download/%40ibm/plex-mono%402.5.0/ibm-plex-mono.zip",
+   "sha256": "6d23f01257663d8cc49a0d64c22ced630b79e0e2a0ac08a0da86e9a38bbc481c"
+  },
+  {
+   "file": "dejavu-2.37.zip",
+   "url": "https://github.com/dejavu-fonts/dejavu-fonts/releases/download/version_2_37/dejavu-fonts-ttf-2.37.zip",
+   "sha256": "7576310b219e04159d35ff61dd4a4ec4cdba4f35c00e002a136f00e96a908b0a"
+  },
+  {
+   "file": "EBGaramond-Regular.ttf",
+   "url": "https://raw.githubusercontent.com/octaviopardo/EBGaramond12/106a4a6d377987459ae5e68673a4570f13b957fb/fonts/ttf/EBGaramond-Regular.ttf",
+   "sha256": "2028dc06d3c130b4761693481436a32a8e35ed500bf58c25c53de004106125b8"
+  },
+  {
+   "file": "EBGaramond-Italic.ttf",
+   "url": "https://raw.githubusercontent.com/octaviopardo/EBGaramond12/106a4a6d377987459ae5e68673a4570f13b957fb/fonts/ttf/EBGaramond-Italic.ttf",
+   "sha256": "d4ad1d0a9390d26d6d3f176117a1d121441edb8c8632bfca52cfad084b9059cb"
+  },
+  {
+   "file": "EBGaramond-SemiBold.ttf",
+   "url": "https://raw.githubusercontent.com/octaviopardo/EBGaramond12/106a4a6d377987459ae5e68673a4570f13b957fb/fonts/ttf/EBGaramond-SemiBold.ttf",
+   "sha256": "ebf827a102983972abb2a1a3964afd5a7b79ca04f2ddd9e53917ce623cefdf2c"
+  },
+  {
+   "file": "EBGaramond-OFL.txt",
+   "url": "https://raw.githubusercontent.com/octaviopardo/EBGaramond12/106a4a6d377987459ae5e68673a4570f13b957fb/OFL.txt",
+   "sha256": "058611bd968817d532cedeab6acaa055e882d365a88523df00e7917ad7a0f704"
+  }
+ ],
+ "saved_faces": [
+  "eb-garamond-400.ttf",
+  "eb-garamond-600.ttf",
+  "zij-interface-400.ttf",
+  "zij-interface-marks-400.woff2",
+  "dejavu-sans-400.ttf"
+ ],
+ "faces": [
+  {
+   "file": "eb-garamond-400.ttf",
+   "family": "EB Garamond",
+   "origin_family": "EB Garamond",
+   "weight": 400,
+   "style": "normal",
+   "download": "EBGaramond-Regular.ttf",
+   "member": null,
+   "source_file": "EBGaramond-Regular.ttf",
+   "source_sha256": "2028dc06d3c130b4761693481436a32a8e35ed500bf58c25c53de004106125b8",
+   "upstream_release": "EB Garamond 1.002 roman; upstream binary snapshot 106a4a6d377987459ae5e68673a4570f13b957fb (upstream has no tagged release)",
+   "upstream_version": "Version 1.002; ttfautohint (v1.8.4.16-eb64)",
+   "role": "page",
+   "licence": "eb-garamond-OFL.txt"
+  },
+  {
+   "file": "eb-garamond-400-italic.ttf",
+   "family": "EB Garamond",
+   "origin_family": "EB Garamond",
+   "weight": 400,
+   "style": "italic",
+   "download": "EBGaramond-Italic.ttf",
+   "member": null,
+   "source_file": "EBGaramond-Italic.ttf",
+   "source_sha256": "d4ad1d0a9390d26d6d3f176117a1d121441edb8c8632bfca52cfad084b9059cb",
+   "upstream_release": "EB Garamond 1.001 italic; upstream binary snapshot 106a4a6d377987459ae5e68673a4570f13b957fb (upstream has no tagged release)",
+   "upstream_version": "Version 1.001; ttfautohint (v1.8.4.16-eb64)",
+   "role": "page",
+   "licence": "eb-garamond-OFL.txt"
+  },
+  {
+   "file": "eb-garamond-600.ttf",
+   "family": "EB Garamond",
+   "origin_family": "EB Garamond",
+   "weight": 600,
+   "style": "normal",
+   "download": "EBGaramond-SemiBold.ttf",
+   "member": null,
+   "source_file": "EBGaramond-SemiBold.ttf",
+   "source_sha256": "ebf827a102983972abb2a1a3964afd5a7b79ca04f2ddd9e53917ce623cefdf2c",
+   "upstream_release": "EB Garamond 1.002 roman; upstream binary snapshot 106a4a6d377987459ae5e68673a4570f13b957fb (upstream has no tagged release)",
+   "upstream_version": "Version 1.002; ttfautohint (v1.8.4.16-eb64)",
+   "role": "page",
+   "licence": "eb-garamond-OFL.txt"
+  },
+  {
+   "file": "zij-interface-400.ttf",
+   "family": "Zij Interface",
+   "origin_family": "IBM Plex Sans Condensed",
+   "weight": 400,
+   "style": "normal",
+   "download": "plex-sans-condensed-2.0.0.zip",
+   "member": "ibm-plex-sans-condensed/fonts/complete/ttf/IBMPlexSansCondensed-Regular.ttf",
+   "source_file": "IBMPlexSansCondensed-Regular.ttf",
+   "source_sha256": "87aaee6ba9d2f80b8a3c1f6669e8c3d478b28b482f1d804917b3894694ccc12b",
+   "upstream_release": "@ibm/plex-sans-condensed@2.0.0",
+   "upstream_version": "Version 3.000",
+   "role": "page",
+   "licence": "ibm-plex-sans-condensed-OFL.txt"
+  },
+  {
+   "file": "zij-interface-600.ttf",
+   "family": "Zij Interface",
+   "origin_family": "IBM Plex Sans Condensed",
+   "weight": 600,
+   "style": "normal",
+   "download": "plex-sans-condensed-2.0.0.zip",
+   "member": "ibm-plex-sans-condensed/fonts/complete/ttf/IBMPlexSansCondensed-SemiBold.ttf",
+   "source_file": "IBMPlexSansCondensed-SemiBold.ttf",
+   "source_sha256": "acc2b1e3b9597ee13b08b767f845bd038fe120cbee806859af7c01b60fe6e9e6",
+   "upstream_release": "@ibm/plex-sans-condensed@2.0.0",
+   "upstream_version": "Version 3.000",
+   "role": "page",
+   "licence": "ibm-plex-sans-condensed-OFL.txt"
+  },
+  {
+   "file": "zij-numeric-400.ttf",
+   "family": "Zij Numeric",
+   "origin_family": "IBM Plex Mono",
+   "weight": 400,
+   "style": "normal",
+   "download": "plex-mono-2.5.0.zip",
+   "member": "ibm-plex-mono/fonts/complete/ttf/IBMPlexMono-Regular.ttf",
+   "source_file": "IBMPlexMono-Regular.ttf",
+   "source_sha256": "7c6fbddca4b700be918f5f6183d9bd4464fa427fe435f0b480d77fe2bb8c5a43",
+   "upstream_release": "@ibm/plex-mono@2.5.0",
+   "upstream_version": "Version 2.005",
+   "role": "code",
+   "licence": "ibm-plex-mono-OFL.txt"
+  },
+  {
+   "file": "dejavu-sans-400.ttf",
+   "family": "DejaVu Sans",
+   "origin_family": "DejaVu Sans",
+   "weight": 400,
+   "style": "normal",
+   "download": "dejavu-2.37.zip",
+   "member": "dejavu-fonts-ttf-2.37/ttf/DejaVuSans.ttf",
+   "source_file": "DejaVuSans.ttf",
+   "source_sha256": "7da195a74c55bef988d0d48f9508bd5d849425c1770dba5d7bfc6ce9ed848954",
+   "upstream_release": "DejaVu 2.37",
+   "upstream_version": "Version 2.37",
+   "role": "fallback",
+   "licence": "dejavu-Bitstream-Arev-DejaVu.txt"
+  },
+  {
+   "file": "zij-interface-marks-400.woff2",
+   "family": "Zij Interface Marks",
+   "origin_family": "IBM Plex Sans Condensed",
+   "weight": 400,
+   "style": "normal",
+   "download": "plex-sans-condensed-2.0.0.zip",
+   "member": "ibm-plex-sans-condensed/fonts/complete/ttf/IBMPlexSansCondensed-Regular.ttf",
+   "source_file": "IBMPlexSansCondensed-Regular.ttf",
+   "source_sha256": "87aaee6ba9d2f80b8a3c1f6669e8c3d478b28b482f1d804917b3894694ccc12b",
+   "upstream_release": "@ibm/plex-sans-condensed@2.0.0",
+   "upstream_version": "Version 3.000",
+   "role": "marks",
+   "licence": "fonts/OFL.txt"
+  },
+  {
+   "file": "zij-interface-marks-600.woff2",
+   "family": "Zij Interface Marks",
+   "origin_family": "IBM Plex Sans Condensed",
+   "weight": 600,
+   "style": "normal",
+   "download": "plex-sans-condensed-2.0.0.zip",
+   "member": "ibm-plex-sans-condensed/fonts/complete/ttf/IBMPlexSansCondensed-SemiBold.ttf",
+   "source_file": "IBMPlexSansCondensed-SemiBold.ttf",
+   "source_sha256": "acc2b1e3b9597ee13b08b767f845bd038fe120cbee806859af7c01b60fe6e9e6",
+   "upstream_release": "@ibm/plex-sans-condensed@2.0.0",
+   "upstream_version": "Version 3.000",
+   "role": "marks",
+   "licence": "fonts/OFL.txt"
+  }
+ ],
+ "licenses": [
+  {
+   "file": "eb-garamond-OFL.txt",
+   "download": "EBGaramond-OFL.txt",
+   "member": null,
+   "sha256": "058611bd968817d532cedeab6acaa055e882d365a88523df00e7917ad7a0f704"
+  },
+  {
+   "file": "ibm-plex-sans-condensed-OFL.txt",
+   "download": "plex-sans-condensed-2.0.0.zip",
+   "member": "ibm-plex-sans-condensed/LICENSE.txt",
+   "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+  },
+  {
+   "file": "ibm-plex-mono-OFL.txt",
+   "download": "plex-mono-2.5.0.zip",
+   "member": "ibm-plex-mono/LICENSE.txt",
+   "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+  },
+  {
+   "file": "dejavu-Bitstream-Arev-DejaVu.txt",
+   "download": "dejavu-2.37.zip",
+   "member": "dejavu-fonts-ttf-2.37/LICENSE",
+   "sha256": "7a083b136e64d064794c3419751e5c7dd10d2f64c108fe5ba161eae5e5958a93"
+  }
+ ],
+ "embedded_symbols": [
+  {
+   "file": "tae-fortune-400.woff2",
+   "family": "TAE Symbols",
+   "origin_family": "DejaVu Sans",
+   "constant": "_FORTUNE_WOFF2_B64",
+   "unicode_range": "U+2297",
+   "copyright_from": "dejavu-sans-400.ttf"
+  }
+ ],
+ "inherited_symbols": [
+  {
+   "file": "tae-symbols-400.ttf",
+   "family": "TAE Symbols",
+   "origin_family": "Noto Sans Symbols",
+   "constant": "_SYMBOLS_WOFF2_B64",
+   "unicode_range": "U+260A-260D, U+263D, U+263F-2640, U+2642-2644, U+2648-2653, U+26B9"
+  },
+  {
+   "file": "tae-symbols2-400.ttf",
+   "family": "TAE Symbols Sun",
+   "origin_family": "Noto Sans Symbols 2",
+   "constant": "_SYMBOLS2_WOFF2_B64",
+   "unicode_range": "U+25A1, U+25B3, U+2609"
+  }
+ ]
+}

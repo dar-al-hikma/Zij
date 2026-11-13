@@ -1,0 +1,58 @@
+name: Windows data folder
+
+# The data folder on Windows, against a second account, on a real machine.
+# The test suite stands Windows in on Linux; what only Windows can show --
+# whose a folder is, its access list, a junction's own owner, a volume that
+# keeps no lists -- is run here, by tests/windows_data_folder_check.py, on
+# GitHub's Windows runner: a machine thrown away after the job, where the job
+# is an administrator. The check makes a second local account with
+# `net user` (its password generated and never printed), gives folders to it
+# with `icacls /setowner`, reads the lists back with `icacls`, and launches
+# the data layer against each scene; the other account makes and opens files
+# through its own logon. The scenes of the files in the data folder are
+# launched by an ordinary account the check makes, through a scheduled task
+# that runs as it. It fails when any scene ends otherwise than it should.
+#
+# It runs on a pull request that changes the data layer, the check or this
+# file, once per push to it; on a push to main that changes them, a merge
+# among them; and by hand from the Actions tab. One run is a few minutes of
+# Windows time, which the account's minutes count twice.
+on:
+  push:
+    branches: [main]
+    paths:
+      - user_data.py
+      - tests/windows_data_folder_check.py
+      - .github/workflows/windows-data-folder.yml
+  pull_request:
+    paths:
+      - user_data.py
+      - tests/windows_data_folder_check.py
+      - .github/workflows/windows-data-folder.yml
+  workflow_dispatch:
+
+# Nothing at the top: the job asks for what it needs.
+permissions: {}
+
+jobs:
+  check:
+    # Asked for by the image's own name, as build.yml asks for it, never a
+    # `-latest` label that moves unasked.
+    runs-on: windows-2025-vs2026
+    timeout-minutes: 20
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          # The release the build and the test suite run on.
+          python-version: '3.14.8'
+
+      # The check needs nothing but the standard library and the data layer.
+      - name: The data folder against a second account
+        run: python tests/windows_data_folder_check.py

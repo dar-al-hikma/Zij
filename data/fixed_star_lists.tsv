@@ -1,0 +1,496 @@
+# The Fixed stars page's two longer lists, and the row of the page's star catalogue
+# that each entry takes. Generated; do not edit by hand.
+# id: the entry's number: hip Hipparcos, ngc New General Catalogue, messier Messier,
+# melotte Melotte. name: its traditional name or designation.
+# list: curated, which stands in both lists, or significant, in the longer list alone.
+# match: position, the two positions agree; same object, one object on two points;
+# added, no row in ephe/sefstars.txt, so its row is in ephe/sefstars_added.txt.
+# row: the key that reads its place.
+# rows: 486; SHA-256 of what follows: 73bcc4b1eb328445ef9052572f0d891564e9c44095047f432206f361471e72a4
+id	name	list	match	row
+hip:100027	Algedi	curated	position	,al-1Cap
+hip:100064	Algedi	curated	position	,al-2Cap
+hip:100310	Alshat	significant	position	Alshat
+hip:100345	Dabih	curated	position	Dabih
+hip:100453	Sadr	significant	position	Sador
+hip:100881	π Cap	curated	position	Oculus
+hip:101027	ρ Cap	curated	position	Bos
+hip:101120	ο Cap	curated	added	,HIP 101120
+hip:101123	ο Cap	curated	added	,HIP 101123
+hip:101138	ω¹ Cyg	curated	position	Ruchbah I
+hip:101243	ω² Cyg	significant	position	Ruchbah II
+hip:101421	Deneb Eldelphin	significant	position	Deneb Dulphim
+hip:101769	Rotanev	significant	position	Rotanev
+hip:101923	τ Cap	curated	added	taCap
+hip:101958	Sualocin	significant	position	Sualocin
+hip:101984	υ Cap	curated	position	,upCap
+hip:102098	Deneb Adige	curated	position	Deneb
+hip:102281	δ Del	significant	position	,deDel
+hip:102485	ψ Cap	significant	position	Pazan
+hip:102488	Gienah	curated	position	Gienah Cygni
+hip:102531	γ¹ Del	significant	added	ga-1Del
+hip:102532	γ² Del	significant	position	,ga-2Del
+hip:102618	Albali	significant	position	Albali
+hip:102978	ω Cap	significant	position	Baten Algiedi
+hip:10306	η Ari	significant	added	etAri
+hip:104019	η Cap	curated	position	Armus
+hip:104139	θ Cap	curated	position	Dorsum
+hip:104521	γ Equ	curated	position	,gaEqu
+hip:104732	ζ Cyg	significant	position	,zeCyg
+hip:104858	δ Equ	curated	position	,deEqu
+hip:104987	Kitalpha	curated	position	Kitalpha
+hip:105199	Alderamin	significant	position	Alderamin
+hip:105570	β Equ	curated	position	,beEqu
+hip:105881	ζ Cap	significant	position	Marakk
+hip:106032	Alfirk	significant	position	Alphirk
+hip:106278	Sadalsuud	curated	position	Sadalsuud
+hip:1067	Algenib	curated	position	Algenib
+hip:106723	ε Cap	curated	position	Castra
+hip:106985	Nashira	curated	position	Nashira
+hip:107188	κ Cap	curated	added	kaCap
+hip:107259	The garnet star	significant	position	Erakis
+hip:107315	Enif	significant	position	Enif
+hip:10732	θ Ari	significant	position	,thAri
+hip:107354	κ Peg	significant	position	Jih
+hip:107380	ι PsA	significant	position	,ioPsA
+hip:107556	Deneb Algedi	curated	position	Deneb Algedi
+hip:107608	θ PsA	significant	position	,thPsA
+hip:10826	Mira	curated	position	Mira
+hip:108917	Kurhah	significant	position	Kurdah
+hip:109074	Sadalmelik	curated	position	Sadalmelek
+hip:109176	ι Peg	significant	position	,ioPeg
+hip:109285	μ PsA	significant	position	,muPsA
+hip:109352	π¹ Peg	significant	position	,pi-1Peg
+hip:109410	π² Peg	significant	position	,piPeg
+hip:109427	Biham	significant	position	Biham
+hip:109492	ζ Cep	significant	position	Kurhah
+hip:110003	Ancha	significant	position	Ancha
+hip:110395	Sadachbia	curated	position	Sadalachbia
+hip:110672	Seat	curated	position	Seat
+hip:110960	ζ¹ Aqr	curated	position	Sadaltager
+hip:111188	β PsA	significant	position	Tien Kang
+hip:111497	η Aqr	curated	position	Hydria
+hip:111710	Situla	curated	position	Situla
+hip:111954	ε PsA	significant	position	,epPsA
+hip:112029	Homam	significant	position	Homam
+hip:112158	Matar	significant	position	Matar
+hip:112440	λ Peg	significant	position	Sadalbari
+hip:112724	ι Cep	significant	position	Alvahet
+hip:112748	Sadalbari	significant	position	,muPeg
+hip:112948	γ PsA	significant	position	,gaPsA
+hip:112961	Hydor	significant	position	Ekkhysis
+hip:113136	Skat	curated	position	Skat
+hip:113246	δ PsA	significant	position	Aboras
+hip:113368	Fomalhaut	curated	position	Fomalhaut
+hip:113881	Scheat	curated	position	Scheat
+hip:113889	Fumalsamakah	significant	position	Fum Alsamakah
+hip:113963	Markab	curated	position	Markab
+hip:114119	86 Aqr	significant	added	,HIP 114119
+hip:114341	88 Aqr	significant	position	,88Aqr
+hip:114375	89 Aqr	significant	added	,HIP 114375
+hip:11484	ξ² Cet	significant	position	,xi-2Cet
+hip:114855	ψ¹ Aqr	significant	position	,ps-1Aqr
+hip:114971	γ Psc	significant	position	Simmah
+hip:115033	ψ² Aqr	significant	added	ps-2Aqr
+hip:115438	98 Aqr	significant	position	,98Aqr
+hip:115669	99 Aqr	significant	added	,HIP 115669
+hip:115738	κ Psc	significant	position	,kaPsc
+hip:115830	θ Psc	significant	position	,thPsc
+hip:116247	101 Aqr	significant	added	,HIP 116247
+hip:116727	Errai	significant	position	Alrai
+hip:116758	ω¹ Aqr	significant	added	ome-1Aqr
+hip:116771	ι Psc	significant	position	,ioPsc
+hip:116928	λ Psc	significant	position	,laPsc
+hip:116971	ω² Aqr	significant	position	,ome-2Aqr
+hip:11767	Polaris	curated	position	Polaris
+hip:118268	ω Psc	significant	position	Vernalis
+hip:12093	ν Cet	significant	position	,nuCet
+hip:12387	δ Cet	significant	position	Phycochroma
+hip:12706	Kaffaljidhma	significant	position	Kaffaljidhma
+hip:12828	μ Cet	significant	position	,muCet
+hip:13254	16 Per	curated	position	,16Per
+hip:13268	Miram	significant	position	Miram
+hip:13531	τ Per	significant	position	,taPer
+hip:13701	Azha	significant	position	Azha
+hip:13847	Acamar	curated	position	Acamar
+hip:13914	ε Ari	curated	added	epAri
+hip:13954	λ Cet	significant	position	,laCet
+hip:14135	Menkar	curated	position	,alCet
+hip:14328	γ Per	significant	position	,gaPer
+hip:14576	Algol	curated	position	Algol
+hip:14632	ι Per	significant	position	,ioPer
+hip:14838	Botein	curated	position	Botein
+hip:15110	ζ Ari	curated	position	,zeAri
+hip:15197	Zibal	significant	position	Zibal
+hip:1562	Schemali	significant	position	Deneb Kaitos
+hip:15627	τ¹ Ari	curated	position	,ta-1Ari
+hip:15737	τ² Ari	curated	added	ta-2Ari
+hip:15863	Mirfak	curated	position	Mirfak
+hip:17358	δ Per	significant	position	,dePer
+hip:17448	Atik	significant	position	Atik
+hip:17489	Celaeno	significant	position	Celaeno
+hip:17499	Electra	curated	position	Electra
+hip:17531	Taygeta	curated	position	Taygeta
+hip:17573	Maia	significant	position	Maia
+hip:17579	Asterope	significant	position	Asterope
+hip:17588	22 Tau	significant	position	Sterope II
+hip:17608	Merope	curated	position	Merope
+hip:17702	Alcyone	curated	position	Alcyone
+hip:17847	Atlas	curated	position	Atlas
+hip:17851	Pleione	significant	position	Pleione
+hip:17954	HIP 17954	curated	added	,HIP 17954
+hip:18532	ε Per	significant	position	,epPer
+hip:18543	Zaurak	curated	position	Zaurak
+hip:18614	Menkib	significant	position	Menkib
+hip:20205	Prima Hyadum	curated	position	Prima Hyadum
+hip:20455	δ¹ Tau	significant	position	Secunda Hyadum
+hip:20542	δ² Tau	significant	added	de-2Tau
+hip:20648	δ³ Tau	significant	added	de-3Tau
+hip:20885	θ¹ Tau	significant	position	Phaeo
+hip:20889	Ain	curated	position	Ain
+hip:20894	θ² Tau	significant	position	Phaesula
+hip:21421	Aldebaran	curated	position	Aldebaran
+hip:22449	Tabit	significant	position	,pi-3Ori
+hip:22509	π² Ori	significant	position	,pi-2Ori
+hip:22549	π⁴ Ori	significant	position	,pi-4Ori
+hip:22797	π⁵ Ori	significant	position	,pi-5Ori
+hip:22845	π¹ Ori	significant	position	,pi-1Ori
+hip:23015	Hassaleh	significant	position	Hasseleh
+hip:23123	π⁶ Ori	significant	position	,pi-6Ori
+hip:23453	Saclateni	significant	position	Haedi
+hip:23767	Haedus	significant	position	Hoedus II
+hip:23875	Cursa	significant	position	Cursa
+hip:24436	Rigel	curated	position	Rigel
+hip:24608	Capella	curated	position	Capella
+hip:25336	Bellatrix	curated	position	Bellatrix
+hip:25428	Elnath	curated	position	Elnath
+hip:25606	Nihal	significant	position	Nihal
+hip:25930	Mintaka	curated	position	Mintaka
+hip:25985	Arneb	curated	position	Arneb
+hip:26176	φ¹ Ori	curated	position	,ph-1Ori
+hip:26207	Meissa	curated	position	Meissa
+hip:26311	Alnilam	curated	position	Alnilam
+hip:26366	φ² Ori	curated	added	ph-2Ori
+hip:26451	Al-Hecka	curated	position	Al Hecka
+hip:26634	Phact	curated	position	Phact
+hip:26727	Alnitak	significant	position	Alnitak
+hip:27366	Saiph	significant	position	Saiph
+hip:27989	Betelgeuse	curated	position	Betelgeuse
+hip:28358	δ Aur	significant	position	Prijipati
+hip:28360	Menkalinan	curated	position	Menkalinan
+hip:28380	θ Aur	significant	position	Bogardus
+hip:29655	Propus	curated	position	Propus
+hip:30122	Furud	significant	position	Furud
+hip:30324	Mirzam	significant	position	Mirzam
+hip:30343	Tejat	curated	position	Tejat
+hip:30438	Canopus	curated	position	Canopus
+hip:30883	ν Gem	significant	position	,nuGem
+hip:31681	Alhena	curated	position	Alhena
+hip:3179	Shedar	curated	position	Schedar
+hip:32246	Mebsuta	significant	position	Mebsuta
+hip:32349	Sirius	curated	position	Sirius
+hip:32362	Alzirr	significant	position	Alzirr
+hip:33018	θ Gem	significant	position	Nageba
+hip:33579	Adhara	significant	position	Adara
+hip:34045	Muliphein	significant	position	Muliphein
+hip:34088	Mekbuda	significant	position	Mekbuda
+hip:3419	Diphda	curated	position	Diphda
+hip:34444	Wezen	significant	position	Wezen
+hip:34693	τ Gem	significant	position	,taGem
+hip:35350	λ Gem	significant	position	Kebash
+hip:35550	Wasat	curated	position	Wasat
+hip:35904	Aludra	significant	position	Aludra
+hip:36188	Gomeisa	significant	position	Gomeisa
+hip:36850	Castor	curated	position	Castor
+hip:36962	υ Gem	significant	position	,upGem
+hip:37279	Procyon	curated	position	Procyon
+hip:37740	κ Gem	significant	position	Al Krikab
+hip:37826	Pollux	curated	position	Pollux
+hip:3786	δ Psc	significant	position	Linteum
+hip:39429	Naos	significant	position	Naos
+hip:39659	μ¹ Cnc	significant	added	mu-1Cnc
+hip:39757	Tureis	significant	position	Turais
+hip:39780	μ² Cnc	significant	added	mu-2Cnc
+hip:39953	Regor	significant	position	Suhail al Muhlif
+hip:40167	Tegmine	significant	position	Tegmen
+hip:40526	Tarf	significant	position	Al Tarf
+hip:41037	Avior	significant	position	Avior
+hip:41075	Alsciaukat	curated	position	Alsciaukat
+hip:41822	θ Cnc	significant	added	thCnc
+hip:41909	η Cnc	significant	position	,etCnc
+hip:42313	δ Hya	significant	position	Mautinah
+hip:42402	Minchir	significant	position	Al Minliar al Shuja
+hip:42556	ε Cnc	significant	position	Meleph
+hip:42799	η Hya	significant	position	,etHya
+hip:42806	Asellus Borealis	curated	position	Asellus Borealis
+hip:42911	Asellus Australis	curated	position	Asellus Australis
+hip:43100	ι Cnc	significant	added	,HIP 43100
+hip:43103	ι Cnc	significant	position	Decapoda
+hip:43109	Ashlesha	significant	position	Ashlesha
+hip:43813	ζ Hya	significant	position	Hydrobius
+hip:44066	Acubens	curated	position	Acubens
+hip:4427	Cih	significant	position	Tsih
+hip:44700	HIP 44700	curated	added	,HIP 44700
+hip:44816	Suhail	significant	position	Alsuhail
+hip:45238	Miaplacidus	significant	position	Miaplacidus
+hip:45336	θ Hya	significant	position	,thHya
+hip:45556	Aspidiske	significant	position	Scutulum
+hip:45941	Markeb	curated	position	Markeb
+hip:46146	κ Leo	significant	position	Alminhar
+hip:46390	Alphard	curated	position	Alphard
+hip:46750	Alterf	curated	position	Alterf
+hip:46952	10 LMi	curated	added	,HIP 46952
+hip:47029	HIP 47029	curated	added	,HIP 47029
+hip:47431	Ukdah	significant	position	,ioHya
+hip:47508	Subra	significant	position	Subra
+hip:47908	Ras Elased	curated	position	Ras Elased Australis
+hip:48356	Zhang	significant	position	Zhang
+hip:48455	Rasalas	curated	position	Ras Elased Borealis
+hip:4906	ε Psc	significant	position	Kaht
+hip:49583	η Leo	curated	position	Al Jabhah
+hip:49669	Regulus	curated	position	Regulus
+hip:49841	λ Hya	significant	position	,laHya
+hip:50335	Adhafera	curated	position	Adhafera
+hip:50583	Algieba	significant	position	Algieba
+hip:52943	ν Hya	significant	position	Pleura
+hip:5364	Deneb Algenubi	significant	position	Deneb Algenubi
+hip:53740	Alkes	significant	position	Alkes
+hip:53910	Merak	curated	position	Merak
+hip:54061	Aldubhe	curated	position	Dubhe
+hip:5447	Mirach	curated	position	Mirach
+hip:54682	β Crt	significant	position	Alsharasif
+hip:54872	Zosma	curated	position	Zosma
+hip:54879	Chertan	curated	position	Coxa
+hip:55282	δ Crt	curated	position	Labrum
+hip:55434	σ Leo	significant	position	Shishimai
+hip:55687	ε Crt	significant	position	,epCrt
+hip:55705	γ Crt	significant	position	,gaCrt
+hip:5586	τ Psc	significant	position	Anunitum
+hip:56211	Giausar	significant	position	Giansar
+hip:56343	ξ Hya	significant	position	,xiHya
+hip:56633	θ Crt	significant	position	,thCrt
+hip:57283	ζ Crt	significant	position	,zeCrt
+hip:57380	ν Vir	significant	position	,nuVir
+hip:5742	φ Psc	significant	position	,phPsc
+hip:57632	Denebola	curated	position	Denebola
+hip:57757	Zavijava	curated	position	Zavijava
+hip:57936	β Hya	significant	position	,beHya
+hip:58001	Phecda	curated	position	Phecda
+hip:58188	η Crt	significant	position	,etCrt
+hip:58948	ο Vir	significant	position	,omiVir
+hip:59196	δ Cen	significant	position	,deCen
+hip:59199	Alchiba	significant	position	Alchiba
+hip:59316	ε Crv	significant	position	Minkar
+hip:59774	Megrez	significant	position	Megrez
+hip:59803	Gienah	significant	position	Gienah
+hip:59847	7 Com	significant	added	,HIP 59847
+hip:60129	Zaniah	curated	position	Zaniah
+hip:60718	Acrux	curated	position	Acrux
+hip:60742	Al Dafīrah	curated	position	Kissin
+hip:60965	Algorab	curated	position	Algorab
+hip:61084	Gacrux	curated	position	Gacrux
+hip:61359	Kraz	significant	position	Kraz
+hip:6193	υ Psc	significant	position	,upPsc
+hip:61932	Muhlifain	significant	position	Muhlifain
+hip:61941	Porrima	curated	position	Porrima
+hip:62434	Mimosa	curated	position	Mimosa
+hip:62956	Alioth	curated	position	Alioth
+hip:63090	Minelauva	significant	position	Auva
+hip:63608	Vindemiatrix	curated	position	Vindemiatrix
+hip:64241	Diadem	curated	position	Diadem
+hip:64394	β Com	curated	position	Aldafirah
+hip:64962	γ Hya	significant	position	Cauda Hydrae
+hip:65109	ι Cen	significant	position	Alhakim
+hip:6537	θ Cet	significant	position	Altawk
+hip:65378	Mizar	curated	position	Mizar
+hip:65474	Spica	curated	position	Spica
+hip:66249	Heze	significant	position	Heze
+hip:66657	ε Cen	significant	position	Birdun
+hip:6686	Ruchbah	significant	position	Ruchbah
+hip:6706	ρ Psc	significant	added	rhPsc
+hip:67301	Alkaid	curated	position	Alkaid
+hip:677	Alpheratz	curated	position	Alpheratz
+hip:67927	Muphrid	significant	position	Mufrid
+hip:68002	Alnair	significant	position	,zeCen
+hip:68702	Hadar	curated	position	Hadar
+hip:68756	Thuban	curated	position	Thuban
+hip:68895	π Hya	significant	position	Sataghni
+hip:68933	Menkent	significant	position	Menkent
+hip:69427	Kang	significant	position	Kang
+hip:69673	Arcturus	curated	position	Arcturus
+hip:69701	Syrma	curated	position	Syrma
+hip:69974	Khambalia	curated	position	Khambalia
+hip:7007	μ Psc	significant	added	muPsc
+hip:70497	θ Boo	significant	position	Asellus Primus
+hip:70755	Elgafar	significant	position	,phVir
+hip:7097	Alpherg	curated	position	Al Pherg
+hip:71075	Seginus	curated	position	Seginus
+hip:71352	η Cen	significant	position	,etCen
+hip:71681	α² Cen	significant	added	al-2Cen
+hip:71683	Toliman	curated	position	Toliman
+hip:71860	Men	significant	position	Kakkab
+hip:71957	Rijl al Awwa	significant	position	Rijl al Awwa
+hip:72105	Izar	significant	position	Izar
+hip:72607	Kochab	curated	position	Kochab
+hip:72622	Zuben Algenubi	curated	position	Zubenelgenubi
+hip:73273	Kekouan	significant	position	Kekouan
+hip:73334	κ Cen	significant	position	Ke Kwan
+hip:73555	Nekkar	significant	position	Nekkar
+hip:74395	ζ Lup	significant	position	,zeLup
+hip:746	Caph	significant	position	Caph
+hip:74666	δ Boo	curated	position	Princeps
+hip:74785	Zuben Eschemali	curated	position	Zuben Eschamali
+hip:75097	Pherkad	significant	position	Pherkad
+hip:75141	δ Lup	significant	position	Hilasmus
+hip:75177	φ¹ Lup	significant	position	,ph-1Lup
+hip:75264	ε Lup	significant	position	,epLup
+hip:75304	φ² Lup	significant	position	,ph-2Lup
+hip:75312	η CrB	significant	added	etCrB
+hip:75411	Alkalurops	significant	position	Alkalurops
+hip:75458	Edasich	significant	position	Edasich
+hip:75695	Nusakan	significant	position	Nusakan
+hip:7588	Achernar	curated	position	Achernar
+hip:76127	θ CrB	significant	position	,thCrB
+hip:76267	Alphecca	curated	position	Alphecca
+hip:76297	γ Lup	significant	position	Thusia
+hip:76705	ψ¹ Lup	significant	added	ps-1Lup
+hip:76945	ψ² Lup	significant	added	ps-2Lup
+hip:76952	γ CrB	significant	position	,gaCrB
+hip:77055	ζ UMi	significant	position	Alifa Al Farkadain
+hip:77070	Unukalhai	curated	position	Unukalhai
+hip:77512	δ CrB	significant	position	,deCrB
+hip:77634	χ Lup	significant	position	,chLup
+hip:78159	ε CrB	significant	position	,epCrB
+hip:78265	Fang	curated	position	Fang
+hip:78384	η Lup	significant	position	,etLup
+hip:78401	Dschubba	curated	position	Dschubba
+hip:78493	ι CrB	significant	position	,ioCrB
+hip:78820	Acrab	curated	position	Graffias
+hip:7884	ν Psc	significant	position	,nuPsc
+hip:79043	Marsic	significant	position	Marsik
+hip:79404	13 Sco	significant	added	,HIP 79404
+hip:79593	Yed Prior	curated	position	Yed Prior
+hip:79822	η UMi	significant	position	Anwar al Farkadain
+hip:79881	HIP 79881	significant	added	,HIP 79881
+hip:79882	Yed Posterior	significant	position	Yed Posterior
+hip:80112	Alniyat	significant	position	Alniyat
+hip:80763	Antares	curated	position	Antares
+hip:80816	Kornephoros	significant	position	Kornephoros
+hip:80883	Marfik	significant	position	Marfik
+hip:8102	τ Cet	significant	position	,taCet
+hip:81266	Paikauhale	significant	position	,taSco
+hip:81377	Han	curated	position	Han
+hip:8198	Torcular	significant	position	Torcularis Septentrionalis
+hip:82080	ε UMi	significant	position	Urodelus
+hip:82363	η Ara	significant	position	,etAra
+hip:82396	Larawag	significant	position	Wei
+hip:82514	Xamidimura	significant	position	Xamidimura
+hip:82545	μ² Sco	significant	position	Pipirima
+hip:82671	ζ¹ Sco	significant	added	ze-1Sco
+hip:82729	ζ² Sco	significant	position	,ze-2Sco
+hip:83000	κ Oph	significant	position	Helkath
+hip:83081	ζ Ara	significant	position	,zeAra
+hip:83153	ε¹ Ara	significant	position	,ep-1Ara
+hip:83608	Alrakis	significant	position	Arrakis
+hip:84012	Sabik	curated	position	Sabik
+hip:84143	η Sco	significant	position	,etSco
+hip:84345	Rasalgethi	curated	position	Ras Algethi
+hip:84970	θ Oph	significant	position	Imad
+hip:85258	β Ara	significant	position	,beAra
+hip:85267	γ Ara	significant	position	,gaAra
+hip:85670	Rastaban	curated	position	Alwaid
+hip:85693	Maasym	significant	position	Masym
+hip:85696	Lesath	curated	position	Lesath
+hip:85727	δ Ara	significant	position	,deAra
+hip:85792	Choo	significant	position	Ara
+hip:85822	Yildun	significant	position	Yildun
+hip:85927	Shaula	curated	position	Shaula
+hip:86032	Rasalhague	curated	position	Rasalhague
+hip:86228	Sargas	significant	position	Sargas
+hip:8645	Baten Kaitos	curated	position	Baten Kaitos
+hip:86742	Cebalrai	significant	position	Celbalrai
+hip:87073	ι¹ Sco	significant	position	,io-1Sco
+hip:87108	γ Oph	significant	position	Al Durajah
+hip:87261	G Scorpii	curated	position	Fuyue
+hip:87294	ι² Sco	significant	added	io-2Sco
+hip:87585	Grumium	significant	position	Grumium
+hip:87833	Eltanin	curated	position	Eltanin
+hip:8796	Mothallah	significant	position	Ras Mutallah
+hip:88048	ν Oph	curated	position	Sinistra
+hip:8832	Mesarthim	curated	position	Mesarthim
+hip:88635	Alnasl	curated	position	Alnasl
+hip:8886	Segin	significant	position	Segin
+hip:8903	Sheratan	curated	position	Sheratan
+hip:89341	Polis	curated	position	Polis
+hip:89931	Kaus media	significant	position	Kaus Media
+hip:90185	Kaus australis	significant	position	Kaus Australis
+hip:90496	Kaus borealis	curated	position	Kaus Borealis
+hip:91262	Vega	curated	position	Vega
+hip:91919	ε¹ Lyr	significant	added	ep-1Lyr
+hip:91926	ε² Lyr	significant	position	,ep-2Lyr
+hip:91971	ζ¹ Lyr	significant	added	ze-1Lyr
+hip:91973	ζ² Lyr	significant	position	,ze-2Lyr
+hip:92041	φ Sgr	significant	position	Nanto
+hip:92308	η¹ CrA	significant	position	,et-1CrA
+hip:92382	η² CrA	significant	added	et-2CrA
+hip:92420	Sheliak	significant	position	Sheliak
+hip:92728	δ¹ Lyr	significant	added	de-1Lyr
+hip:92761	Ainalrami	curated	position	Ainalrami
+hip:92791	δ² Lyr	significant	position	,de-2Lyr
+hip:92845	ν² Sgr	curated	added	nu-2Sgr
+hip:92855	Nunki	curated	position	Nunki
+hip:92946	Alya	significant	position	Alya
+hip:93194	Sulafat	significant	position	Sulaphat
+hip:93244	ε Aql	significant	position	Deneb el Okab Borealis
+hip:93506	Ascella	curated	position	Ascella
+hip:93542	ζ CrA	significant	position	,zeCrA
+hip:93683	ο Sgr	curated	position	Manubrium
+hip:93747	Deneb Alokab	significant	position	Deneb el Okab Australis
+hip:93805	λ Aql	significant	position	Al Thalimaim Anterior
+hip:93825	γ CrA	significant	position	,gaCrA
+hip:93864	τ Sgr	significant	position	Hecatebolus
+hip:94005	δ CrA	significant	position	,deCrA
+hip:94114	Meridiana	significant	position	Alfecca Meridiana
+hip:94160	β CrA	significant	position	,beCrA
+hip:94376	Altais	significant	position	Nodus II
+hip:94779	κ Cyg	significant	position	,kaCyg
+hip:94820	43 Sgr	significant	added	,HIP 94820
+hip:9487	Alrescha	curated	position	Alrischa
+hip:95168	ρ¹ Sgr	significant	added	rh-1Sgr
+hip:95188	ρ² Sgr	significant	added	rh-2Sgr
+hip:95241	Arkab Prior	significant	position	Arkab Prior
+hip:95294	Arkab Posterior	significant	position	Arkab Posterior
+hip:95347	Rukbat	curated	position	Rukbat
+hip:95477	χ¹ Sgr	significant	added	ch-1Sgr
+hip:95501	δ Aql	curated	position	Delta Aquilae
+hip:95656	ι¹ Cyg	significant	added	io-1Cyg
+hip:95853	ι² Cyg	significant	position	,io-2Cyg
+hip:95947	Albireo	curated	position	Albireo
+hip:9640	Almach	curated	position	Almaak
+hip:96468	ι Aql	significant	position	Al Thalimaim Posterior
+hip:96516	ε Sge	significant	added	epSge
+hip:96757	Sham	significant	position	Sham
+hip:96837	β Sge	significant	position	,beSge
+hip:97165	δ Cyg	significant	position	Ruc
+hip:97278	Tarazed	significant	position	Tarazed
+hip:97365	δ Sge	significant	position	,deSge
+hip:97496	ζ Sge	significant	added	zeSge
+hip:97649	Altair	curated	position	Altair
+hip:98036	Alshain	significant	position	Alshain
+hip:98066	Terebellum	curated	position	Terebellium
+hip:98110	η Cyg	significant	position	,etCyg
+hip:98162	59 Sgr	significant	position	,59Sgr
+hip:98337	γ Sge	significant	position	,gaSge
+hip:98353	60 Sgr	significant	added	,HIP 98353
+hip:98688	62 Sgr	significant	position	,62Sgr
+hip:9884	Hamal	curated	position	Hamal
+hip:99473	θ Aql	significant	position	Tseen Foo
+hip:99529	ξ¹ Cap	significant	added	xi-1Cap
+hip:99572	ξ² Cap	significant	added	xi-2Cap
+melotte:111	Coma Berenices	curated	added	Coma Berenices
+messier:44	Praesepe	curated	same object	Praesepe Cluster
+messier:6	M6	curated	same object	Aculeus
+messier:7	M7	curated	same object	Acumen
+ngc:6441	NGC 6441	curated	added	,NGC 6441
+ngc:869	NGC 869	curated	same object	Capulus
+ngc:884	NGC 884	curated	added	,NGC 884

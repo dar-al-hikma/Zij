@@ -1,0 +1,1690 @@
+# The key that reads the place of each row of the sky's physical table, by that
+# row's number, so that the sky's figures and colours find the star the engine
+# places. The same join as the star lists'. Generated; do not edit by hand.
+id	row
+hip:122	,thOct
+hip:154	,HIP 154
+hip:301	,HIP 301
+hip:355	,HIP 355
+hip:443	,HIP 443
+hip:677	Alpheratz
+hip:746	Caph
+hip:765	,epPhe
+hip:910	,HIP 910
+hip:1067	Algenib
+hip:1168	,chPeg
+hip:1170	,HIP 1170
+hip:1343	,HIP 1343
+hip:1366	thAnd
+hip:1473	,siAnd
+hip:1562	Deneb Kaitos
+hip:1599	,zeTuc
+hip:2021	,beHyi
+hip:2072	kaPhe
+hip:2081	Ankaa
+hip:2210	etScl
+hip:2472	,la-1Phe
+hip:2484	be-1Tuc
+hip:2487	,be-2Tuc
+hip:2505	laCas
+hip:2599	,kaCas
+hip:2912	,piAnd
+hip:2920	Fulu
+hip:3031	,epAnd
+hip:3092	,deAnd
+hip:3179	Schedar
+hip:3245	,muPhe
+hip:3300	xiCas
+hip:3405	,etPhe
+hip:3414	piCas
+hip:3419	Diphda
+hip:3455	Al Nitham
+hip:3504	,omiCas
+hip:3693	,zeAnd
+hip:3786	Linteum
+hip:3801	nuCas
+hip:3821	Achird
+hip:3881	,nuAnd
+hip:4147	,HIP 4147
+hip:4151	,HIP 4151
+hip:4292	up-1Cas
+hip:4422	Castula
+hip:4427	Tsih
+hip:4436	,muAnd
+hip:4463	etAnd
+hip:4577	,alScl
+hip:4906	Kaht
+hip:5165	,bePhe
+hip:5348	Wurren
+hip:5364	Deneb Algenubi
+hip:5372	,HIP 5372
+hip:5434	phAnd
+hip:5447	Mirach
+hip:5542	thCas
+hip:5571	,chPsc
+hip:5586	Anunitum
+hip:5737	Revati
+hip:5742	,phPsc
+hip:5862	nuPhe
+hip:5896	kaTuc
+hip:6193	,upPsc
+hip:6242	phCas
+hip:6411	Adhil
+hip:6537	Altawk
+hip:6670	,HIP 6670
+hip:6686	Ruchbah
+hip:6692	,psCas
+hip:6706	rhPsc
+hip:6813	,omeAnd
+hip:6867	,gaPhe
+hip:7007	muPsc
+hip:7083	,dePhe
+hip:7097	Al Pherg
+hip:7294	chCas
+hip:7513	Adhab
+hip:7588	Achernar
+hip:7607	Nembus
+hip:7818	taAnd
+hip:7884	,nuPsc
+hip:7918	,HIP 7918
+hip:7999	,HIP 7999
+hip:8068	,phPer
+hip:8102	,taCet
+hip:8198	Torcularis Septentrionalis
+hip:8497	,chCet
+hip:8645	Baten Kaitos
+hip:8796	Ras Mutallah
+hip:8832	Mesarthim
+hip:8833	,xiPsc
+hip:8837	,psPhe
+hip:8886	Segin
+hip:8903	Sheratan
+hip:8928	,et-2Hyi
+hip:9007	,chEri
+hip:9009	omeCas
+hip:9061	,HIP 9061
+hip:9095	,HIP 9095
+hip:9153	laAri
+hip:9236	,alHyi
+hip:9347	Abyssus Aqueus
+hip:9480	,HIP 9480
+hip:9487	Alrischa
+hip:9505	,HIP 9505
+hip:9598	,HIP 9598
+hip:9640	Almaak
+hip:9677	,nuFor
+hip:9884	Hamal
+hip:9977	,HIP 9977
+hip:10053	,HIP 10053
+hip:10064	,beTri
+hip:10280	,HIP 10280
+hip:10306	etAri
+hip:10324	,xi-1Cet
+hip:10340	,HIP 10340
+hip:10602	,phEri
+hip:10644	deTri
+hip:10670	,gaTri
+hip:10732	,thAri
+hip:10826	Mira
+hip:11001	,deHyi
+hip:11313	,HIP 11313
+hip:11345	,rhCet
+hip:11407	,kaEri
+hip:11484	,xi-2Cet
+hip:11569	ioCas
+hip:11767	Polaris
+hip:11783	,siCet
+hip:11918	omeFor
+hip:12093	,nuCet
+hip:12387	Phycochroma
+hip:12390	epCet
+hip:12394	,epHyi
+hip:12413	,HIP 12413
+hip:12486	,ioEri
+hip:12623	,HIP 12623
+hip:12706	Kaffaljidhma
+hip:12719	,HIP 12719
+hip:12770	Al Sadr al Ketus
+hip:12777	,thPer
+hip:12828	,muCet
+hip:12843	,ta-1Eri
+hip:12876	zeHyi
+hip:13061	Lilii Borea
+hip:13147	,beFor
+hip:13209	Bharani
+hip:13244	nuHyi
+hip:13254	,16Per
+hip:13268	Miram
+hip:13288	Angetenar
+hip:13328	,HIP 13328
+hip:13531	,taPer
+hip:13701	Azha
+hip:13847	Acamar
+hip:13879	Gorgona Secunda
+hip:13884	,beHor
+hip:13905	,HIP 13905
+hip:13914	epAri
+hip:13954	,laCet
+hip:14060	rh-1Eri
+hip:14135	,alCet
+hip:14146	,ta-3Eri
+hip:14168	rh-2Eri
+hip:14293	rh-3Eri
+hip:14328	,gaPer
+hip:14354	Gorgona Tertia
+hip:14382	,HIP 14382
+hip:14576	Algol
+hip:14632	,ioPer
+hip:14668	Misam
+hip:14817	Gorgona Quatra
+hip:14838	Botein
+hip:14862	,HIP 14862
+hip:14879	Fornacis
+hip:15110	,zeAri
+hip:15197	Zibal
+hip:15382	,HIP 15382
+hip:15416	,HIP 15416
+hip:15457	ka-1Cet
+hip:15474	,ta-4Eri
+hip:15510	,eEri
+hip:15520	,HIP 15520
+hip:15549	,HIP 15549
+hip:15627	,ta-1Ari
+hip:15648	,HIP 15648
+hip:15737	ta-2Ari
+hip:15863	Mirfak
+hip:15900	Atirsagne
+hip:16083	Ushakaron
+hip:16147	,HIP 16147
+hip:16228	,HIP 16228
+hip:16244	,HIP 16244
+hip:16245	,kaRet
+hip:16281	,HIP 16281
+hip:16335	,siPer
+hip:16341	,HIP 16341
+hip:16369	,HIP 16369
+hip:16537	Ran
+hip:16611	,ta-5Eri
+hip:16826	psPer
+hip:16852	,HIP 16852
+hip:16870	,HIP 16870
+hip:17304	,deFor
+hip:17313	,HIP 17313
+hip:17351	,HIP 17351
+hip:17358	,dePer
+hip:17378	Rana
+hip:17440	,beRet
+hip:17448	Atik
+hip:17489	Celaeno
+hip:17499	Electra
+hip:17529	,nuPer
+hip:17531	Taygeta
+hip:17573	Maia
+hip:17579	Asterope
+hip:17587	,HIP 17587
+hip:17588	Sterope II
+hip:17593	,piEri
+hip:17608	Merope
+hip:17651	,ta-6Eri
+hip:17678	,gaHyi
+hip:17702	Alcyone
+hip:17717	ta-7Eri
+hip:17797	,fEri
+hip:17847	Atlas
+hip:17851	Pleione
+hip:17874	,gEri
+hip:17884	,HIP 17884
+hip:17954	,HIP 17954
+hip:17959	,gaCam
+hip:18216	,ta-8Eri
+hip:18246	,zePer
+hip:18255	,HIP 18255
+hip:18488	,HIP 18488
+hip:18505	,HIP 18505
+hip:18532	,epPer
+hip:18543	Zaurak
+hip:18597	,deRet
+hip:18614	Menkib
+hip:18673	,ta-9Eri
+hip:18724	Althaur
+hip:18744	,gaRet
+hip:18772	,ioRet
+hip:18907	Furibundus
+hip:19018	,HIP 19018
+hip:19038	,HIP 19038
+hip:19167	,laPer
+hip:19343	,HIP 19343
+hip:19515	deHor
+hip:19587	Beid
+hip:19740	,HIP 19740
+hip:19747	,alHor
+hip:19777	,HIP 19777
+hip:19780	,alRet
+hip:19811	,HIP 19811
+hip:19812	,muPer
+hip:19849	Keid
+hip:19860	Kattupothu
+hip:19893	,gaDor
+hip:19921	,epRet
+hip:19990	ome-2Tau
+hip:20042	,up-4Eri
+hip:20070	,HIP 20070
+hip:20205	Prima Hyadum
+hip:20250	phTau
+hip:20252	,HIP 20252
+hip:20354	,HIP 20354
+hip:20455	Secunda Hyadum
+hip:20535	Beemim
+hip:20542	de-2Tau
+hip:20635	ka-1Tau
+hip:20648	de-3Tau
+hip:20711	upTau
+hip:20713	,HIP 20713
+hip:20732	piTau
+hip:20877	,HIP 20877
+hip:20885	Phaeo
+hip:20889	Ain
+hip:20894	Phaesula
+hip:21029	,HIP 21029
+hip:21139	,HIP 21139
+hip:21248	,up-1Eri
+hip:21273	,rhTau
+hip:21281	,alDor
+hip:21393	Theemin
+hip:21402	,HIP 21402
+hip:21421	Aldebaran
+hip:21444	,nuEri
+hip:21476	,HIP 21476
+hip:21589	,HIP 21589
+hip:21594	Sceptrum
+hip:21644	,HIP 21644
+hip:21683	si-2Tau
+hip:21763	,HIP 21763
+hip:21770	,alCae
+hip:21881	,taTau
+hip:22109	,muEri
+hip:22449	,pi-3Ori
+hip:22453	,HIP 22453
+hip:22509	,pi-2Ori
+hip:22549	,pi-4Ori
+hip:22667	,omi-1Ori
+hip:22678	,HIP 22678
+hip:22701	,omeEri
+hip:22783	,alCam
+hip:22797	,pi-5Ori
+hip:22845	,pi-1Ori
+hip:22957	omi-2Ori
+hip:23015	Hasseleh
+hip:23040	,7Cam
+hip:23123	,pi-6Ori
+hip:23179	omeAur
+hip:23231	,sEri
+hip:23362	,HIP 23362
+hip:23364	psEri
+hip:23416	Maaz
+hip:23453	Haedi
+hip:23497	,ioTau
+hip:23522	,beCam
+hip:23595	ga-1Cae
+hip:23607	,HIP 23607
+hip:23685	Sasin
+hip:23693	,zeDor
+hip:23767	Hoedus II
+hip:23783	,HIP 23783
+hip:23835	,HIP 23835
+hip:23875	Cursa
+hip:23972	,laEri
+hip:24010	,HIP 24010
+hip:24244	ioLep
+hip:24305	,muLep
+hip:24327	kaLep
+hip:24331	rhOri
+hip:24340	,muAur
+hip:24372	,thDor
+hip:24436	Rigel
+hip:24608	Capella
+hip:24659	,omiCol
+hip:24674	,taOri
+hip:24727	,HIP 24727
+hip:24813	,laAur
+hip:24822	,HIP 24822
+hip:24845	,laLep
+hip:24873	nuLep
+hip:24927	,HIP 24927
+hip:25044	,HIP 25044
+hip:25142	,HIP 25142
+hip:25247	,HIP 25247
+hip:25278	,HIP 25278
+hip:25281	,HIP 25281
+hip:25302	ps-1Ori
+hip:25336	Bellatrix
+hip:25428	Elnath
+hip:25473	ps-2Ori
+hip:25539	,HIP 25539
+hip:25606	Nihal
+hip:25737	,HIP 25737
+hip:25813	,HIP 25813
+hip:25859	,epCol
+hip:25923	Thabit
+hip:25930	Mintaka
+hip:25945	,HIP 25945
+hip:25984	,chAur
+hip:25985	Arneb
+hip:26069	,beDor
+hip:26176	,ph-1Ori
+hip:26199	,HIP 26199
+hip:26207	Meissa
+hip:26220	Trapezium
+hip:26235	th-2Ori
+hip:26237	,HIP 26237
+hip:26241	Hatsya
+hip:26311	Alnilam
+hip:26366	ph-2Ori
+hip:26451	Al Hecka
+hip:26549	siOri
+hip:26563	,HIP 26563
+hip:26594	omeOri
+hip:26634	Phact
+hip:26727	Alnitak
+hip:26736	,HIP 26736
+hip:26777	,HIP 26777
+hip:26885	,HIP 26885
+hip:27072	,gaLep
+hip:27100	,deDor
+hip:27288	,zeLep
+hip:27321	,bePic
+hip:27366	Saiph
+hip:27468	,HIP 27468
+hip:27483	taAur
+hip:27511	,HIP 27511
+hip:27530	,gaPic
+hip:27628	Wazn
+hip:27639	upAur
+hip:27654	,deLep
+hip:27673	,nuAur
+hip:27750	,HIP 27750
+hip:27810	Tsze
+hip:27830	,HIP 27830
+hip:27890	,HIP 27890
+hip:27913	ch-1Ori
+hip:27949	,xiAur
+hip:27989	Betelgeuse
+hip:28010	xiCol
+hip:28103	,etLep
+hip:28199	,gaCol
+hip:28237	,HIP 28237
+hip:28328	,etCol
+hip:28358	Prijipati
+hip:28360	Menkalinan
+hip:28380	Bogardus
+hip:28404	piAur
+hip:28413	,HIP 28413
+hip:28574	,HIP 28574
+hip:28614	,muOri
+hip:28716	,ch-2Ori
+hip:28734	,HIP 28734
+hip:28816	,HIP 28816
+hip:28910	thLep
+hip:29034	thCol
+hip:29038	,nuOri
+hip:29276	,dePic
+hip:29426	,xiOri
+hip:29434	,HIP 29434
+hip:29651	,gaMon
+hip:29655	Propus
+hip:29696	,kaAur
+hip:29735	,HIP 29735
+hip:29807	Al Kurud
+hip:29997	,HIP 29997
+hip:30060	,2Lyn
+hip:30093	,HIP 30093
+hip:30122	Furud
+hip:30277	Ghusn al Zaitun
+hip:30324	Mirzam
+hip:30343	Tejat
+hip:30419	,epMon
+hip:30438	Canopus
+hip:30520	,ps-1Aur
+hip:30788	laCMa
+hip:30867	,beMon
+hip:30883	,nuGem
+hip:31125	xi-1CMa
+hip:31216	,13Mon
+hip:31407	,HIP 31407
+hip:31416	,xi-2CMa
+hip:31592	nu-2CMa
+hip:31681	Alhena
+hip:31685	Kaimana
+hip:31700	nu-3CMa
+hip:31827	,HIP 31827
+hip:31832	ps-2Aur
+hip:31978	,HIP 31978
+hip:32246	Mebsuta
+hip:32249	,HIP 32249
+hip:32349	Sirius
+hip:32362	Alzirr
+hip:32438	,HIP 32438
+hip:32533	,HIP 32533
+hip:32578	,18Mon
+hip:32607	,alPic
+hip:32759	,kaCMa
+hip:32761	,HIP 32761
+hip:32768	Al Rihla
+hip:32844	ps-7Aur
+hip:32855	,HIP 32855
+hip:33018	Nageba
+hip:33092	,HIP 33092
+hip:33152	omi-1CMa
+hip:33160	,thCMa
+hip:33202	,HIP 33202
+hip:33302	piCMa
+hip:33345	muCMa
+hip:33347	ioCMa
+hip:33357	,HIP 33357
+hip:33449	,15Lyn
+hip:33485	,HIP 33485
+hip:33579	Adara
+hip:33694	,HIP 33694
+hip:33856	Unurgunite
+hip:33971	,HIP 33971
+hip:33977	,omi-2CMa
+hip:34045	Muliphein
+hip:34059	,HIP 34059
+hip:34088	Mekbuda
+hip:34444	Wezen
+hip:34481	,ga-2Vol
+hip:34495	,HIP 34495
+hip:34622	,HIP 34622
+hip:34693	,taGem
+hip:34752	,HIP 34752
+hip:34769	,deMon
+hip:34834	,HIP 34834
+hip:34899	,HIP 34899
+hip:34922	,HIP 34922
+hip:34981	,HIP 34981
+hip:35020	,HIP 35020
+hip:35037	omeCMa
+hip:35205	,HIP 35205
+hip:35210	,HIP 35210
+hip:35228	,deVol
+hip:35264	Ahadi
+hip:35350	Kebash
+hip:35363	,HIP 35363
+hip:35384	,HIP 35384
+hip:35412	,HIP 35412
+hip:35415	taCMa
+hip:35550	Wasat
+hip:35727	,HIP 35727
+hip:35904	Aludra
+hip:36041	epCMi
+hip:36046	Propus iotGem
+hip:36145	,21Lyn
+hip:36188	Gomeisa
+hip:36284	gaCMi
+hip:36366	,rhGem
+hip:36377	,siPup
+hip:36425	,HIP 36425
+hip:36431	,HIP 36431
+hip:36514	,HIP 36514
+hip:36547	,HIP 36547
+hip:36773	,HIP 36773
+hip:36795	,HIP 36795
+hip:36850	Castor
+hip:36917	,pPup
+hip:36942	,HIP 36942
+hip:36962	,upGem
+hip:37096	,HIP 37096
+hip:37173	,HIP 37173
+hip:37229	,k01Pup
+hip:37265	Jishui
+hip:37279	Procyon
+hip:37297	,HIP 37297
+hip:37379	,HIP 37379
+hip:37447	,alMon
+hip:37504	,zeVol
+hip:37609	,HIP 37609
+hip:37629	,siGem
+hip:37648	,HIP 37648
+hip:37677	,HIP 37677
+hip:37740	Al Krikab
+hip:37819	,HIP 37819
+hip:37826	Pollux
+hip:37908	,HIP 37908
+hip:38070	omiPup
+hip:38089	,HIP 38089
+hip:38164	,P_Pup
+hip:38170	Azmidiske
+hip:38414	,HIP 38414
+hip:38455	,HIP 38455
+hip:38500	,HIP 38500
+hip:38518	,J_Pup
+hip:38538	,phGem
+hip:38827	Drus
+hip:38835	,HIP 38835
+hip:38901	,HIP 38901
+hip:38957	,HIP 38957
+hip:39079	,HIP 39079
+hip:39095	,HIP 39095
+hip:39138	,HIP 39138
+hip:39211	,HIP 39211
+hip:39311	,HIP 39311
+hip:39424	,chGem
+hip:39429	Naos
+hip:39659	mu-1Cnc
+hip:39757	Turais
+hip:39780	mu-2Cnc
+hip:39794	,epVol
+hip:39847	,HIP 39847
+hip:39863	,zeMon
+hip:39903	,HIP 39903
+hip:39906	,HIP 39906
+hip:39953	Suhail al Muhlif
+hip:40084	,HIP 40084
+hip:40091	,HIP 40091
+hip:40096	,HIP 40096
+hip:40167	Tegmen
+hip:40259	,HIP 40259
+hip:40274	,HIP 40274
+hip:40326	,HIP 40326
+hip:40526	Al Tarf
+hip:40702	,alCha
+hip:40706	,HIP 40706
+hip:40888	,thCha
+hip:40945	,HIP 40945
+hip:41037	Avior
+hip:41039	,HIP 41039
+hip:41075	Alsciaukat
+hip:41307	,HIP 41307
+hip:41312	,beVol
+hip:41704	Muscida
+hip:41822	thCnc
+hip:41909	,etCnc
+hip:42134	,HIP 42134
+hip:42312	,eVel
+hip:42313	Mautinah
+hip:42402	Al Minliar al Shuja
+hip:42483	zePyx
+hip:42509	,HIP 42509
+hip:42515	,bePyx
+hip:42527	pi-2UMa
+hip:42536	Xestus
+hip:42556	Meleph
+hip:42568	,HIP 42568
+hip:42570	,HIP 42570
+hip:42624	,HIP 42624
+hip:42662	,HIP 42662
+hip:42726	,HIP 42726
+hip:42799	,etHya
+hip:42806	Asellus Borealis
+hip:42828	,alPyx
+hip:42835	,HIP 42835
+hip:42884	,dVel
+hip:42911	Asellus Australis
+hip:42913	Alsephina
+hip:43023	,HIP 43023
+hip:43067	,HIP 43067
+hip:43100	,HIP 43100
+hip:43103	Decapoda
+hip:43105	,HIP 43105
+hip:43109	Ashlesha
+hip:43234	rhHya
+hip:43347	,HIP 43347
+hip:43409	,gaPyx
+hip:43783	,HIP 43783
+hip:43813	Hydrobius
+hip:43825	dePyx
+hip:43878	,HIP 43878
+hip:43937	,HIP 43937
+hip:44066	Acubens
+hip:44127	Talitha
+hip:44191	,HIP 44191
+hip:44248	,HIP 44248
+hip:44382	,alVol
+hip:44390	,rhUMa
+hip:44471	Talitha Australis
+hip:44511	,HIP 44511
+hip:44599	,HIP 44599
+hip:44626	,HIP 44626
+hip:44659	omeHya
+hip:44700	,HIP 44700
+hip:44816	Alsuhail
+hip:44824	kaPyx
+hip:44901	,HIP 44901
+hip:45038	si-2UMa
+hip:45075	taUMa
+hip:45080	,HIP 45080
+hip:45085	,HIP 45085
+hip:45101	,HIP 45101
+hip:45238	Miaplacidus
+hip:45336	,thHya
+hip:45439	,HIP 45439
+hip:45448	,HIP 45448
+hip:45493	,HIP 45493
+hip:45496	,HIP 45496
+hip:45556	Scutulum
+hip:45688	Maculosa
+hip:45751	,HIP 45751
+hip:45811	,HIP 45811
+hip:45856	,HIP 45856
+hip:45860	Alvashak
+hip:45902	,thPyx
+hip:45941	Markeb
+hip:46026	laPyx
+hip:46146	Alminhar
+hip:46371	,HIP 46371
+hip:46390	Alphard
+hip:46509	,ta-1Hya
+hip:46515	,epAnt
+hip:46651	,psVel
+hip:46701	,HIP 46701
+hip:46733	,23UMa
+hip:46750	Alterf
+hip:46771	,xiLeo
+hip:46776	,ta-2Hya
+hip:46853	Al Haud
+hip:46952	,HIP 46952
+hip:46974	,HIP 46974
+hip:46977	,HIP 46977
+hip:47006	,26UMa
+hip:47029	,HIP 47029
+hip:47175	,HIP 47175
+hip:47193	,HIP 47193
+hip:47205	,HIP 47205
+hip:47310	,HIP 47310
+hip:47391	,HIP 47391
+hip:47431	,ioHya
+hip:47508	Subra
+hip:47522	,HIP 47522
+hip:47592	,HIP 47592
+hip:47758	,thAnt
+hip:47854	,HIP 47854
+hip:47908	Ras Elased Australis
+hip:48002	Vathorz Prior
+hip:48319	,upUMa
+hip:48356	Zhang
+hip:48374	,HIP 48374
+hip:48402	,phUMa
+hip:48455	Ras Elased Borealis
+hip:48559	,HIP 48559
+hip:48615	,HIP 48615
+hip:48774	Tseen Ke
+hip:49029	,piLeo
+hip:49402	,up-2Hya
+hip:49583	Al Jabhah
+hip:49593	,21LMi
+hip:49637	,HIP 49637
+hip:49641	,alSex
+hip:49669	Regulus
+hip:49712	,HIP 49712
+hip:49841	,laHya
+hip:50099	Simiram
+hip:50191	,qVel
+hip:50335	Adhafera
+hip:50371	,qCar
+hip:50372	Tania Borealis
+hip:50555	,HIP 50555
+hip:50564	,HIP 50564
+hip:50583	Algieba
+hip:50676	,HIP 50676
+hip:50799	,HIP 50799
+hip:50801	Tania Australis
+hip:50847	,HIP 50847
+hip:50933	,HIP 50933
+hip:50954	,HIP 50954
+hip:51056	,HIP 51056
+hip:51069	,muHya
+hip:51172	,alAnt
+hip:51192	,HIP 51192
+hip:51232	,HIP 51232
+hip:51233	,beLMi
+hip:51438	,HIP 51438
+hip:51459	,HIP 51459
+hip:51495	,HIP 51495
+hip:51523	,HIP 51523
+hip:51576	,HIP 51576
+hip:51624	Shir
+hip:51658	,HIP 51658
+hip:51808	,HIP 51808
+hip:51839	,gaCha
+hip:51849	,HIP 51849
+hip:51979	,HIP 51979
+hip:51986	,pVel
+hip:52009	,HIP 52009
+hip:52085	ph-3Hya
+hip:52098	,HIP 52098
+hip:52102	,HIP 52102
+hip:52154	,HIP 52154
+hip:52370	,HIP 52370
+hip:52419	Vathorz Posterior
+hip:52468	,HIP 52468
+hip:52502	,HIP 52502
+hip:52633	,de-2Cha
+hip:52727	Peregrini
+hip:52736	,HIP 52736
+hip:52943	Pleura
+hip:53229	Praecipua
+hip:53253	,HIP 53253
+hip:53295	omeUMa
+hip:53417	,HIP 53417
+hip:53502	,ioAnt
+hip:53740	Alkes
+hip:53773	,HIP 53773
+hip:53807	,HIP 53807
+hip:53824	,HIP 53824
+hip:53907	,HIP 53907
+hip:53910	Merak
+hip:53954	,HIP 53954
+hip:54061	Dubhe
+hip:54182	,chLeo
+hip:54204	,ch-1Hya
+hip:54301	,HIP 54301
+hip:54463	,HIP 54463
+hip:54539	,psUMa
+hip:54682	Alsharasif
+hip:54751	,HIP 54751
+hip:54872	Zosma
+hip:54879	Coxa
+hip:54951	,HIP 54951
+hip:55084	,phLeo
+hip:55203	Alula Australis
+hip:55219	Alula Borealis
+hip:55266	,HIP 55266
+hip:55282	Labrum
+hip:55425	,piCen
+hip:55434	Shishimai
+hip:55560	,HIP 55560
+hip:55588	,HIP 55588
+hip:55642	Tse Tseng
+hip:55687	,epCrt
+hip:55705	,gaCrt
+hip:55945	,taLeo
+hip:56127	,HIP 56127
+hip:56211	Giansar
+hip:56280	,HIP 56280
+hip:56343	,xiHya
+hip:56480	,HIP 56480
+hip:56561	Ma Ti
+hip:56633	,thCrt
+hip:56647	,upLeo
+hip:56922	,omiHya
+hip:56986	,HIP 56986
+hip:57175	,HIP 57175
+hip:57283	,zeCrt
+hip:57328	xiVir
+hip:57363	,laMus
+hip:57380	,nuVir
+hip:57399	El Kophrah
+hip:57439	,HIP 57439
+hip:57443	,HIP 57443
+hip:57565	,HIP 57565
+hip:57581	,muMus
+hip:57632	Denebola
+hip:57669	,HIP 57669
+hip:57696	,HIP 57696
+hip:57757	Zavijava
+hip:57803	,HIP 57803
+hip:57851	,HIP 57851
+hip:57936	,beHya
+hip:58001	Phecda
+hip:58188	,etCrt
+hip:58484	epCha
+hip:58590	,piVir
+hip:58758	th-1Cru
+hip:58867	th-2Cru
+hip:58948	,omiVir
+hip:59072	etCru
+hip:59173	,HIP 59173
+hip:59196	,deCen
+hip:59199	Alchiba
+hip:59316	Minkar
+hip:59449	,rhCen
+hip:59747	Decrux
+hip:59774	Megrez
+hip:59803	Gienah
+hip:59847	,HIP 59847
+hip:59856	,HIP 59856
+hip:59929	,epMus
+hip:60000	,beCha
+hip:60009	zeCru
+hip:60129	Zaniah
+hip:60172	,HIP 60172
+hip:60202	,HIP 60202
+hip:60260	Juxta Crucem
+hip:60351	,HIP 60351
+hip:60485	,HIP 60485
+hip:60697	,HIP 60697
+hip:60710	,HIP 60710
+hip:60718	Acrux
+hip:60742	Kissin
+hip:60746	,HIP 60746
+hip:60823	,siCen
+hip:60965	Algorab
+hip:61084	Gacrux
+hip:61174	Avis Satyra
+hip:61199	,gaMus
+hip:61281	Ketu
+hip:61317	Asterion
+hip:61359	Kraz
+hip:61384	,HIP 61384
+hip:61394	,HIP 61394
+hip:61585	,alMus
+hip:61622	taCen
+hip:61740	,chVir
+hip:61789	,HIP 61789
+hip:61932	Muhlifain
+hip:61941	Porrima
+hip:61960	,rhVir
+hip:61966	,HIP 61966
+hip:62012	,HIP 62012
+hip:62268	ioCru
+hip:62322	,beMus
+hip:62327	,HIP 62327
+hip:62434	Mimosa
+hip:62683	,HIP 62683
+hip:62763	,HIP 62763
+hip:62867	,HIP 62867
+hip:62886	,HIP 62886
+hip:62896	,HIP 62896
+hip:62956	Alioth
+hip:62985	,psVir
+hip:63003	mu-1Cru
+hip:63007	laCru
+hip:63090	Auva
+hip:63125	Cor Caroli
+hip:63355	,HIP 63355
+hip:63462	,HIP 63462
+hip:63503	,HIP 63503
+hip:63608	Vindemiatrix
+hip:63613	,deMus
+hip:63724	xi-1Cen
+hip:63945	,HIP 63945
+hip:64004	,xi-2Cen
+hip:64022	,HIP 64022
+hip:64166	psHya
+hip:64238	,thVir
+hip:64241	Diadem
+hip:64394	Aldafirah
+hip:64408	,HIP 64408
+hip:64425	,HIP 64425
+hip:64540	,HIP 64540
+hip:64583	,HIP 64583
+hip:64661	,etMus
+hip:64820	,HIP 64820
+hip:64844	,HIP 64844
+hip:64852	,siVir
+hip:64924	,HIP 64924
+hip:64962	Cauda Hydrae
+hip:65109	Alhakim
+hip:65271	,HIP 65271
+hip:65378	Mizar
+hip:65387	,HIP 65387
+hip:65474	Spica
+hip:65477	Alcor
+hip:65639	,HIP 65639
+hip:65721	,HIP 65721
+hip:65936	,dCen
+hip:66006	,HIP 66006
+hip:66200	,HIP 66200
+hip:66234	,HIP 66234
+hip:66249	Heze
+hip:66257	,HIP 66257
+hip:66458	,HIP 66458
+hip:66657	Birdun
+hip:66738	,HIP 66738
+hip:66821	,HIP 66821
+hip:67153	,HIP 67153
+hip:67234	,HIP 67234
+hip:67275	,taBoo
+hip:67301	Alkaid
+hip:67457	,HIP 67457
+hip:67459	upBoo
+hip:67464	Kabkent Secunda
+hip:67472	,muCen
+hip:67480	,HIP 67480
+hip:67494	,HIP 67494
+hip:67627	,HIP 67627
+hip:67665	,HIP 67665
+hip:67669	,HIP 67669
+hip:67786	,HIP 67786
+hip:67927	Mufrid
+hip:68002	,zeCen
+hip:68191	,HIP 68191
+hip:68245	Kabkent Tertia
+hip:68282	up-1Cen
+hip:68520	,taVir
+hip:68523	up-2Cen
+hip:68702	Hadar
+hip:68756	Thuban
+hip:68862	chCen
+hip:68895	Sataghni
+hip:68933	Menkent
+hip:69112	,HIP 69112
+hip:69191	,HIP 69191
+hip:69226	,HIP 69226
+hip:69269	,HIP 69269
+hip:69389	,HIP 69389
+hip:69427	Kang
+hip:69483	Asellus Tertius
+hip:69673	Arcturus
+hip:69701	Syrma
+hip:69713	Asellus Secundus
+hip:69732	Xuange
+hip:69879	,HIP 69879
+hip:69896	etAps
+hip:69974	Khambalia
+hip:69996	ioLup
+hip:70027	,HIP 70027
+hip:70069	,HIP 70069
+hip:70090	,psCen
+hip:70104	,HIP 70104
+hip:70264	,HIP 70264
+hip:70300	,HIP 70300
+hip:70306	,HIP 70306
+hip:70327	,HIP 70327
+hip:70497	Asellus Primus
+hip:70574	,ta-1Lup
+hip:70576	ta-2Lup
+hip:70638	,deOct
+hip:70692	,HIP 70692
+hip:70753	,HIP 70753
+hip:70755	,phVir
+hip:71053	Hemelein Prima
+hip:71075	Seginus
+hip:71121	siLup
+hip:71284	Hemelein Secunda
+hip:71352	,etCen
+hip:71536	rhLup
+hip:71681	al-2Cen
+hip:71683	Toliman
+hip:71762	pi-1Boo
+hip:71795	,zeBoo
+hip:71832	,HIP 71832
+hip:71860	Kakkab
+hip:71865	,HIP 71865
+hip:71908	,alCir
+hip:71957	Rijl al Awwa
+hip:71995	,HIP 71995
+hip:72010	,HIP 72010
+hip:72104	,HIP 72104
+hip:72105	Izar
+hip:72125	omiBoo
+hip:72220	,109Vir
+hip:72370	,alAps
+hip:72571	,HIP 72571
+hip:72607	Kochab
+hip:72622	Zubenelgenubi
+hip:72631	,HIP 72631
+hip:72659	xiBoo
+hip:72683	omiLup
+hip:73165	,HIP 73165
+hip:73199	,HIP 73199
+hip:73273	Kekouan
+hip:73334	Ke Kwan
+hip:73473	Zubenelakribi
+hip:73555	Nekkar
+hip:73568	omeBoo
+hip:73620	,HIP 73620
+hip:73695	,HIP 73695
+hip:73714	Brachium
+hip:73745	,psBoo
+hip:73807	piLup
+hip:73996	,HIP 73996
+hip:74117	laLup
+hip:74376	,ka-1Lup
+hip:74392	Vishakha
+hip:74395	,zeLup
+hip:74449	,HIP 74449
+hip:74604	,HIP 74604
+hip:74666	Princeps
+hip:74785	Zuben Eschamali
+hip:74824	,beCir
+hip:74837	epCir
+hip:74857	,HIP 74857
+hip:74911	muLup
+hip:74946	,gaTrA
+hip:75097	Pherkad
+hip:75141	Hilasmus
+hip:75177	,ph-1Lup
+hip:75206	nu-1Lup
+hip:75264	,epLup
+hip:75304	,ph-2Lup
+hip:75312	etCrB
+hip:75323	gaCir
+hip:75379	epLib
+hip:75411	Alkalurops
+hip:75458	Edasich
+hip:75501	,HIP 75501
+hip:75695	Nusakan
+hip:76008	thUMi
+hip:76041	nu-2Boo
+hip:76127	,thCrB
+hip:76219	,HIP 76219
+hip:76267	Alphecca
+hip:76276	Qin
+hip:76297	Thusia
+hip:76333	Zubenelakrab
+hip:76371	,HIP 76371
+hip:76440	,epTrA
+hip:76470	,upLib
+hip:76552	omeLup
+hip:76600	,taLib
+hip:76669	ze-1CrB
+hip:76705	ps-1Lup
+hip:76742	,HIP 76742
+hip:76829	,HIP 76829
+hip:76852	ioSer
+hip:76880	,kaLib
+hip:76945	ps-2Lup
+hip:76952	,gaCrB
+hip:77055	Alifa Al Farkadain
+hip:77070	Unukalhai
+hip:77233	Chow
+hip:77257	laSer
+hip:77450	,kaSer
+hip:77512	,deCrB
+hip:77516	Leiolepis
+hip:77622	Nulla Pambu
+hip:77634	,chLup
+hip:77635	,HIP 77635
+hip:77655	,kaC1GrB
+hip:77661	rhSer
+hip:77760	,chHer
+hip:77840	,HIP 77840
+hip:77853	thLib
+hip:77952	,beTrA
+hip:78072	Ainalhai
+hip:78104	Iklil
+hip:78159	,epCrB
+hip:78180	,HIP 78180
+hip:78207	,HIP 78207
+hip:78265	Fang
+hip:78323	,HIP 78323
+hip:78384	,etLup
+hip:78401	Dschubba
+hip:78493	,ioCrB
+hip:78527	,thDra
+hip:78554	piSer
+hip:78592	upHer
+hip:78639	,etNor
+hip:78650	,HIP 78650
+hip:78655	,HIP 78655
+hip:78662	io-1Nor
+hip:78727	Grafias
+hip:78820	Graffias
+hip:78821	,be-2Sco
+hip:78914	,deNor
+hip:78918	,thLup
+hip:78933	,ome-1Sco
+hip:78990	,ome-2Sco
+hip:79043	Marsik
+hip:79101	,phHer
+hip:79119	,taCrB
+hip:79374	Jabbah
+hip:79375	psSco
+hip:79404	,HIP 79404
+hip:79509	,kaNor
+hip:79593	Yed Prior
+hip:79664	,deTrA
+hip:79790	ga-1Nor
+hip:79822	Anwar al Farkadain
+hip:79881	,HIP 79881
+hip:79882	Yed Posterior
+hip:79992	Rukbalgethi Shemali
+hip:80000	,ga-2Nor
+hip:80047	,de-1Aps
+hip:80079	omiSco
+hip:80112	Alniyat
+hip:80170	,gaHer
+hip:80179	,siSer
+hip:80181	xiCrB
+hip:80331	Aldhibain
+hip:80343	psOph
+hip:80463	Kajam omeHer
+hip:80473	rhOph
+hip:80569	chOph
+hip:80582	,epNor
+hip:80628	upOph
+hip:80650	,HIP 80650
+hip:80686	,zeTrA
+hip:80704	,HIP 80704
+hip:80763	Antares
+hip:80815	,HIP 80815
+hip:80816	Kornephoros
+hip:80883	Marfik
+hip:80894	phOph
+hip:80911	,HIP 80911
+hip:80975	omeOph
+hip:81008	,HIP 81008
+hip:81065	,gaAps
+hip:81122	muNor
+hip:81126	,siHer
+hip:81266	,taSco
+hip:81304	,HIP 81304
+hip:81377	Han
+hip:81497	,HIP 81497
+hip:81660	,HIP 81660
+hip:81693	Rutilicus
+hip:81724	,HIP 81724
+hip:81833	Sofian
+hip:81852	,beAps
+hip:82020	,HIP 82020
+hip:82080	Urodelus
+hip:82273	Atria
+hip:82321	,HIP 82321
+hip:82363	,etAra
+hip:82369	,HIP 82369
+hip:82396	Wei
+hip:82514	Xamidimura
+hip:82545	Pipirima
+hip:82671	ze-1Sco
+hip:82673	,ioOph
+hip:82729	,ze-2Sco
+hip:82860	,HIP 82860
+hip:83000	Helkath
+hip:83081	,zeAra
+hip:83153	,ep-1Ara
+hip:83207	Kajam epsHer
+hip:83262	,HIP 83262
+hip:83430	,HIP 83430
+hip:83574	,HIP 83574
+hip:83608	Arrakis
+hip:83613	,HIP 83613
+hip:83895	Nodus I
+hip:84012	Sabik
+hip:84143	,etSco
+hip:84345	Ras Algethi
+hip:84379	Sarin
+hip:84380	Fudail
+hip:84405	,HIP 84405
+hip:84514	,HIP 84514
+hip:84573	,HIP 84573
+hip:84606	,HIP 84606
+hip:84880	,nuSer
+hip:84893	,xiOph
+hip:84969	zeAps
+hip:84970	Imad
+hip:85112	,rhHer
+hip:85258	,beAra
+hip:85267	,gaAra
+hip:85340	,44Oph
+hip:85355	,siOph
+hip:85365	,HIP 85365
+hip:85423	,45Oph
+hip:85670	Alwaid
+hip:85693	Masym
+hip:85696	Lesath
+hip:85727	,deAra
+hip:85755	,HIP 85755
+hip:85792	Ara
+hip:85819	,nu-1Dra
+hip:85822	Yildun
+hip:85829	,nu-2Dra
+hip:85927	Shaula
+hip:86032	Rasalhague
+hip:86092	siAra
+hip:86170	,HIP 86170
+hip:86201	,omeDra
+hip:86228	Sargas
+hip:86263	Nehushtan
+hip:86284	muOph
+hip:86414	Al Jathiyah
+hip:86486	laAra
+hip:86565	,omiSer
+hip:86614	Dziban
+hip:86670	Girtab
+hip:86736	,HIP 86736
+hip:86742	Celbalrai
+hip:86929	,etPav
+hip:86974	Melkarth
+hip:87072	,HIP 87072
+hip:87073	,io-1Sco
+hip:87108	Al Durajah
+hip:87220	,HIP 87220
+hip:87261	Fuyue
+hip:87294	io-2Sco
+hip:87585	Grumium
+hip:87808	Rukbalgethi Genubi
+hip:87833	Eltanin
+hip:87846	,HIP 87846
+hip:87933	,xiHer
+hip:87936	,HIP 87936
+hip:87998	nuHer
+hip:88048	Sinistra
+hip:88060	,HIP 88060
+hip:88116	,HIP 88116
+hip:88128	,HIP 88128
+hip:88149	,HIP 88149
+hip:88175	zeSer
+hip:88192	,HIP 88192
+hip:88267	,HIP 88267
+hip:88290	,HIP 88290
+hip:88404	taOph
+hip:88567	ga-1Sgr
+hip:88601	,HIP 88601
+hip:88635	Alnasl
+hip:88657	,HIP 88657
+hip:88714	,thAra
+hip:88726	,HIP 88726
+hip:88765	,HIP 88765
+hip:88771	,HIP 88771
+hip:88788	,HIP 88788
+hip:88794	,omiHer
+hip:88839	,HIP 88839
+hip:88866	piPav
+hip:88886	,HIP 88886
+hip:89112	,epTel
+hip:89153	,HIP 89153
+hip:89172	,HIP 89172
+hip:89341	Polis
+hip:89348	,HIP 89348
+hip:89642	Sephdar
+hip:89678	,HIP 89678
+hip:89826	,kaLyr
+hip:89861	,HIP 89861
+hip:89908	Batentaban Australis
+hip:89918	,HIP 89918
+hip:89931	Kaus Media
+hip:89937	Batentaban Borealis
+hip:89962	Tang
+hip:90098	,xiPav
+hip:90135	,zeSct
+hip:90139	,HIP 90139
+hip:90156	,HIP 90156
+hip:90185	Kaus Australis
+hip:90289	,HIP 90289
+hip:90344	Fafnir
+hip:90422	,alTel
+hip:90496	Kaus Borealis
+hip:90568	,zeTel
+hip:90595	,gaSct
+hip:90797	nuPav
+hip:90830	de-1Tel
+hip:90905	,HIP 90905
+hip:90982	,thCrA
+hip:91117	,alSct
+hip:91262	Vega
+hip:91726	,deSct
+hip:91792	,zePav
+hip:91845	,epSct
+hip:91918	,HIP 91918
+hip:91919	ep-1Lyr
+hip:91926	,ep-2Lyr
+hip:91971	ze-1Lyr
+hip:91973	,ze-2Lyr
+hip:92024	,HIP 92024
+hip:92041	Nanto
+hip:92043	,HIP 92043
+hip:92088	,HIP 92088
+hip:92161	,HIP 92161
+hip:92175	,beSct
+hip:92308	,et-1CrA
+hip:92382	et-2CrA
+hip:92420	Sheliak
+hip:92512	,omiDra
+hip:92609	,laPav
+hip:92689	,HIP 92689
+hip:92728	de-1Lyr
+hip:92761	Ainalrami
+hip:92782	,upDra
+hip:92791	,de-2Lyr
+hip:92818	,HIP 92818
+hip:92845	nu-2Sgr
+hip:92855	Nunki
+hip:92862	,HIP 92862
+hip:92946	Alya
+hip:92951	th-2Ser
+hip:93015	kaPav
+hip:93026	etSct
+hip:93085	,xi-2Sgr
+hip:93148	,laTel
+hip:93174	,epCrA
+hip:93194	Sulaphat
+hip:93244	Deneb el Okab Borealis
+hip:93279	laLyr
+hip:93408	,HIP 93408
+hip:93429	Bered
+hip:93506	Ascella
+hip:93542	,zeCrA
+hip:93683	Manubrium
+hip:93747	Deneb el Okab Australis
+hip:93805	Al Thalimaim Anterior
+hip:93825	,gaCrA
+hip:93864	Hecatebolus
+hip:94005	,deCrA
+hip:94114	Alfecca Meridiana
+hip:94141	Albaldah
+hip:94160	,beCrA
+hip:94376	Nodus II
+hip:94481	Aladfar
+hip:94490	,HIP 94490
+hip:94643	psSgr
+hip:94648	,taDra
+hip:94703	,HIP 94703
+hip:94713	,thLyr
+hip:94779	,kaCyg
+hip:94820	,HIP 94820
+hip:95066	,HIP 95066
+hip:95081	piDra
+hip:95168	rh-1Sgr
+hip:95176	,upSgr
+hip:95188	rh-2Sgr
+hip:95241	Arkab Prior
+hip:95294	Arkab Posterior
+hip:95347	Rukbat
+hip:95372	,HIP 95372
+hip:95477	ch-1Sgr
+hip:95501	Delta Aquilae
+hip:95585	nuAql
+hip:95656	io-1Cyg
+hip:95771	Anser
+hip:95853	,io-2Cyg
+hip:95947	Albireo
+hip:96052	,HIP 96052
+hip:96100	Alsafi
+hip:96229	,muAql
+hip:96275	,HIP 96275
+hip:96341	,ioTel
+hip:96441	,thCyg
+hip:96465	,52Sgr
+hip:96468	Al Thalimaim Posterior
+hip:96483	,kaAql
+hip:96516	epSge
+hip:96683	phCyg
+hip:96757	Sham
+hip:96837	,beSge
+hip:97118	,HIP 97118
+hip:97165	Ruc
+hip:97278	Tarazed
+hip:97290	,HIP 97290
+hip:97295	,HIP 97295
+hip:97365	,deSge
+hip:97433	Tyl
+hip:97496	zeSge
+hip:97649	Altair
+hip:97679	,12Vul
+hip:97804	Bazak
+hip:97886	,HIP 97886
+hip:97938	Libertas
+hip:98032	,ioSgr
+hip:98036	Alshain
+hip:98055	psCyg
+hip:98066	Terebellium
+hip:98068	,HIP 98068
+hip:98073	,HIP 98073
+hip:98110	,etCyg
+hip:98162	,59Sgr
+hip:98337	,gaSge
+hip:98353	,HIP 98353
+hip:98412	,th-1Sgr
+hip:98495	,epPav
+hip:98543	,HIP 98543
+hip:98608	,HIP 98608
+hip:98688	,62Sgr
+hip:98702	rhDra
+hip:98761	,HIP 98761
+hip:98842	,HIP 98842
+hip:99120	,xiTel
+hip:99240	,dePav
+hip:99255	,kaCep
+hip:99303	,HIP 99303
+hip:99473	Tseen Foo
+hip:99529	xi-1Cap
+hip:99572	xi-2Cap
+hip:99639	,HIP 99639
+hip:99655	,HIP 99655
+hip:99675	,HIP 99675
+hip:99742	,rhAql
+hip:99770	,HIP 99770
+hip:99824	,HIP 99824
+hip:99848	,HIP 99848
+hip:99874	,HIP 99874
+hip:100027	,al-1Cap
+hip:100044	,34Cyg
+hip:100064	,al-2Cap
+hip:100310	Alshat
+hip:100345	Dabih
+hip:100453	Sador
+hip:100587	,HIP 100587
+hip:100751	Peacock
+hip:100881	Oculus
+hip:101027	Bos
+hip:101076	,HIP 101076
+hip:101093	Alkidr
+hip:101101	,HIP 101101
+hip:101120	,HIP 101120
+hip:101123	,HIP 101123
+hip:101138	Ruchbah I
+hip:101243	Ruchbah II
+hip:101421	Deneb Dulphim
+hip:101474	,HIP 101474
+hip:101589	zeDel
+hip:101612	ph-1Pav
+hip:101692	,HIP 101692
+hip:101769	Rotanev
+hip:101772	,alInd
+hip:101773	rhPav
+hip:101847	,HIP 101847
+hip:101867	,HIP 101867
+hip:101923	taCap
+hip:101958	Sualocin
+hip:101984	,upCap
+hip:102098	Deneb
+hip:102281	,deDel
+hip:102333	,etInd
+hip:102388	,HIP 102388
+hip:102395	,bePav
+hip:102422	Alagemin
+hip:102431	,HIP 102431
+hip:102453	,HIP 102453
+hip:102485	Pazan
+hip:102488	Gienah Cygni
+hip:102531	ga-1Del
+hip:102532	,ga-2Del
+hip:102571	,HIP 102571
+hip:102589	laCyg
+hip:102618	Albali
+hip:102624	,3Aqr
+hip:102724	,HIP 102724
+hip:102790	zeInd
+hip:102831	,alMic
+hip:102978	Baten Algiedi
+hip:103004	,HIP 103004
+hip:103045	,muAqr
+hip:103089	,HIP 103089
+hip:103227	,beInd
+hip:103413	,nuCyg
+hip:103632	,HIP 103632
+hip:103738	,gaMic
+hip:104019	Armus
+hip:104060	,xiCyg
+hip:104139	Dorsum
+hip:104194	,HIP 104194
+hip:104234	,24Cap
+hip:104459	Albulaan
+hip:104521	,gaEqu
+hip:104732	,zeCyg
+hip:104858	,deEqu
+hip:104887	taCyg
+hip:104987	Kitalpha
+hip:105102	,siCyg
+hip:105138	,upCyg
+hip:105140	,epMic
+hip:105199	Alderamin
+hip:105319	,thInd
+hip:105382	,th-1Mic
+hip:105502	,1Peg
+hip:105515	,ioCap
+hip:105570	,beEqu
+hip:105858	,gaPav
+hip:105881	Marakk
+hip:106032	Alphirk
+hip:106039	,36Cap
+hip:106140	,HIP 106140
+hip:106278	Sadalsuud
+hip:106481	,rhCyg
+hip:106551	,HIP 106551
+hip:106723	Castra
+hip:106786	Bunda
+hip:106801	,HIP 106801
+hip:106985	Nashira
+hip:107089	,nuOct
+hip:107119	,HIP 107119
+hip:107136	Azelfafage
+hip:107188	kaCap
+hip:107259	Erakis
+hip:107310	mu-1Cyg
+hip:107315	Enif
+hip:107348	,9Peg
+hip:107354	Jih
+hip:107380	,ioPsA
+hip:107418	,nuCep
+hip:107517	,laCap
+hip:107533	,pi-2Cyg
+hip:107556	Deneb Algedi
+hip:107608	,thPsA
+hip:108036	,muCap
+hip:108085	Aldhanab
+hip:108431	,deInd
+hip:108870	,epInd
+hip:108874	Kae Uh
+hip:108917	Kurdah
+hip:109068	nuPeg
+hip:109074	Sadalmelek
+hip:109111	,laGru
+hip:109139	,ioAqr
+hip:109176	,ioPeg
+hip:109268	Alnair
+hip:109285	,muPsA
+hip:109289	upPsA
+hip:109352	,pi-1Peg
+hip:109400	,HIP 109400
+hip:109410	,piPeg
+hip:109422	taPsA
+hip:109427	Biham
+hip:109492	Kurhah
+hip:109754	,HIP 109754
+hip:109789	,laPsA
+hip:109857	Phicares
+hip:109908	mu-1Gru
+hip:109937	,1Lac
+hip:110003	Ancha
+hip:110130	,alTuc
+hip:110351	,2Lac
+hip:110371	,HIP 110371
+hip:110386	,HIP 110386
+hip:110395	Sadalachbia
+hip:110538	,beLac
+hip:110609	,4Lac
+hip:110672	Seat
+hip:110838	deTuc
+hip:110882	,HIP 110882
+hip:110960	Sadaltager
+hip:110991	Alradif
+hip:110997	,de-1Gru
+hip:111022	,5Lac
+hip:111043	,de-2Gru
+hip:111104	,6Lac
+hip:111123	,siAqr
+hip:111169	,alLac
+hip:111188	Tien Kang
+hip:111310	nuTuc
+hip:111497	Hydria
+hip:111674	,HIP 111674
+hip:111710	Situla
+hip:111841	,HIP 111841
+hip:111944	,HIP 111944
+hip:111954	,epPsA
+hip:112029	Homam
+hip:112051	omiPeg
+hip:112122	Gruid
+hip:112158	Matar
+hip:112203	rhGru
+hip:112211	,HIP 112211
+hip:112374	etGru
+hip:112405	,beOct
+hip:112440	Sadalbari
+hip:112447	,xiPeg
+hip:112519	,HIP 112519
+hip:112623	,epGru
+hip:112716	,ta-2Aqr
+hip:112724	Alvahet
+hip:112748	,muPeg
+hip:112917	,HIP 112917
+hip:112948	,gaPsA
+hip:112961	Ekkhysis
+hip:113116	,HIP 113116
+hip:113136	Skat
+hip:113186	rhPeg
+hip:113246	Aboras
+hip:113288	,HIP 113288
+hip:113368	Fomalhaut
+hip:113638	,zeGru
+hip:113726	,omiAnd
+hip:113881	Scheat
+hip:113889	Fum Alsamakah
+hip:113919	,HIP 113919
+hip:113963	Markab
+hip:114104	,HIP 114104
+hip:114119	,HIP 114119
+hip:114131	,thGru
+hip:114144	,HIP 114144
+hip:114155	,HIP 114155
+hip:114222	piCep
+hip:114341	,88Aqr
+hip:114375	,HIP 114375
+hip:114421	,ioGru
+hip:114570	,HIP 114570
+hip:114724	,phAqr
+hip:114855	,ps-1Aqr
+hip:114939	chAqr
+hip:114971	Simmah
+hip:114996	,gaTuc
+hip:115022	,HIP 115022
+hip:115033	ps-2Aqr
+hip:115088	omiCep
+hip:115102	,gaScl
+hip:115115	,ps-3Aqr
+hip:115250	Kerb
+hip:115438	,98Aqr
+hip:115590	,HIP 115590
+hip:115623	Alkarab
+hip:115669	,HIP 115669
+hip:115738	,kaPsc
+hip:115830	,thPsc
+hip:115919	,HIP 115919
+hip:115990	,HIP 115990
+hip:116231	,beScl
+hip:116247	,HIP 116247
+hip:116310	,HIP 116310
+hip:116389	,ioPhe
+hip:116584	,laAnd
+hip:116602	,HIP 116602
+hip:116631	,ioAnd
+hip:116727	Alrai
+hip:116758	ome-1Aqr
+hip:116771	,ioPsc
+hip:116805	,kaAnd
+hip:116901	,HIP 116901
+hip:116928	,laPsc
+hip:116971	,ome-2Aqr
+hip:117073	,HIP 117073
+hip:117089	,HIP 117089
+hip:117221	,psAnd
+hip:117245	,19Psc
+hip:117301	taCas
+hip:117452	,deScl
+hip:117629	,HIP 117629
+hip:117863	,rhCas
+hip:118121	etTuc
+hip:118131	,psPeg
+hip:118209	,HIP 118209
+hip:118243	siCas
+hip:118268	Vernalis
+hip:118322	,epTuc
+messier:44	Praesepe Cluster
+ngc:869	Capulus
+ngc:884	,NGC 884
+ngc:6441	,NGC 6441
+messier:6	Aculeus
+messier:7	Acumen
+melotte:111	Coma Berenices

@@ -1,0 +1,4828 @@
+{
+ "1240-05-23": {
+  "digests": {
+   "page / Strength of the Planets": "b51c440abb600a98d8c79af885242ff49d84ebde7a3773e3fa9cac546a9a0e19",
+   "page / Answer key: testimonies in words": "ab6bb24dc80c84526f27de165253cc41ce1ec00564f08b1f2d6c47b9686dfd22",
+   "page / Weakness of the Planets": "2d205b259188651d99f32d7ded0ff8a5e294db7b4821417d65229fdc7caa6021",
+   "page / Corruption of the Moon": "19bcd930a401f6d2ee6de54b54ef8f236f23b9d0245db62e3ef8f9c0fc2d4779",
+   "page / Planetary Condition": "625767235bf80c6cd4a04fe99e7ad42c3fd2bdf3acc98f183a56375786277f0f",
+   "export / Planetary Condition": "1834247b2b218c08b6c1acb5cc54fd878704872b3eb33892dc40cdedb01b9a6d",
+   "export / Corruption of the Moon": "2097b30642a2b82d9b54978e733fd2d370dcba8ae0c8d750432979eff2c2288c",
+   "export / Planetary Dignity Evaluation (Hellenistic/Rhetorius reconstruction)": "376588a6fb9688eb1abc93527e8a76c0c74d8d63e6be3d4ad26188322b63009f",
+   "export / Topical Planets in Houses": "71e5eae6f3627073f72aaf00f69bc2364abbe5ef06a39e52feeeb245ac0a0a09",
+   "page / Rhetorius / PN IV readings": "c0e13bf58502b6daba553e49b1161d00b56d8d4b44acc0706cb55c1479bf6142"
+  },
+  "rows": {
+   "export / Strength of the Planets": [
+    {
+     "Planet": "Sun",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 6,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Joy"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.96 (unrounded: 0.9553844877934661)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Aversion",
+        "Configuration with Saturn: Aversion"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Moon, Venus, Jupiter",
+        "Moon: whole-sign place 9, Gemini",
+        "Venus: whole-sign place 7, Aries",
+        "Jupiter: whole-sign place 7, Aries",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Moon",
+     "Strength Testimonies": "Direct in course (80), Not in the whole-sign angles of an infortune (81), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83)",
+     "Count": 4,
+     "Labels": [
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)"
+     ],
+     "Testimonies": [
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 14.19 (unrounded: 14.193465572280006)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Aversion",
+        "Configuration with Saturn: Aversion"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Sun, Venus, Jupiter",
+        "Sun: whole-sign place 9, Gemini",
+        "Venus: whole-sign place 7, Aries",
+        "Jupiter: whole-sign place 7, Aries",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mercury",
+     "Strength Testimonies": "Direct in course (80), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In its own glow, i.e. of the sect (85), In a fixed sign (86)",
+     "Count": 5,
+     "Labels": [
+      "Direct in course (80)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)",
+      "In a fixed sign (86)"
+     ],
+     "Testimonies": [
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 1.08 (unrounded: 1.0784297010268007)"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: none",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      },
+      {
+       "n": "86",
+       "sentence": "In a fixed sign (86)",
+       "facts": [
+        "Sign: Taurus",
+        "Fixed signs: Taurus, Leo, Scorpio, Aquarius"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Venus",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), In its own share of dignity (79), Direct in course (80), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83)",
+     "Count": 5,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 7",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Face"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.86 (unrounded: 0.8627738375483684)"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Sun, Moon, Jupiter, Saturn",
+        "Sun: whole-sign place 9, Gemini",
+        "Moon: whole-sign place 9, Gemini",
+        "Jupiter: whole-sign place 7, Aries",
+        "Saturn: whole-sign place 10, Cancer",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 7",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mars",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In a fixed sign (86)",
+     "Count": 6,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In a fixed sign (86)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Term, Triplicity (Sahl I Figure 4)"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.70 (unrounded: 0.6984648449499772)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Saturn",
+        "Configuration with Saturn: Sextile"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: none",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "86",
+       "sentence": "In a fixed sign (86)",
+       "facts": [
+        "Sign: Taurus",
+        "Fixed signs: Taurus, Leo, Scorpio, Aquarius"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Jupiter",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), Direct in course (80), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3), In its own glow, i.e. of the sect (85)",
+     "Count": 6,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "Direct in course (80)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 7",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.20 (unrounded: 0.19671061985778363)"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Sun, Moon, Venus, Saturn",
+        "Sun: whole-sign place 9, Gemini",
+        "Moon: whole-sign place 9, Gemini",
+        "Venus: whole-sign place 7, Aries",
+        "Saturn: whole-sign place 10, Cancer",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 7",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "84",
+       "sentence": "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+       "facts": [
+        "Signed distance from the Sun (negative is eastern): -48.29 (unrounded: -48.28893878305843)",
+        "Considered-eastern floor: 6.00 (unrounded: 6.0)"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Saturn",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 7,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 10",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Term"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.10 (unrounded: 0.10007828812989701)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars",
+        "Configuration with Mars: Sextile"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Venus, Jupiter",
+        "Venus: whole-sign place 7, Aries",
+        "Jupiter: whole-sign place 7, Aries",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 10",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    }
+   ],
+   "export / Weakness of the Planets": [
+    {
+     "Planet": "Sun",
+     "Weakness Testimonies": "Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 1,
+     "Labels": [
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Mercury",
+        "Exaltation lord where it sits: -",
+        "Triplicity lord where it sits (by day): Saturn",
+        "Partnering triplicity lord where it sits: Jupiter"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Moon",
+     "Weakness Testimonies": "Under the rays of the Sun, western/overtaken (93, 99), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 2,
+     "Labels": [
+      "Under the rays of the Sun, western/overtaken (93, 99)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "93",
+       "sentence": "Under the rays of the Sun, western/overtaken (93, 99)",
+       "facts": [
+        "Solar phase (Sahl): Burned",
+        "Heart limit (degrees, inclusive): 1.00 (unrounded: 1.0)",
+        "Signed distance from the Sun (positive is western): 5.53 (unrounded: 5.533719295177718)"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Mercury",
+        "Exaltation lord where it sits: -",
+        "Triplicity lord where it sits (by day): Saturn",
+        "Partnering triplicity lord where it sits: Jupiter"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mercury",
+     "Weakness Testimonies": "Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 1,
+     "Labels": [
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Venus",
+        "Exaltation lord where it sits: Moon",
+        "Triplicity lord where it sits (by day): Venus",
+        "Partnering triplicity lord where it sits: Mars"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Venus",
+     "Weakness Testimonies": "Connecting with Saturn by assembly, square, or opposition (94), Alien: no house, exaltation, or triplicity where it sits (98), Inverted, in the seventh sign from its own house (100)",
+     "Count": 3,
+     "Labels": [
+      "Connecting with Saturn by assembly, square, or opposition (94)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)",
+      "Inverted, in the seventh sign from its own house (100)"
+     ],
+     "Testimonies": [
+      {
+       "n": "94",
+       "sentence": "Connecting with Saturn by assembly, square, or opposition (94)",
+       "facts": [
+        "Connecting with Saturn: Square"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Mars",
+        "Exaltation lord where it sits: Sun",
+        "Triplicity lord where it sits (by day): Sun",
+        "Partnering triplicity lord where it sits: Saturn"
+       ]
+      },
+      {
+       "n": "100",
+       "sentence": "Inverted, in the seventh sign from its own house (100)",
+       "facts": [
+        "Detriment (essential): yes"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mars",
+     "Weakness Testimonies": "Under the rays of the Sun (93), With the Head or Tail, without latitude (99; this app reads |latitude| < 1°; 12 deg orb for either node, Ch. 3, 107 and Gr. Intr. VII.6, 52), Inverted, in the seventh sign from its own house (100)",
+     "Count": 3,
+     "Labels": [
+      "Under the rays of the Sun (93)",
+      "With the Head or Tail, without latitude (99; this app reads |latitude| < 1°; 12 deg orb for either node, Ch. 3, 107 and Gr. Intr. VII.6, 52)",
+      "Inverted, in the seventh sign from its own house (100)"
+     ],
+     "Testimonies": [
+      {
+       "n": "93",
+       "sentence": "Under the rays of the Sun (93)",
+       "facts": [
+        "Solar phase (Sahl): Under the rays",
+        "Heart limit (degrees, inclusive): 1.00 (unrounded: 1.0)",
+        "Signed distance from the Sun (positive is western): -10.92 (unrounded: -10.918996802971776)"
+       ]
+      },
+      {
+       "n": "99",
+       "sentence": "With the Head or Tail, without latitude (99; this app reads |latitude| < 1°; 12 deg orb for either node, Ch. 3, 107 and Gr. Intr. VII.6, 52)",
+       "facts": [
+        "Distance from the nearer node: 1.25 (unrounded: 1.2525855117343099)",
+        "Latitude: 0.14 (unrounded: 0.14118602335629774)"
+       ]
+      },
+      {
+       "n": "100",
+       "sentence": "Inverted, in the seventh sign from its own house (100)",
+       "facts": [
+        "Detriment (essential): yes"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Jupiter",
+     "Weakness Testimonies": "Connecting with Saturn by assembly, square, or opposition (94), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 2,
+     "Labels": [
+      "Connecting with Saturn by assembly, square, or opposition (94)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "94",
+       "sentence": "Connecting with Saturn by assembly, square, or opposition (94)",
+       "facts": [
+        "Connecting with Saturn: Square"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Mars",
+        "Exaltation lord where it sits: Sun",
+        "Triplicity lord where it sits (by day): Sun",
+        "Partnering triplicity lord where it sits: Saturn"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Saturn",
+     "Weakness Testimonies": "Alien: no house, exaltation, or triplicity where it sits (98), Inverted, in the seventh sign from its own house (100)",
+     "Count": 2,
+     "Labels": [
+      "Alien: no house, exaltation, or triplicity where it sits (98)",
+      "Inverted, in the seventh sign from its own house (100)"
+     ],
+     "Testimonies": [
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Moon",
+        "Exaltation lord where it sits: Jupiter",
+        "Triplicity lord where it sits (by day): Venus",
+        "Partnering triplicity lord where it sits: Moon"
+       ]
+      },
+      {
+       "n": "100",
+       "sentence": "Inverted, in the seventh sign from its own house (100)",
+       "facts": [
+        "Detriment (essential): yes"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "1240-05-25": {
+  "digests": {
+   "page / Strength of the Planets": "163cf483d73d9c9954178a9186b88bba277450e9f38819cedf6dc05fa1a17600",
+   "page / Answer key: testimonies in words": "2c86f6538976238ea18163a1e2b01c69f9a77f56a6352a4efcea917e1831d675",
+   "page / Weakness of the Planets": "4081dba513a6e70e6301c88f766bdb88f8142d8078488cdf30bd49acd93ed3ba",
+   "page / Corruption of the Moon": "0f4f80bc6fd9ac4f0b2c8e0abfc3e300298b62b6fac602b21681af81e179b51c",
+   "page / Planetary Condition": "c8b0311b360f5044527ac0d19fa23d72cb7c9b58d8299455fe9c4a2c02a52cba",
+   "export / Planetary Condition": "feb5a8709a09614d42ed996e08c2bc71a176d33bb2f45d159b206d3756c1d051",
+   "export / Corruption of the Moon": "0e2fe2f4c6aead0ba0a22f8500cf414391e436ec5a15441dad3eb4920f1b79ff",
+   "export / Planetary Dignity Evaluation (Hellenistic/Rhetorius reconstruction)": "310543c1afa36b896851627efb39fc1d8a9aed616451adcde34c8ecdece31edc",
+   "export / Topical Planets in Houses": "33ab66db0d6974d64a800600c124023abdd149bf7775bdf01434e51e9f5feb51",
+   "page / Rhetorius / PN IV readings": "9d57ae84eaf10768c31b31e86db176bbb3ac6496c8d8589fac3abc7a2b287248"
+  },
+  "rows": {
+   "export / Strength of the Planets": [
+    {
+     "Planet": "Sun",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 6,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Joy"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.95 (unrounded: 0.9549629152014235)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Aversion",
+        "Configuration with Saturn: Aversion"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Venus, Jupiter",
+        "Venus: whole-sign place 7, Aries",
+        "Jupiter: whole-sign place 7, Aries",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Moon",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), In its own share of dignity (79), Direct in course (80), Advancing, by the five-degree rule into the 10th (83), In a matching-gender (feminine) quadrant and sign (88)",
+     "Count": 5,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Advancing, by the five-degree rule into the 10th (83)",
+      "In a matching-gender (feminine) quadrant and sign (88)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 10",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Domicile, Triplicity (Sahl I Figure 4)"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 14.53 (unrounded: 14.534686983660723)"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing, by the five-degree rule into the 10th (83)",
+       "facts": [
+        "Quadrant division: 10",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11",
+        "Quadrant division, strict: 9"
+       ]
+      },
+      {
+       "n": "88",
+       "sentence": "In a matching-gender (feminine) quadrant and sign (88)",
+       "facts": [
+        "Gender: Feminine",
+        "Quadrant division, strict: 9",
+        "Quadrant gender: Feminine",
+        "Sign: Cancer",
+        "Sign gender: Feminine"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mercury",
+     "Strength Testimonies": "Direct in course (80), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In its own glow, i.e. of the sect (85), In a fixed sign (86)",
+     "Count": 5,
+     "Labels": [
+      "Direct in course (80)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)",
+      "In a fixed sign (86)"
+     ],
+     "Testimonies": [
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 1.19 (unrounded: 1.190818427850783)"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Moon",
+        "Moon: whole-sign place 10, Cancer",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      },
+      {
+       "n": "86",
+       "sentence": "In a fixed sign (86)",
+       "facts": [
+        "Sign: Taurus",
+        "Fixed signs: Taurus, Leo, Scorpio, Aquarius"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Venus",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), In its own share of dignity (79), Direct in course (80), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83)",
+     "Count": 5,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 7",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Face"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.88 (unrounded: 0.8821992927779548)"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Sun, Jupiter, Saturn",
+        "Sun: whole-sign place 9, Gemini",
+        "Jupiter: whole-sign place 7, Aries",
+        "Saturn: whole-sign place 10, Cancer",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 7",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mars",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In a fixed sign (86)",
+     "Count": 6,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In a fixed sign (86)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Term, Triplicity (Sahl I Figure 4)"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.70 (unrounded: 0.6967411678141883)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Saturn",
+        "Configuration with Saturn: Sextile"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: none",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "86",
+       "sentence": "In a fixed sign (86)",
+       "facts": [
+        "Sign: Taurus",
+        "Fixed signs: Taurus, Leo, Scorpio, Aquarius"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Jupiter",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), Direct in course (80), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3), In its own glow, i.e. of the sect (85)",
+     "Count": 6,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "Direct in course (80)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 7",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.19 (unrounded: 0.19387339098085526)"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Sun, Moon, Venus, Saturn",
+        "Sun: whole-sign place 9, Gemini",
+        "Moon: whole-sign place 10, Cancer",
+        "Venus: whole-sign place 7, Aries",
+        "Saturn: whole-sign place 10, Cancer",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 7",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "84",
+       "sentence": "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+       "facts": [
+        "Signed distance from the Sun (negative is eastern): -49.81 (unrounded: -49.808695571213036)",
+        "Considered-eastern floor: 6.00 (unrounded: 6.0)"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Saturn",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 7,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 10",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Term"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.10 (unrounded: 0.10204770611416289)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars",
+        "Configuration with Mars: Sextile"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Venus, Jupiter",
+        "Venus: whole-sign place 7, Aries",
+        "Jupiter: whole-sign place 7, Aries",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 10",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    }
+   ],
+   "export / Weakness of the Planets": [
+    {
+     "Planet": "Sun",
+     "Weakness Testimonies": "Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 1,
+     "Labels": [
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Mercury",
+        "Exaltation lord where it sits: -",
+        "Triplicity lord where it sits (by day): Saturn",
+        "Partnering triplicity lord where it sits: Jupiter"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Moon",
+     "Weakness Testimonies": "Connecting with Mercury, averse to the Ascendant (97)",
+     "Count": 1,
+     "Labels": [
+      "Connecting with Mercury, averse to the Ascendant (97)"
+     ],
+     "Testimonies": [
+      {
+       "n": "97",
+       "sentence": "Connecting with Mercury, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Mercury"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mercury",
+     "Weakness Testimonies": "Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 1,
+     "Labels": [
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Venus",
+        "Exaltation lord where it sits: Moon",
+        "Triplicity lord where it sits (by day): Venus",
+        "Partnering triplicity lord where it sits: Mars"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Venus",
+     "Weakness Testimonies": "Connecting with Saturn by assembly, square, or opposition (94), Alien: no house, exaltation, or triplicity where it sits (98), Inverted, in the seventh sign from its own house (100)",
+     "Count": 3,
+     "Labels": [
+      "Connecting with Saturn by assembly, square, or opposition (94)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)",
+      "Inverted, in the seventh sign from its own house (100)"
+     ],
+     "Testimonies": [
+      {
+       "n": "94",
+       "sentence": "Connecting with Saturn by assembly, square, or opposition (94)",
+       "facts": [
+        "Connecting with Saturn: Square"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Mars",
+        "Exaltation lord where it sits: Sun",
+        "Triplicity lord where it sits (by day): Sun",
+        "Partnering triplicity lord where it sits: Saturn"
+       ]
+      },
+      {
+       "n": "100",
+       "sentence": "Inverted, in the seventh sign from its own house (100)",
+       "facts": [
+        "Detriment (essential): yes"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mars",
+     "Weakness Testimonies": "Under the rays of the Sun (93), With the Head or Tail, without latitude (99; this app reads |latitude| < 1°; 12 deg orb for either node, Ch. 3, 107 and Gr. Intr. VII.6, 52), Inverted, in the seventh sign from its own house (100)",
+     "Count": 3,
+     "Labels": [
+      "Under the rays of the Sun (93)",
+      "With the Head or Tail, without latitude (99; this app reads |latitude| < 1°; 12 deg orb for either node, Ch. 3, 107 and Gr. Intr. VII.6, 52)",
+      "Inverted, in the seventh sign from its own house (100)"
+     ],
+     "Testimonies": [
+      {
+       "n": "93",
+       "sentence": "Under the rays of the Sun (93)",
+       "facts": [
+        "Solar phase (Sahl): Under the rays",
+        "Heart limit (degrees, inclusive): 1.00 (unrounded: 1.0)",
+        "Signed distance from the Sun (positive is western): -11.43 (unrounded: -11.434143971646364)"
+       ]
+      },
+      {
+       "n": "99",
+       "sentence": "With the Head or Tail, without latitude (99; this app reads |latitude| < 1°; 12 deg orb for either node, Ch. 3, 107 and Gr. Intr. VII.6, 52)",
+       "facts": [
+        "Distance from the nearer node: 2.70 (unrounded: 2.6963476739360033)",
+        "Latitude: 0.16 (unrounded: 0.16213982331930085)"
+       ]
+      },
+      {
+       "n": "100",
+       "sentence": "Inverted, in the seventh sign from its own house (100)",
+       "facts": [
+        "Detriment (essential): yes"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Jupiter",
+     "Weakness Testimonies": "Connecting with Saturn by assembly, square, or opposition (94), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 2,
+     "Labels": [
+      "Connecting with Saturn by assembly, square, or opposition (94)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "94",
+       "sentence": "Connecting with Saturn by assembly, square, or opposition (94)",
+       "facts": [
+        "Connecting with Saturn: Square"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Mars",
+        "Exaltation lord where it sits: Sun",
+        "Triplicity lord where it sits (by day): Sun",
+        "Partnering triplicity lord where it sits: Saturn"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Saturn",
+     "Weakness Testimonies": "Alien: no house, exaltation, or triplicity where it sits (98), Inverted, in the seventh sign from its own house (100)",
+     "Count": 2,
+     "Labels": [
+      "Alien: no house, exaltation, or triplicity where it sits (98)",
+      "Inverted, in the seventh sign from its own house (100)"
+     ],
+     "Testimonies": [
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Moon",
+        "Exaltation lord where it sits: Jupiter",
+        "Triplicity lord where it sits (by day): Venus",
+        "Partnering triplicity lord where it sits: Moon"
+       ]
+      },
+      {
+       "n": "100",
+       "sentence": "Inverted, in the seventh sign from its own house (100)",
+       "facts": [
+        "Detriment (essential): yes"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "1240-05-26": {
+  "digests": {
+   "page / Strength of the Planets": "d41f542a9dffc4958cb375f3c753d6903cb834e0218932e163b8375629c6043c",
+   "page / Answer key: testimonies in words": "88b60cb5005fe035a8a054b7744a68175351c198988d95b529b9755b5e9001a4",
+   "page / Weakness of the Planets": "28aa04960858fdb7f888fd7e029bfe2b4a176b52cce71cf9f0f917e95666019f",
+   "page / Corruption of the Moon": "fe5f396a533391143f6c621ad81ce9ba1098a84eae8d5398ec1cb2cdcb658529",
+   "page / Planetary Condition": "257d5c9d0281a5f43c73aac9f0f41be91ab537eaa5b351800448f56af23a5da0",
+   "export / Planetary Condition": "42c7e118cd63d404c876fcf6bb5d09e80462b5a5829603b8b0ad3458aa9b56cb",
+   "export / Corruption of the Moon": "55d19c3854d17ff755607ff1d6f9f38ea8d2bfdbdd437367fac41125a97beb37",
+   "export / Planetary Dignity Evaluation (Hellenistic/Rhetorius reconstruction)": "2d580b90199e5ba0a3f090b0acffbed050c4cf9b5650661e1af15913e0dcc75f",
+   "export / Topical Planets in Houses": "e7fc94a92d3ed91fc35e928d299df5de561aa6f6362aadcd9c6b4a02b70b7890",
+   "page / Rhetorius / PN IV readings": "8edcdc2ddde80c129bea6bff183c8a4a326d56357138c4ebf3be4b1d967f9631"
+  },
+  "rows": {
+   "export / Strength of the Planets": [
+    {
+     "Planet": "Sun",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 5,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Joy"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.95 (unrounded: 0.9547223644044922)"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Venus, Mars, Jupiter",
+        "Venus: whole-sign place 7, Aries",
+        "Mars: whole-sign place 9, Gemini",
+        "Jupiter: whole-sign place 7, Aries",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Moon",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), In its own share of dignity (79), Direct in course (80), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83)",
+     "Count": 5,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 10",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Domicile, Face, Triplicity (Sahl I Figure 4)"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 14.56 (unrounded: 14.559856406385913)"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Saturn",
+        "Saturn: whole-sign place 10, Cancer",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 10",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mercury",
+     "Strength Testimonies": "Direct in course (80), Not in the whole-sign angles of an infortune (81), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In its own glow, i.e. of the sect (85), In a fixed sign (86)",
+     "Count": 6,
+     "Labels": [
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)",
+      "In a fixed sign (86)"
+     ],
+     "Testimonies": [
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 1.25 (unrounded: 1.2457067355871259)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Aversion",
+        "Configuration with Saturn: Sextile"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: none",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      },
+      {
+       "n": "86",
+       "sentence": "In a fixed sign (86)",
+       "facts": [
+        "Sign: Taurus",
+        "Fixed signs: Taurus, Leo, Scorpio, Aquarius"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Venus",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), In its own share of dignity (79), Direct in course (80), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83)",
+     "Count": 5,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 7",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Face"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.89 (unrounded: 0.8913654420752151)"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Sun, Jupiter, Saturn",
+        "Sun: whole-sign place 9, Gemini",
+        "Jupiter: whole-sign place 7, Aries",
+        "Saturn: whole-sign place 10, Cancer",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 7",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mars",
+     "Strength Testimonies": "Direct in course (80), Not in the whole-sign angles of an infortune (81), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83)",
+     "Count": 4,
+     "Labels": [
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)"
+     ],
+     "Testimonies": [
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.70 (unrounded: 0.6958568161011723)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Saturn",
+        "Configuration with Saturn: Aversion"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Sun",
+        "Sun: whole-sign place 9, Gemini",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Jupiter",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), Direct in course (80), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3), In its own glow, i.e. of the sect (85)",
+     "Count": 6,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "Direct in course (80)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 7",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.19 (unrounded: 0.19240189689105527)"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Sun, Venus, Saturn",
+        "Sun: whole-sign place 9, Gemini",
+        "Venus: whole-sign place 7, Aries",
+        "Saturn: whole-sign place 10, Cancer",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 7",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "84",
+       "sentence": "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+       "facts": [
+        "Signed distance from the Sun (negative is eastern): -50.57 (unrounded: -50.57040101747398)",
+        "Considered-eastern floor: 6.00 (unrounded: 6.0)"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Saturn",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 7,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 10",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Term"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.10 (unrounded: 0.10298794852669953)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars",
+        "Configuration with Mars: Aversion"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Moon, Venus, Jupiter",
+        "Moon: whole-sign place 10, Cancer",
+        "Venus: whole-sign place 7, Aries",
+        "Jupiter: whole-sign place 7, Aries",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 10",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    }
+   ],
+   "export / Weakness of the Planets": [
+    {
+     "Planet": "Sun",
+     "Weakness Testimonies": "Connecting with Mars by assembly, square, or opposition (94), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 2,
+     "Labels": [
+      "Connecting with Mars by assembly, square, or opposition (94)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "94",
+       "sentence": "Connecting with Mars by assembly, square, or opposition (94)",
+       "facts": [
+        "Connecting with Mars: Conjunction"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Mercury",
+        "Exaltation lord where it sits: -",
+        "Triplicity lord where it sits (by day): Saturn",
+        "Partnering triplicity lord where it sits: Jupiter"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Moon",
+     "Weakness Testimonies": "Connecting with Saturn by assembly, square, or opposition (94)",
+     "Count": 1,
+     "Labels": [
+      "Connecting with Saturn by assembly, square, or opposition (94)"
+     ],
+     "Testimonies": [
+      {
+       "n": "94",
+       "sentence": "Connecting with Saturn by assembly, square, or opposition (94)",
+       "facts": [
+        "Connecting with Saturn: Conjunction"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mercury",
+     "Weakness Testimonies": "Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 1,
+     "Labels": [
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Venus",
+        "Exaltation lord where it sits: Moon",
+        "Triplicity lord where it sits (by day): Venus",
+        "Partnering triplicity lord where it sits: Mars"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Venus",
+     "Weakness Testimonies": "Connecting with Saturn by assembly, square, or opposition (94), Alien: no house, exaltation, or triplicity where it sits (98), Inverted, in the seventh sign from its own house (100)",
+     "Count": 3,
+     "Labels": [
+      "Connecting with Saturn by assembly, square, or opposition (94)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)",
+      "Inverted, in the seventh sign from its own house (100)"
+     ],
+     "Testimonies": [
+      {
+       "n": "94",
+       "sentence": "Connecting with Saturn by assembly, square, or opposition (94)",
+       "facts": [
+        "Connecting with Saturn: Square"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Mars",
+        "Exaltation lord where it sits: Sun",
+        "Triplicity lord where it sits (by day): Sun",
+        "Partnering triplicity lord where it sits: Saturn"
+       ]
+      },
+      {
+       "n": "100",
+       "sentence": "Inverted, in the seventh sign from its own house (100)",
+       "facts": [
+        "Detriment (essential): yes"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mars",
+     "Weakness Testimonies": "Under the rays of the Sun (93), Alien: no house, exaltation, or triplicity where it sits (98), With the Head or Tail, without latitude (99; this app reads |latitude| < 1°; 12 deg orb for either node, Ch. 3, 107 and Gr. Intr. VII.6, 52)",
+     "Count": 3,
+     "Labels": [
+      "Under the rays of the Sun (93)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)",
+      "With the Head or Tail, without latitude (99; this app reads |latitude| < 1°; 12 deg orb for either node, Ch. 3, 107 and Gr. Intr. VII.6, 52)"
+     ],
+     "Testimonies": [
+      {
+       "n": "93",
+       "sentence": "Under the rays of the Sun (93)",
+       "facts": [
+        "Solar phase (Sahl): Under the rays",
+        "Heart limit (degrees, inclusive): 1.00 (unrounded: 1.0)",
+        "Signed distance from the Sun (positive is western): -11.69 (unrounded: -11.692689079874896)"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Mercury",
+        "Exaltation lord where it sits: -",
+        "Triplicity lord where it sits (by day): Saturn",
+        "Partnering triplicity lord where it sits: Jupiter"
+       ]
+      },
+      {
+       "n": "99",
+       "sentence": "With the Head or Tail, without latitude (99; this app reads |latitude| < 1°; 12 deg orb for either node, Ch. 3, 107 and Gr. Intr. VII.6, 52)",
+       "facts": [
+        "Distance from the nearer node: 3.42 (unrounded: 3.422423773652156)",
+        "Latitude: 0.17 (unrounded: 0.17259804754988284)"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Jupiter",
+     "Weakness Testimonies": "Connecting with Saturn by assembly, square, or opposition (94), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 2,
+     "Labels": [
+      "Connecting with Saturn by assembly, square, or opposition (94)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "94",
+       "sentence": "Connecting with Saturn by assembly, square, or opposition (94)",
+       "facts": [
+        "Connecting with Saturn: Square"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Mars",
+        "Exaltation lord where it sits: Sun",
+        "Triplicity lord where it sits (by day): Sun",
+        "Partnering triplicity lord where it sits: Saturn"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Saturn",
+     "Weakness Testimonies": "Alien: no house, exaltation, or triplicity where it sits (98), Inverted, in the seventh sign from its own house (100)",
+     "Count": 2,
+     "Labels": [
+      "Alien: no house, exaltation, or triplicity where it sits (98)",
+      "Inverted, in the seventh sign from its own house (100)"
+     ],
+     "Testimonies": [
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Moon",
+        "Exaltation lord where it sits: Jupiter",
+        "Triplicity lord where it sits (by day): Venus",
+        "Partnering triplicity lord where it sits: Moon"
+       ]
+      },
+      {
+       "n": "100",
+       "sentence": "Inverted, in the seventh sign from its own house (100)",
+       "facts": [
+        "Detriment (essential): yes"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "1240-09-18": {
+  "digests": {
+   "page / Strength of the Planets": "2261eb5a8583bcfb7b93634833453c17c9d885a6e11d5865cc88ed5ea105a9e8",
+   "page / Answer key: testimonies in words": "f157610208074fd10495e15da742f3ddcea10bdd0a89adcaaa77f71f393ddd7f",
+   "page / Weakness of the Planets": "9190cbafb0b2499e81207de6d9f137d6db5b9f38550276efd6b5475ceb347075",
+   "page / Corruption of the Moon": "3246608eb744929a17363e444cf2960f546d3d4c5d20f03d9c6e30e9fcd6b4d1",
+   "page / Planetary Condition": "963b6145bfbfa8fca8fd4f0a380685ce73405d10f4e6e2ae1d7ec3a71807d8a4",
+   "export / Planetary Condition": "ff0f7a062116db1c87e8906cc86df9882e9b022d37d805adc84dec3588fe8a05",
+   "export / Corruption of the Moon": "03e2b268f9ea4128ffc6a66b1aa17d8793dd4fa6e4730f620e5159286d8b4568",
+   "export / Planetary Dignity Evaluation (Hellenistic/Rhetorius reconstruction)": "7b63129cb155bec75ef893d052b7a698e2cb4af0f87222277e9d685a5beec084",
+   "export / Topical Planets in Houses": "2df2f36c7f0ef7f697eafac0e6e244ce13dac9e9a17d00085f8583be80d6cf8c",
+   "page / Rhetorius / PN IV readings": "46909f295482b495d6056e2eefa3e0a3ff8e1ce2f01570886da9d0a199ee9dd9"
+  },
+  "rows": {
+   "export / Strength of the Planets": [
+    {
+     "Planet": "Sun",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), Direct in course (80), Not in the whole-sign angles of an infortune (81), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 5,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 10",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.99 (unrounded: 0.9881699976015019)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Sextile",
+        "Configuration with Saturn: Sextile"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Moon",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), Direct in course (80), Not in the whole-sign angles of an infortune (81), Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+     "Count": 4,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 10",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 14.65 (unrounded: 14.653918081152433)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Sextile",
+        "Configuration with Saturn: Sextile"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Jupiter",
+        "Jupiter: whole-sign place 4, Aries",
+        "Fall (essential): no"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mercury",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 6,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Domicile, Exalt"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 1.48 (unrounded: 1.4770139745217388)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Aversion",
+        "Configuration with Saturn: Aversion"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: none",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Venus",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Advancing (83), In a matching-gender (feminine) quadrant and sign (88)",
+     "Count": 5,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Advancing (83)",
+      "In a matching-gender (feminine) quadrant and sign (88)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Triplicity"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 1.23 (unrounded: 1.2275682541499775)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Aversion",
+        "Configuration with Saturn: Aversion"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "88",
+       "sentence": "In a matching-gender (feminine) quadrant and sign (88)",
+       "facts": [
+        "Gender: Feminine",
+        "Quadrant division, strict: 8",
+        "Quadrant gender: Feminine",
+        "Sign: Virgo",
+        "Sign gender: Feminine"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mars",
+     "Strength Testimonies": "Direct in course (80), Advancing (83), Masculine planet, eastern, 15+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3), In a fixed sign (86)",
+     "Count": 4,
+     "Labels": [
+      "Direct in course (80)",
+      "Advancing (83)",
+      "Masculine planet, eastern, 15+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+      "In a fixed sign (86)"
+     ],
+     "Testimonies": [
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.61 (unrounded: 0.6069112285735678)"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 7",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "84",
+       "sentence": "Masculine planet, eastern, 15+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+       "facts": [
+        "Signed distance from the Sun (negative is eastern): -47.62 (unrounded: -47.621571525096954)",
+        "Considered-eastern floor: 15.00 (unrounded: 15.0)"
+       ]
+      },
+      {
+       "n": "86",
+       "sentence": "In a fixed sign (86)",
+       "facts": [
+        "Sign: Leo",
+        "Fixed signs: Taurus, Leo, Scorpio, Aquarius"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Jupiter",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), Not in the whole-sign angles of an infortune (81), Not connecting with a falling/fallen planet, nor itself in its fall (82), Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3), In its own glow, i.e. of the sect (85)",
+     "Count": 5,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 4",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Trine",
+        "Configuration with Saturn: Trine"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Moon",
+        "Moon: whole-sign place 10, Libra",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "84",
+       "sentence": "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+       "facts": [
+        "Signed distance from the Sun (negative is eastern): -155.15 (unrounded: -155.14920039647512)",
+        "Considered-eastern floor: 6.00 (unrounded: 6.0)"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Saturn",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Advancing (83), Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3), In its own glow, i.e. of the sect (85), In a fixed sign (86)",
+     "Count": 6,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Advancing (83)",
+      "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+      "In its own glow, i.e. of the sect (85)",
+      "In a fixed sign (86)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Term, Triplicity (Sahl I Figure 4)"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.10 (unrounded: 0.0952044140743547)"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 7",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "84",
+       "sentence": "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+       "facts": [
+        "Signed distance from the Sun (negative is eastern): -51.78 (unrounded: -51.77762468308046)",
+        "Considered-eastern floor: 6.00 (unrounded: 6.0)"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      },
+      {
+       "n": "86",
+       "sentence": "In a fixed sign (86)",
+       "facts": [
+        "Sign: Leo",
+        "Fixed signs: Taurus, Leo, Scorpio, Aquarius"
+       ]
+      }
+     ]
+    }
+   ],
+   "export / Weakness of the Planets": [
+    {
+     "Planet": "Sun",
+     "Weakness Testimonies": "In its own fall (96), Connecting with Mars and Saturn, averse to the Ascendant (97), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 3,
+     "Labels": [
+      "In its own fall (96)",
+      "Connecting with Mars and Saturn, averse to the Ascendant (97)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "96",
+       "sentence": "In its own fall (96)",
+       "facts": [
+        "Fall (essential): yes"
+       ]
+      },
+      {
+       "n": "97",
+       "sentence": "Connecting with Mars and Saturn, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Mars, Saturn"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Venus",
+        "Exaltation lord where it sits: Saturn",
+        "Triplicity lord where it sits (by day): Saturn",
+        "Partnering triplicity lord where it sits: Jupiter"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Moon",
+     "Weakness Testimonies": "Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 1,
+     "Labels": [
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Venus",
+        "Exaltation lord where it sits: Saturn",
+        "Triplicity lord where it sits (by day): Saturn",
+        "Partnering triplicity lord where it sits: Jupiter"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Venus",
+     "Weakness Testimonies": "In its own fall (96)",
+     "Count": 1,
+     "Labels": [
+      "In its own fall (96)"
+     ],
+     "Testimonies": [
+      {
+       "n": "96",
+       "sentence": "In its own fall (96)",
+       "facts": [
+        "Fall (essential): yes"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mars",
+     "Weakness Testimonies": "Connecting with Saturn by assembly, square, or opposition (94), Connecting with Saturn, averse to the Ascendant; separating from Saturn, which would have received it (97), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 3,
+     "Labels": [
+      "Connecting with Saturn by assembly, square, or opposition (94)",
+      "Connecting with Saturn, averse to the Ascendant; separating from Saturn, which would have received it (97)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "94",
+       "sentence": "Connecting with Saturn by assembly, square, or opposition (94)",
+       "facts": [
+        "Connecting with Saturn: Conjunction"
+       ]
+      },
+      {
+       "n": "97",
+       "sentence": "Connecting with Saturn, averse to the Ascendant; separating from Saturn, which would have received it (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Saturn",
+        "Separating from: Saturn",
+        "Domicile lord of its degree: Sun",
+        "Exaltation lord of its degree: -",
+        "Triplicity lord of its degree (by day): Sun",
+        "Partnering triplicity lord of its degree: Saturn",
+        "How the departed planet receives it: Saturn (triplicity, bound)"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Sun",
+        "Exaltation lord where it sits: -",
+        "Triplicity lord where it sits (by day): Sun",
+        "Partnering triplicity lord where it sits: Saturn"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Jupiter",
+     "Weakness Testimonies": "Retrograde (92), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 2,
+     "Labels": [
+      "Retrograde (92)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "92",
+       "sentence": "Retrograde (92)",
+       "facts": [
+        "Retrograde (accidental): yes",
+        "Speed in longitude: -0.11 (unrounded: -0.11192436233229577)"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Mars",
+        "Exaltation lord where it sits: Sun",
+        "Triplicity lord where it sits (by day): Sun",
+        "Partnering triplicity lord where it sits: Saturn"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Saturn",
+     "Weakness Testimonies": "Connecting with Mars by assembly, square, or opposition (94), Connecting with Mars, averse to the Ascendant (97), Inverted, in the seventh sign from its own house (100)",
+     "Count": 3,
+     "Labels": [
+      "Connecting with Mars by assembly, square, or opposition (94)",
+      "Connecting with Mars, averse to the Ascendant (97)",
+      "Inverted, in the seventh sign from its own house (100)"
+     ],
+     "Testimonies": [
+      {
+       "n": "94",
+       "sentence": "Connecting with Mars by assembly, square, or opposition (94)",
+       "facts": [
+        "Connecting with Mars: Conjunction"
+       ]
+      },
+      {
+       "n": "97",
+       "sentence": "Connecting with Mars, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Mars"
+       ]
+      },
+      {
+       "n": "100",
+       "sentence": "Inverted, in the seventh sign from its own house (100)",
+       "facts": [
+        "Detriment (essential): yes"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "1240-10-05": {
+  "digests": {
+   "page / Strength of the Planets": "d2f2383ea94b3ceee041a141d85b2dcd28b04b6c372c0ce25d53f8b7c2e26de9",
+   "page / Answer key: testimonies in words": "a306e0200300a317ea451120c50c22ef37516c22f60ec9043ee656391ccd754d",
+   "page / Weakness of the Planets": "92d69653fef63fe27c10e95877d893af303ec2c8470f045fcb7b163175c5486b",
+   "page / Corruption of the Moon": "0e6182240189b2339665ca843fe708014cdbb2fb977ce96ee85845d6dcd087d4",
+   "page / Planetary Condition": "ad66b45206b47c9cfa772c83bab42c5624d73057dc0d9064805a9ede309eb76e",
+   "export / Planetary Condition": "9d8907f58f92702e85badc3ced6323ee704020ce5f128507398b72fb0c6fec54",
+   "export / Corruption of the Moon": "0db4b165e5a2f46f8c95e41aab03bbf6d9662397f92b67d226ea6fa2081d9fec",
+   "export / Planetary Dignity Evaluation (Hellenistic/Rhetorius reconstruction)": "73340e1284e8f814033724c3cd438bff19d518719bb47e710e17cc20268bf861",
+   "export / Topical Planets in Houses": "761057b761dc83333b09b29ef288282b9320df50efd0217bf20705afe6fc9e2b",
+   "page / Rhetorius / PN IV readings": "7579b4de38cdf899696cf29380e9d03992143270efbd8d0af61c86bb073357ae"
+  },
+  "rows": {
+   "export / Strength of the Planets": [
+    {
+     "Planet": "Sun",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 5,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Joy"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 1.00 (unrounded: 0.9971821028519644)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Sextile",
+        "Configuration with Saturn: Sextile"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Moon",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), In its own share of dignity (79), Direct in course (80), In a fixed sign (86), In a matching-gender (feminine) quadrant and sign (88)",
+     "Count": 5,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "In a fixed sign (86)",
+      "In a matching-gender (feminine) quadrant and sign (88)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 4",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Exalt"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 12.82 (unrounded: 12.82291615393721)"
+       ]
+      },
+      {
+       "n": "86",
+       "sentence": "In a fixed sign (86)",
+       "facts": [
+        "Sign: Taurus",
+        "Fixed signs: Taurus, Leo, Scorpio, Aquarius"
+       ]
+      },
+      {
+       "n": "88",
+       "sentence": "In a matching-gender (feminine) quadrant and sign (88)",
+       "facts": [
+        "Gender: Feminine",
+        "Quadrant division, strict: 3",
+        "Quadrant gender: Feminine",
+        "Sign: Taurus",
+        "Sign gender: Feminine"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mercury",
+     "Strength Testimonies": "Direct in course (80), Not in the whole-sign angles of an infortune (81), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 4,
+     "Labels": [
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 1.69 (unrounded: 1.6923901669350228)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Sextile",
+        "Configuration with Saturn: Sextile"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Venus",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Advancing (83), In a matching-gender (feminine) quadrant and sign (88)",
+     "Count": 5,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Advancing (83)",
+      "In a matching-gender (feminine) quadrant and sign (88)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Triplicity"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 1.24 (unrounded: 1.2414094290117899)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Aversion",
+        "Configuration with Saturn: Aversion"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "88",
+       "sentence": "In a matching-gender (feminine) quadrant and sign (88)",
+       "facts": [
+        "Gender: Feminine",
+        "Quadrant division, strict: 8",
+        "Quadrant gender: Feminine",
+        "Sign: Virgo",
+        "Sign gender: Feminine"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mars",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), In its own share of dignity (79), Direct in course (80), Advancing (83), Masculine planet, eastern, 15+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3), In a fixed sign (86)",
+     "Count": 6,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Advancing (83)",
+      "Masculine planet, eastern, 15+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+      "In a fixed sign (86)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 7",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Term, Face"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.59 (unrounded: 0.5906923292491352)"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 7",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "84",
+       "sentence": "Masculine planet, eastern, 15+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+       "facts": [
+        "Signed distance from the Sun (negative is eastern): -54.31 (unrounded: -54.31429104478386)",
+        "Considered-eastern floor: 15.00 (unrounded: 15.0)"
+       ]
+      },
+      {
+       "n": "86",
+       "sentence": "In a fixed sign (86)",
+       "facts": [
+        "Sign: Leo",
+        "Fixed signs: Taurus, Leo, Scorpio, Aquarius"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Jupiter",
+     "Strength Testimonies": "Not in the whole-sign angles of an infortune (81), Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3), In its own glow, i.e. of the sect (85)",
+     "Count": 3,
+     "Labels": [
+      "Not in the whole-sign angles of an infortune (81)",
+      "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Trine",
+        "Configuration with Saturn: Trine"
+       ]
+      },
+      {
+       "n": "84",
+       "sentence": "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+       "facts": [
+        "Signed distance from the Sun (negative is eastern): -174.16 (unrounded: -174.15585096969767)",
+        "Considered-eastern floor: 6.00 (unrounded: 6.0)"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Saturn",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), In its own share of dignity (79), Direct in course (80), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3), In its own glow, i.e. of the sect (85), In a fixed sign (86)",
+     "Count": 8,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+      "In its own glow, i.e. of the sect (85)",
+      "In a fixed sign (86)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 7",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Term, Triplicity (Sahl I Figure 4)"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.07 (unrounded: 0.07359265053654332)"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: none",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 7",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "84",
+       "sentence": "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+       "facts": [
+        "Signed distance from the Sun (negative is eastern): -67.21 (unrounded: -67.20985419277605)",
+        "Considered-eastern floor: 6.00 (unrounded: 6.0)"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      },
+      {
+       "n": "86",
+       "sentence": "In a fixed sign (86)",
+       "facts": [
+        "Sign: Leo",
+        "Fixed signs: Taurus, Leo, Scorpio, Aquarius"
+       ]
+      }
+     ]
+    }
+   ],
+   "export / Weakness of the Planets": [
+    {
+     "Planet": "Sun",
+     "Weakness Testimonies": "Enclosed between the infortunes, separating from Saturn and connecting to Mars (95, 119-123), In its own fall (96), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 3,
+     "Labels": [
+      "Enclosed between the infortunes, separating from Saturn and connecting to Mars (95, 119-123)",
+      "In its own fall (96)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "95",
+       "sentence": "Enclosed between the infortunes, separating from Saturn and connecting to Mars (95, 119-123)",
+       "facts": [
+        "Separating from: Saturn",
+        "Connecting to: Mars"
+       ]
+      },
+      {
+       "n": "96",
+       "sentence": "In its own fall (96)",
+       "facts": [
+        "Fall (essential): yes"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Venus",
+        "Exaltation lord where it sits: Saturn",
+        "Triplicity lord where it sits (by day): Saturn",
+        "Partnering triplicity lord where it sits: Jupiter"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Moon",
+     "Weakness Testimonies": "Connecting with Mars by assembly, square, or opposition (94), Enclosed between the infortunes, separating from Saturn and connecting to Mars (95, 119-123), Connecting with Venus, averse to the Ascendant (97), With the Head or Tail, without latitude (99; this app reads |latitude| < 1°; 12 deg orb for either node, Ch. 3, 107 and Gr. Intr. VII.6, 52)",
+     "Count": 4,
+     "Labels": [
+      "Connecting with Mars by assembly, square, or opposition (94)",
+      "Enclosed between the infortunes, separating from Saturn and connecting to Mars (95, 119-123)",
+      "Connecting with Venus, averse to the Ascendant (97)",
+      "With the Head or Tail, without latitude (99; this app reads |latitude| < 1°; 12 deg orb for either node, Ch. 3, 107 and Gr. Intr. VII.6, 52)"
+     ],
+     "Testimonies": [
+      {
+       "n": "94",
+       "sentence": "Connecting with Mars by assembly, square, or opposition (94)",
+       "facts": [
+        "Connecting with Mars: Square"
+       ]
+      },
+      {
+       "n": "95",
+       "sentence": "Enclosed between the infortunes, separating from Saturn and connecting to Mars (95, 119-123)",
+       "facts": [
+        "Separating from: Saturn",
+        "Connecting to: Mars"
+       ]
+      },
+      {
+       "n": "97",
+       "sentence": "Connecting with Venus, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Venus"
+       ]
+      },
+      {
+       "n": "99",
+       "sentence": "With the Head or Tail, without latitude (99; this app reads |latitude| < 1°; 12 deg orb for either node, Ch. 3, 107 and Gr. Intr. VII.6, 52)",
+       "facts": [
+        "Distance from the nearer node: 4.58 (unrounded: 4.581308921304981)",
+        "Latitude: 0.42 (unrounded: 0.41853874261631707)"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mercury",
+     "Weakness Testimonies": "Under the rays of the Sun (93), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 2,
+     "Labels": [
+      "Under the rays of the Sun (93)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "93",
+       "sentence": "Under the rays of the Sun (93)",
+       "facts": [
+        "Solar phase (Sahl): Burned",
+        "Heart limit (degrees, inclusive): 1.00 (unrounded: 1.0)",
+        "Signed distance from the Sun (positive is western): -4.82 (unrounded: -4.819673137456562)"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Venus",
+        "Exaltation lord where it sits: Saturn",
+        "Triplicity lord where it sits (by day): Saturn",
+        "Partnering triplicity lord where it sits: Jupiter"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Venus",
+     "Weakness Testimonies": "In its own fall (96)",
+     "Count": 1,
+     "Labels": [
+      "In its own fall (96)"
+     ],
+     "Testimonies": [
+      {
+       "n": "96",
+       "sentence": "In its own fall (96)",
+       "facts": [
+        "Fall (essential): yes"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mars",
+     "Weakness Testimonies": "Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 1,
+     "Labels": [
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Sun",
+        "Exaltation lord where it sits: -",
+        "Triplicity lord where it sits (by day): Sun",
+        "Partnering triplicity lord where it sits: Saturn"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Jupiter",
+     "Weakness Testimonies": "Retrograde (92), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 2,
+     "Labels": [
+      "Retrograde (92)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "92",
+       "sentence": "Retrograde (92)",
+       "facts": [
+        "Retrograde (accidental): yes",
+        "Speed in longitude: -0.13 (unrounded: -0.13452741066654303)"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Mars",
+        "Exaltation lord where it sits: Sun",
+        "Triplicity lord where it sits (by day): Sun",
+        "Partnering triplicity lord where it sits: Saturn"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Saturn",
+     "Weakness Testimonies": "Inverted, in the seventh sign from its own house (100)",
+     "Count": 1,
+     "Labels": [
+      "Inverted, in the seventh sign from its own house (100)"
+     ],
+     "Testimonies": [
+      {
+       "n": "100",
+       "sentence": "Inverted, in the seventh sign from its own house (100)",
+       "facts": [
+        "Detriment (essential): yes"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "1240-01-04": {
+  "digests": {
+   "page / Strength of the Planets": "fa20c5c14a2fda5842ed0fc62321260cb1825e797fd62f22ef998224fffad66b",
+   "page / Answer key: testimonies in words": "4bc9a5b0e717d79647595bb5ebc9c18b39b38b3d431e66104efd66782a5c2382",
+   "page / Weakness of the Planets": "5c929413db9696b69085e8b7afca89bbb63647975b907c06b7f809af58e1c2e5",
+   "page / Corruption of the Moon": "7cc552d25c140f6547bd6d37ae518d17ea1024d5a63f2543f494a9cfea668044",
+   "page / Planetary Condition": "86c7c2c8037e48ca9ce9a7043b7c17aba646f28f989e8694827887e52e2812a1",
+   "export / Planetary Condition": "912371a207d08c43705b3fa1fbc5fe0f1c04fa583180200a98db64c47c500ee5",
+   "export / Corruption of the Moon": "333b656325ca165081904cd25fd82e2e5b09e93cecc9044815954ce33f662ae4",
+   "export / Planetary Dignity Evaluation (Hellenistic/Rhetorius reconstruction)": "d89664a7ebede27ed65246f0b77739b33c63560581dea40161c30e597b5dfd84",
+   "export / Topical Planets in Houses": "92d624a58cc99848ee5462967d85149c69c770300a03748eb6325fc83507ed14",
+   "page / Rhetorius / PN IV readings": "852a3928c6185be839a427f20ddd4e259c2ab42a8395c2397cf8d1def7341a2e"
+  },
+  "rows": {
+   "export / Strength of the Planets": [
+    {
+     "Planet": "Sun",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 4,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Face"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 1.02 (unrounded: 1.0175203022466421)"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Moon",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), Direct in course (80), Advancing (83)",
+     "Count": 3,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "Direct in course (80)",
+      "Advancing (83)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 11",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 12.97 (unrounded: 12.965558646603581)"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 11",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mercury",
+     "Strength Testimonies": "Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 3,
+     "Labels": [
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Venus",
+        "Venus: whole-sign place 10, Pisces",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 7",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Venus",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Advancing (83)",
+     "Count": 5,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Advancing (83)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 10",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Exalt, Triplicity, Term"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 1.07 (unrounded: 1.0700238499939136)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Aversion",
+        "Configuration with Saturn: Trine"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 10",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mars",
+     "Strength Testimonies": "Direct in course (80), Not in the whole-sign angles of an infortune (81), Not connecting with a falling/fallen planet, nor itself in its fall (82), In a fixed sign (86)",
+     "Count": 4,
+     "Labels": [
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "In a fixed sign (86)"
+     ],
+     "Testimonies": [
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.79 (unrounded: 0.7897503953994847)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Saturn",
+        "Configuration with Saturn: Aversion"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: none",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "86",
+       "sentence": "In a fixed sign (86)",
+       "facts": [
+        "Sign: Aquarius",
+        "Fixed signs: Taurus, Leo, Scorpio, Aquarius"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Jupiter",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 6,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 10",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Domicile, Face"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.18 (unrounded: 0.17876895258897507)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Aversion",
+        "Configuration with Saturn: Trine"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 10",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Saturn",
+     "Strength Testimonies": "In its own share of dignity (79), Not in the whole-sign angles of an infortune (81), Advancing (83), Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3), In its own glow, i.e. of the sect (85)",
+     "Count": 5,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Advancing (83)",
+      "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Term"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars",
+        "Configuration with Mars: Aversion"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 2",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "84",
+       "sentence": "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+       "facts": [
+        "Signed distance from the Sun (negative is eastern): -173.78 (unrounded: -173.77582004027423)",
+        "Considered-eastern floor: 6.00 (unrounded: 6.0)"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    }
+   ],
+   "export / Weakness of the Planets": [
+    {
+     "Planet": "Sun",
+     "Weakness Testimonies": "Connecting with Saturn by assembly, square, or opposition (94), Connecting with Saturn, averse to the Ascendant (97), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 3,
+     "Labels": [
+      "Connecting with Saturn by assembly, square, or opposition (94)",
+      "Connecting with Saturn, averse to the Ascendant (97)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "94",
+       "sentence": "Connecting with Saturn by assembly, square, or opposition (94)",
+       "facts": [
+        "Connecting with Saturn: Opposition"
+       ]
+      },
+      {
+       "n": "97",
+       "sentence": "Connecting with Saturn, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Saturn"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Saturn",
+        "Exaltation lord where it sits: Mars",
+        "Triplicity lord where it sits (by day): Venus",
+        "Partnering triplicity lord where it sits: Mars"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Moon",
+     "Weakness Testimonies": "Connecting with Saturn by assembly, square, or opposition (94), Connecting with Saturn, averse to the Ascendant (97), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 3,
+     "Labels": [
+      "Connecting with Saturn by assembly, square, or opposition (94)",
+      "Connecting with Saturn, averse to the Ascendant (97)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "94",
+       "sentence": "Connecting with Saturn by assembly, square, or opposition (94)",
+       "facts": [
+        "Connecting with Saturn: Square"
+       ]
+      },
+      {
+       "n": "97",
+       "sentence": "Connecting with Saturn, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Saturn"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Mars",
+        "Exaltation lord where it sits: Sun",
+        "Triplicity lord where it sits (by day): Sun",
+        "Partnering triplicity lord where it sits: Saturn"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mercury",
+     "Weakness Testimonies": "Retrograde (92), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 2,
+     "Labels": [
+      "Retrograde (92)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "92",
+       "sentence": "Retrograde (92)",
+       "facts": [
+        "Retrograde (accidental): yes",
+        "Speed in longitude: -0.86 (unrounded: -0.8562871215361666)"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Saturn",
+        "Exaltation lord where it sits: Mars",
+        "Triplicity lord where it sits (by day): Venus",
+        "Partnering triplicity lord where it sits: Mars"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Venus",
+     "Weakness Testimonies": "Connecting with Mercury, averse to the Ascendant (97)",
+     "Count": 1,
+     "Labels": [
+      "Connecting with Mercury, averse to the Ascendant (97)"
+     ],
+     "Testimonies": [
+      {
+       "n": "97",
+       "sentence": "Connecting with Mercury, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Mercury"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mars",
+     "Weakness Testimonies": "Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 1,
+     "Labels": [
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Saturn",
+        "Exaltation lord where it sits: -",
+        "Triplicity lord where it sits (by day): Saturn",
+        "Partnering triplicity lord where it sits: Jupiter"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Jupiter",
+     "Weakness Testimonies": "Connecting with Saturn, averse to the Ascendant (97)",
+     "Count": 1,
+     "Labels": [
+      "Connecting with Saturn, averse to the Ascendant (97)"
+     ],
+     "Testimonies": [
+      {
+       "n": "97",
+       "sentence": "Connecting with Saturn, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Saturn"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Saturn",
+     "Weakness Testimonies": "Retrograde (92), Connecting with Sun, averse to the Ascendant (97), Alien: no house, exaltation, or triplicity where it sits (98), Inverted, in the seventh sign from its own house (100)",
+     "Count": 4,
+     "Labels": [
+      "Retrograde (92)",
+      "Connecting with Sun, averse to the Ascendant (97)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)",
+      "Inverted, in the seventh sign from its own house (100)"
+     ],
+     "Testimonies": [
+      {
+       "n": "92",
+       "sentence": "Retrograde (92)",
+       "facts": [
+        "Retrograde (accidental): yes",
+        "Speed in longitude: -0.08 (unrounded: -0.08140456701677495)"
+       ]
+      },
+      {
+       "n": "97",
+       "sentence": "Connecting with Sun, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Sun"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Moon",
+        "Exaltation lord where it sits: Jupiter",
+        "Triplicity lord where it sits (by day): Venus",
+        "Partnering triplicity lord where it sits: Moon"
+       ]
+      },
+      {
+       "n": "100",
+       "sentence": "Inverted, in the seventh sign from its own house (100)",
+       "facts": [
+        "Detriment (essential): yes"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "1239-06-14": {
+  "digests": {
+   "page / Strength of the Planets": "a0769a7ba1c6957c23899a2f69ab44d081bb3a607910bf07105da73b5b0d12d8",
+   "page / Answer key: testimonies in words": "7dcfc35a20c323d73346c6550d9c6af5a39e0af9dc052aa33439ea1e6fe3ee7b",
+   "page / Weakness of the Planets": "f00152ba14ec62801b1f2ae740646233d7f83327f1436b76728197365d909720",
+   "page / Corruption of the Moon": "d08365bb16fc085756f4cd8abc2cb5184798cdb7cba51dbc9e25dd643cf703a1",
+   "page / Planetary Condition": "270934d01536f97d239d0a5ef16c118a8f1801a827813fcb866f7b2624d1018a",
+   "export / Planetary Condition": "65e116421ee1e424a4ab0c1257cb5e243ee34229846d07bc1cc42a8fd4fafce2",
+   "export / Corruption of the Moon": "db9a536b2dd4653a12a663e0ac9bcd59fcbeea9c5df1b9d482f3ff20ee0df800",
+   "export / Planetary Dignity Evaluation (Hellenistic/Rhetorius reconstruction)": "73bec85476c5ccb0637aaabd9a72c5738ec062dd297b123e2881a21007058207",
+   "export / Topical Planets in Houses": "d41900ea0a1e99090008a223327cbdd8dc3e7f8af25d2318a045ea81f0340e7c",
+   "page / Rhetorius / PN IV readings": "f8b0398aa93d439897e1d6cde8b16a5dd1458c57ee8fa8e65b00867d62e371a9"
+  },
+  "rows": {
+   "export / Strength of the Planets": [
+    {
+     "Planet": "Sun",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 5,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Face, Joy"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.95 (unrounded: 0.9524716015549793)"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: none",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Moon",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Advancing (83), In a fixed sign (86), In a matching-gender (feminine) quadrant and sign (88)",
+     "Count": 6,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Advancing (83)",
+      "In a fixed sign (86)",
+      "In a matching-gender (feminine) quadrant and sign (88)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Triplicity (Sahl I Figure 4)"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 12.08 (unrounded: 12.082728099687163)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Sextile",
+        "Configuration with Saturn: Trine"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 1",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "86",
+       "sentence": "In a fixed sign (86)",
+       "facts": [
+        "Sign: Scorpio",
+        "Fixed signs: Taurus, Leo, Scorpio, Aquarius"
+       ]
+      },
+      {
+       "n": "88",
+       "sentence": "In a matching-gender (feminine) quadrant and sign (88)",
+       "facts": [
+        "Gender: Feminine",
+        "Quadrant division, strict: 1",
+        "Quadrant gender: Feminine",
+        "Sign: Scorpio",
+        "Sign gender: Feminine"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mercury",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 5,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Domicile"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 1.27 (unrounded: 1.2659413102881998)"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: none",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Venus",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), In its own share of dignity (79), Direct in course (80), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In a matching-gender (feminine) quadrant and sign (88)",
+     "Count": 6,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In a matching-gender (feminine) quadrant and sign (88)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 10",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Triplicity, Face"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 1.23 (unrounded: 1.2289493792168589)"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: none",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "88",
+       "sentence": "In a matching-gender (feminine) quadrant and sign (88)",
+       "facts": [
+        "Gender: Feminine",
+        "Quadrant division, strict: 8",
+        "Quadrant gender: Feminine",
+        "Sign: Cancer",
+        "Sign gender: Feminine"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mars",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Advancing (83)",
+     "Count": 4,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Advancing (83)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Triplicity (Sahl I Figure 4)"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.52 (unrounded: 0.5174137655154523)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Saturn",
+        "Configuration with Saturn: Sextile"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 11",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Jupiter",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Advancing (83), Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3), In its own glow, i.e. of the sect (85)",
+     "Count": 5,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Advancing (83)",
+      "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Domicile"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.07 (unrounded: 0.06867823420915065)"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 5",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "84",
+       "sentence": "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+       "facts": [
+        "Signed distance from the Sun (negative is eastern): -97.01 (unrounded: -97.0103814992857)",
+        "Considered-eastern floor: 6.00 (unrounded: 6.0)"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Saturn",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), Direct in course (80), Not in the whole-sign angles of an infortune (81), In its own glow, i.e. of the sect (85)",
+     "Count": 4,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 10",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.13 (unrounded: 0.1255055106038136)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars",
+        "Configuration with Mars: Sextile"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    }
+   ],
+   "export / Weakness of the Planets": [
+    {
+     "Planet": "Sun",
+     "Weakness Testimonies": "Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 1,
+     "Labels": [
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Mercury",
+        "Exaltation lord where it sits: -",
+        "Triplicity lord where it sits (by day): Saturn",
+        "Partnering triplicity lord where it sits: Jupiter"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Moon",
+     "Weakness Testimonies": "In its own fall (96), Connecting with Jupiter, averse to the Ascendant (97)",
+     "Count": 2,
+     "Labels": [
+      "In its own fall (96)",
+      "Connecting with Jupiter, averse to the Ascendant (97)"
+     ],
+     "Testimonies": [
+      {
+       "n": "96",
+       "sentence": "In its own fall (96)",
+       "facts": [
+        "Fall (essential): yes"
+       ]
+      },
+      {
+       "n": "97",
+       "sentence": "Connecting with Jupiter, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Jupiter"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Venus",
+     "Weakness Testimonies": "Under the rays of the Sun, western/overtaken (93, 99)",
+     "Count": 1,
+     "Labels": [
+      "Under the rays of the Sun, western/overtaken (93, 99)"
+     ],
+     "Testimonies": [
+      {
+       "n": "93",
+       "sentence": "Under the rays of the Sun, western/overtaken (93, 99)",
+       "facts": [
+        "Solar phase (Sahl): Burned",
+        "Heart limit (degrees, inclusive): 1.00 (unrounded: 1.0)",
+        "Signed distance from the Sun (positive is western): 2.09 (unrounded: 2.0911967192794805)"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mars",
+     "Weakness Testimonies": "Falling from the stakes, averse to the Ascendant (91), Connecting with Jupiter, averse to the Ascendant (97)",
+     "Count": 2,
+     "Labels": [
+      "Falling from the stakes, averse to the Ascendant (91)",
+      "Connecting with Jupiter, averse to the Ascendant (97)"
+     ],
+     "Testimonies": [
+      {
+       "n": "91",
+       "sentence": "Falling from the stakes, averse to the Ascendant (91)",
+       "facts": [
+        "Whole-sign place: 12",
+        "Cadent places: 3, 6, 9, 12",
+        "Averse to the Ascendant: yes"
+       ]
+      },
+      {
+       "n": "97",
+       "sentence": "Connecting with Jupiter, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Jupiter"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Jupiter",
+     "Weakness Testimonies": "Falling from the stakes, averse to the Ascendant (91), Connecting with Mars by assembly, square, or opposition (94), Connecting with Mars and Moon, averse to the Ascendant (97)",
+     "Count": 3,
+     "Labels": [
+      "Falling from the stakes, averse to the Ascendant (91)",
+      "Connecting with Mars by assembly, square, or opposition (94)",
+      "Connecting with Mars and Moon, averse to the Ascendant (97)"
+     ],
+     "Testimonies": [
+      {
+       "n": "91",
+       "sentence": "Falling from the stakes, averse to the Ascendant (91)",
+       "facts": [
+        "Whole-sign place: 6",
+        "Cadent places: 3, 6, 9, 12",
+        "Averse to the Ascendant: yes"
+       ]
+      },
+      {
+       "n": "94",
+       "sentence": "Connecting with Mars by assembly, square, or opposition (94)",
+       "facts": [
+        "Connecting with Mars: Opposition"
+       ]
+      },
+      {
+       "n": "97",
+       "sentence": "Connecting with Mars and Moon, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Mars, Moon"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Saturn",
+     "Weakness Testimonies": "Connecting with Jupiter, averse to the Ascendant (97), Alien: no house, exaltation, or triplicity where it sits (98), Inverted, in the seventh sign from its own house (100)",
+     "Count": 3,
+     "Labels": [
+      "Connecting with Jupiter, averse to the Ascendant (97)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)",
+      "Inverted, in the seventh sign from its own house (100)"
+     ],
+     "Testimonies": [
+      {
+       "n": "97",
+       "sentence": "Connecting with Jupiter, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Jupiter"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Moon",
+        "Exaltation lord where it sits: Jupiter",
+        "Triplicity lord where it sits (by day): Venus",
+        "Partnering triplicity lord where it sits: Moon"
+       ]
+      },
+      {
+       "n": "100",
+       "sentence": "Inverted, in the seventh sign from its own house (100)",
+       "facts": [
+        "Detriment (essential): yes"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "1700-02-28": {
+  "digests": {
+   "page / Strength of the Planets": "84cfafcdc72514a75dc1f1afda37fa72557f1808e3e06209349f459ba17a38a0",
+   "page / Answer key: testimonies in words": "efb725a1004808caa3b9913b6dbda99776f127e3a4d9e3357bb522e92b1721df",
+   "page / Weakness of the Planets": "5be3af2084688c22fec75cc4384e8f58e330743b7c73627d62878ef6ec0e3a6b",
+   "page / Corruption of the Moon": "d82a08b8f8d4fa8b119f6d9e813517a0c335b738b2e56883cfb905598116d8fa",
+   "page / Planetary Condition": "70352b830a42319689a10e9c6721d0b73b023e360244182c0e2ecd57497ec441",
+   "export / Planetary Condition": "29bf656d67d88c6b8e2dc1b019036f7137960ba2e9db94486fa95db4f200cac1",
+   "export / Corruption of the Moon": "069b94fc5608e4ded0ed53c03eabe5fc3d37f8f256d16f37a98a7aa0e75bbe08",
+   "export / Planetary Dignity Evaluation (Hellenistic/Rhetorius reconstruction)": "187751c19a77b3807f16d229d8ff86dc6ee572759d0d182733c28592399633a8",
+   "export / Topical Planets in Houses": "1b774e59c34ed1598fae67ba908aea5aa8fb9704867e2194be2137999d05f6ae",
+   "page / Rhetorius / PN IV readings": "cd12b146125be39dae38dd7dd51728ca1561299681a91532ed249032050b8aaa"
+  },
+  "rows": {
+   "export / Strength of the Planets": [
+    {
+     "Planet": "Sun",
+     "Strength Testimonies": "Direct in course (80), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 3,
+     "Labels": [
+      "Direct in course (80)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 1.00 (unrounded: 1.0014400551374945)"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Moon",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81)",
+     "Count": 3,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Domicile, Triplicity (Sahl I Figure 4)"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 14.37 (unrounded: 14.368578772109078)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Trine",
+        "Configuration with Saturn: Trine"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mercury",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), In its own share of dignity (79), Direct in course (80), Not connecting with a falling/fallen planet, nor itself in its fall (82), Advancing (83), In its own glow, i.e. of the sect (85), In a fixed sign (86)",
+     "Count": 7,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)",
+      "In a fixed sign (86)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 7",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Face"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 1.52 (unrounded: 1.5243506055775402)"
+       ]
+      },
+      {
+       "n": "82",
+       "sentence": "Not connecting with a falling/fallen planet, nor itself in its fall (82)",
+       "facts": [
+        "Connected with: Mars",
+        "Mars: whole-sign place 4, Scorpio",
+        "Fall (essential): no"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 7",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      },
+      {
+       "n": "86",
+       "sentence": "In a fixed sign (86)",
+       "facts": [
+        "Sign: Aquarius",
+        "Fixed signs: Taurus, Leo, Scorpio, Aquarius"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Venus",
+     "Strength Testimonies": "Direct in course (80), Not in the whole-sign angles of an infortune (81)",
+     "Count": 2,
+     "Labels": [
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)"
+     ],
+     "Testimonies": [
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 1.23 (unrounded: 1.232215502107411)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Aversion",
+        "Configuration with Saturn: Aversion"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mars",
+     "Strength Testimonies": "In an excellent place from the Ascendant (78), In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Advancing (83), Masculine planet, eastern, 15+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3), In a fixed sign (86)",
+     "Count": 7,
+     "Labels": [
+      "In an excellent place from the Ascendant (78)",
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Advancing (83)",
+      "Masculine planet, eastern, 15+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+      "In a fixed sign (86)"
+     ],
+     "Testimonies": [
+      {
+       "n": "78",
+       "sentence": "In an excellent place from the Ascendant (78)",
+       "facts": [
+        "Whole-sign place: 4",
+        "Excellent places: 1, 4, 5, 7, 10, 11"
+       ]
+      },
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Domicile"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.32 (unrounded: 0.3153929450457669)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Saturn",
+        "Configuration with Saturn: Trine"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 4",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "84",
+       "sentence": "Masculine planet, eastern, 15+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+       "facts": [
+        "Signed distance from the Sun (negative is eastern): -110.43 (unrounded: -110.42618458650207)",
+        "Considered-eastern floor: 15.00 (unrounded: 15.0)"
+       ]
+      },
+      {
+       "n": "86",
+       "sentence": "In a fixed sign (86)",
+       "facts": [
+        "Sign: Scorpio",
+        "Fixed signs: Taurus, Leo, Scorpio, Aquarius"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Jupiter",
+     "Strength Testimonies": "Direct in course (80), Not in the whole-sign angles of an infortune (81), Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3), In its own glow, i.e. of the sect (85)",
+     "Count": 4,
+     "Labels": [
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.19 (unrounded: 0.19409020814072475)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars, Saturn",
+        "Configuration with Mars: Sextile",
+        "Configuration with Saturn: Sextile"
+       ]
+      },
+      {
+       "n": "84",
+       "sentence": "Masculine planet, eastern, 6+ deg from the Sun (84; Saturn and Jupiter \"considered to be eastern\" from 6 deg, On Nativities 1.22, 1; Mars from 15 deg, Dykes's fn 174 to On Nativities 1.22, 3)",
+       "facts": [
+        "Signed distance from the Sun (negative is eastern): -46.78 (unrounded: -46.78203306704046)",
+        "Considered-eastern floor: 6.00 (unrounded: 6.0)"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Saturn",
+     "Strength Testimonies": "In its own share of dignity (79), Direct in course (80), Not in the whole-sign angles of an infortune (81), Advancing (83), In its own glow, i.e. of the sect (85)",
+     "Count": 5,
+     "Labels": [
+      "In its own share of dignity (79)",
+      "Direct in course (80)",
+      "Not in the whole-sign angles of an infortune (81)",
+      "Advancing (83)",
+      "In its own glow, i.e. of the sect (85)"
+     ],
+     "Testimonies": [
+      {
+       "n": "79",
+       "sentence": "In its own share of dignity (79)",
+       "facts": [
+        "Share of dignity: Face"
+       ]
+      },
+      {
+       "n": "80",
+       "sentence": "Direct in course (80)",
+       "facts": [
+        "Retrograde (accidental): no",
+        "Speed in longitude: 0.12 (unrounded: 0.12157286024511571)"
+       ]
+      },
+      {
+       "n": "81",
+       "sentence": "Not in the whole-sign angles of an infortune (81)",
+       "facts": [
+        "Infortunes: Mars",
+        "Configuration with Mars: Trine"
+       ]
+      },
+      {
+       "n": "83",
+       "sentence": "Advancing (83)",
+       "facts": [
+        "Quadrant division: 8",
+        "Angular and succedent divisions: 1, 2, 4, 5, 7, 8, 10, 11"
+       ]
+      },
+      {
+       "n": "85",
+       "sentence": "In its own glow, i.e. of the sect (85)",
+       "facts": [
+        "Planet is diurnal: yes",
+        "Sect: Diurnal"
+       ]
+      }
+     ]
+    }
+   ],
+   "export / Weakness of the Planets": [
+    {
+     "Planet": "Sun",
+     "Weakness Testimonies": "Connecting with Saturn by assembly, square, or opposition (94), Enclosed between the infortunes, separating from Saturn and connecting to Mars (95, 119-123), Connecting with Jupiter and Moon and Saturn, averse to the Ascendant (97), Alien: no house, exaltation, or triplicity where it sits (98), With the Head or Tail, without latitude (99; this app reads |latitude| < 1°; 12 deg orb for either node, Ch. 3, 107 and Gr. Intr. VII.6, 52)",
+     "Count": 5,
+     "Labels": [
+      "Connecting with Saturn by assembly, square, or opposition (94)",
+      "Enclosed between the infortunes, separating from Saturn and connecting to Mars (95, 119-123)",
+      "Connecting with Jupiter and Moon and Saturn, averse to the Ascendant (97)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)",
+      "With the Head or Tail, without latitude (99; this app reads |latitude| < 1°; 12 deg orb for either node, Ch. 3, 107 and Gr. Intr. VII.6, 52)"
+     ],
+     "Testimonies": [
+      {
+       "n": "94",
+       "sentence": "Connecting with Saturn by assembly, square, or opposition (94)",
+       "facts": [
+        "Connecting with Saturn: Conjunction"
+       ]
+      },
+      {
+       "n": "95",
+       "sentence": "Enclosed between the infortunes, separating from Saturn and connecting to Mars (95, 119-123)",
+       "facts": [
+        "Separating from: Saturn",
+        "Connecting to: Mars"
+       ]
+      },
+      {
+       "n": "97",
+       "sentence": "Connecting with Jupiter and Moon and Saturn, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Jupiter, Moon, Saturn"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Jupiter",
+        "Exaltation lord where it sits: Venus",
+        "Triplicity lord where it sits (by day): Venus",
+        "Partnering triplicity lord where it sits: Moon"
+       ]
+      },
+      {
+       "n": "99",
+       "sentence": "With the Head or Tail, without latitude (99; this app reads |latitude| < 1°; 12 deg orb for either node, Ch. 3, 107 and Gr. Intr. VII.6, 52)",
+       "facts": [
+        "Distance from the nearer node: 3.76 (unrounded: 3.7594465803264825)",
+        "Latitude: -0.00 (unrounded: -0.00016773432085125085)"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Moon",
+     "Weakness Testimonies": "Falling from the stakes, averse to the Ascendant (91), Connecting with Saturn and Sun, averse to the Ascendant (97)",
+     "Count": 2,
+     "Labels": [
+      "Falling from the stakes, averse to the Ascendant (91)",
+      "Connecting with Saturn and Sun, averse to the Ascendant (97)"
+     ],
+     "Testimonies": [
+      {
+       "n": "91",
+       "sentence": "Falling from the stakes, averse to the Ascendant (91)",
+       "facts": [
+        "Whole-sign place: 12",
+        "Cadent places: 3, 6, 9, 12",
+        "Averse to the Ascendant: yes"
+       ]
+      },
+      {
+       "n": "97",
+       "sentence": "Connecting with Saturn and Sun, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Saturn, Sun"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mercury",
+     "Weakness Testimonies": "Connecting with Mars by assembly, square, or opposition (94), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 2,
+     "Labels": [
+      "Connecting with Mars by assembly, square, or opposition (94)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "94",
+       "sentence": "Connecting with Mars by assembly, square, or opposition (94)",
+       "facts": [
+        "Connecting with Mars: Square"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Saturn",
+        "Exaltation lord where it sits: -",
+        "Triplicity lord where it sits (by day): Saturn",
+        "Partnering triplicity lord where it sits: Jupiter"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Venus",
+     "Weakness Testimonies": "Connecting with Moon, averse to the Ascendant (97), Alien: no house, exaltation, or triplicity where it sits (98), Inverted, in the seventh sign from its own house (100)",
+     "Count": 3,
+     "Labels": [
+      "Connecting with Moon, averse to the Ascendant (97)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)",
+      "Inverted, in the seventh sign from its own house (100)"
+     ],
+     "Testimonies": [
+      {
+       "n": "97",
+       "sentence": "Connecting with Moon, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Moon"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Mars",
+        "Exaltation lord where it sits: Sun",
+        "Triplicity lord where it sits (by day): Sun",
+        "Partnering triplicity lord where it sits: Saturn"
+       ]
+      },
+      {
+       "n": "100",
+       "sentence": "Inverted, in the seventh sign from its own house (100)",
+       "facts": [
+        "Detriment (essential): yes"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Mars",
+     "Weakness Testimonies": "Connecting with Jupiter and Sun, averse to the Ascendant (97)",
+     "Count": 1,
+     "Labels": [
+      "Connecting with Jupiter and Sun, averse to the Ascendant (97)"
+     ],
+     "Testimonies": [
+      {
+       "n": "97",
+       "sentence": "Connecting with Jupiter and Sun, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Jupiter, Sun"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Jupiter",
+     "Weakness Testimonies": "Falling from the stakes, averse to the Ascendant (91), In its own fall (96), Connecting with Sun, averse to the Ascendant (97), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 4,
+     "Labels": [
+      "Falling from the stakes, averse to the Ascendant (91)",
+      "In its own fall (96)",
+      "Connecting with Sun, averse to the Ascendant (97)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "91",
+       "sentence": "Falling from the stakes, averse to the Ascendant (91)",
+       "facts": [
+        "Whole-sign place: 6",
+        "Cadent places: 3, 6, 9, 12",
+        "Averse to the Ascendant: yes"
+       ]
+      },
+      {
+       "n": "96",
+       "sentence": "In its own fall (96)",
+       "facts": [
+        "Fall (essential): yes"
+       ]
+      },
+      {
+       "n": "97",
+       "sentence": "Connecting with Sun, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Sun"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Saturn",
+        "Exaltation lord where it sits: Mars",
+        "Triplicity lord where it sits (by day): Venus",
+        "Partnering triplicity lord where it sits: Mars"
+       ]
+      }
+     ]
+    },
+    {
+     "Planet": "Saturn",
+     "Weakness Testimonies": "Under the rays of the Sun (93), Connecting with Moon and Sun, averse to the Ascendant (97), Alien: no house, exaltation, or triplicity where it sits (98)",
+     "Count": 3,
+     "Labels": [
+      "Under the rays of the Sun (93)",
+      "Connecting with Moon and Sun, averse to the Ascendant (97)",
+      "Alien: no house, exaltation, or triplicity where it sits (98)"
+     ],
+     "Testimonies": [
+      {
+       "n": "93",
+       "sentence": "Under the rays of the Sun (93)",
+       "facts": [
+        "Solar phase (Sahl): Burned",
+        "Heart limit (degrees, inclusive): 1.00 (unrounded: 1.0)",
+        "Signed distance from the Sun (positive is western): -4.66 (unrounded: -4.658111375427211)"
+       ]
+      },
+      {
+       "n": "97",
+       "sentence": "Connecting with Moon and Sun, averse to the Ascendant (97)",
+       "facts": [
+        "Connecting with, averse to the Ascendant: Moon, Sun"
+       ]
+      },
+      {
+       "n": "98",
+       "sentence": "Alien: no house, exaltation, or triplicity where it sits (98)",
+       "facts": [
+        "Domicile lord where it sits: Jupiter",
+        "Exaltation lord where it sits: Venus",
+        "Triplicity lord where it sits (by day): Venus",
+        "Partnering triplicity lord where it sits: Moon"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

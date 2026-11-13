@@ -1,0 +1,892 @@
+{
+"1240-05-23|14|30|43.7792|11.2463": [
+{
+"Star": "Pleiades (in Taurus), esp. η (Alcyone)",
+"As printed": "Gr. Intr.: from 13° 36' Taurus to 14° 30' Sahl: Taurus from 6° to 10° Abu Bakr: Taurus, the sixth Abu Bakr: Taurus, the ninth and tenth",
+"Longitude": "19° Tau 23'",
+"Latitude": "+3.97°",
+"Catalogue designation": "etTau",
+"Witnesses": "Gr. Intr. Fig. 88 [1] Gr. Intr. VI.20, 1, 4 Carmen IV.2, 48 (2nd ed.) Rhetorius Ch. 62 (the Pleiades; Holden's note names other stars) Sahl I Fig. 59 Sahl, On Nativities 6.2, 54 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Praesepe (in Cancer): M44 or MCG 2632",
+"As printed": "Gr. Intr.: Cancer 21° 08' Sahl: Cancer, the ninth degree to the fifteenth Sahl: Cancer, from 15° to 19° Abu Bakr: Cancer, from the ninth degree up to the fifteenth",
+"Longitude": "26° Can 35'",
+"Latitude": "+1.49°",
+"Catalogue designation": "M44",
+"Witnesses": "Gr. Intr. Fig. 88 [2] Gr. Intr. VI.20, 1, 5, fn 281 Carmen IV.2, 49 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 55, 72 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice (near Tail of Leo): α",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "28° Vir 25'",
+"Latitude": "+23.01°",
+"Catalogue designation": "alCom",
+"Witnesses": "Carmen IV.2, 44 (2nd ed.) Rhetorius Ch. 62 (the Mane of Leo; Holden's note names 7 and 15 Com) Sahl I Fig. 59 Sahl, On Nativities 6.2, 49, 70 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice (near Tail of Leo): β",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "23° Vir 59'",
+"Latitude": "+32.44°",
+"Catalogue designation": "beCom",
+"Witnesses": "Carmen IV.2, 44 (2nd ed.) Rhetorius Ch. 62 (the Mane of Leo; Holden's note names 7 and 15 Com) Sahl I Fig. 59 Sahl, On Nativities 6.2, 49, 70 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice (near Tail of Leo): γ",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "13° Vir 14'",
+"Latitude": "+28.42°",
+"Catalogue designation": "gaCom",
+"Witnesses": "Carmen IV.2, 44 (2nd ed.) Rhetorius Ch. 62 (the Mane of Leo; Holden's note names 7 and 15 Com) Sahl I Fig. 59 Sahl, On Nativities 6.2, 49, 70 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice: the nebulous mass (Melotte 111)",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "13° Vir 54'",
+"Latitude": "+25.77°",
+"Catalogue designation": "Melotte 111",
+"Witnesses": "Gr. Intr. VI.20, 3, fn 280 Rhetorius Ch. 62 (Mane of Leo)"
+},
+{
+"Star": "Forehead, eyes of Scorpio: β, Acrab/Graffias",
+"As printed": "Sahl: Scorpio, the eighth, ninth and tenth degree Sahl: Scorpio, the ninth and tenth Abu Bakr: Scorpio, the eighth, ninth and tenth, according to Dorotheus",
+"Longitude": "22° Sco 35'",
+"Latitude": "+1.10°",
+"Catalogue designation": "be-1Sco",
+"Witnesses": "Carmen IV.2, 46 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Forehead, eyes of Scorpio: δ, Dschubba",
+"As printed": "Sahl: Scorpio, the eighth, ninth and tenth degree Sahl: Scorpio, the ninth and tenth Abu Bakr: Scorpio, the eighth, ninth and tenth, according to Dorotheus",
+"Longitude": "21° Sco 58'",
+"Latitude": "−1.89°",
+"Catalogue designation": "deSco",
+"Witnesses": "Carmen IV.2, 46 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Forehead, eyes of Scorpio: π Scorpionis",
+"As printed": "Sahl: Scorpio, the eighth, ninth and tenth degree Sahl: Scorpio, the ninth and tenth Abu Bakr: Scorpio, the eighth, ninth and tenth, according to Dorotheus",
+"Longitude": "22° Sco 21'",
+"Latitude": "−5.38°",
+"Catalogue designation": "piSco",
+"Witnesses": "Carmen IV.2, 46 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Sting of Scorpio: λ, Shaula",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283) Sahl: Scorpio, in 23 Sahl: Sagittarius, the first degree Abu Bakr: Scorpio, the twenty-second, according to Dorotheus",
+"Longitude": "13° Sag 59'",
+"Latitude": "−13.68°",
+"Catalogue designation": "laSco",
+"Witnesses": "Gr. Intr. Fig. 88 [3] (Shaula & Lesath?) Gr. Intr. VI.20, 1, 6, fns 278, 283 Carmen IV.2, 45 (2nd ed.) Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3 Rhetorius Ch. 62 (Holden's note: Shaula)"
+},
+{
+"Star": "Sting of Scorpio: υ, Lesath",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283) Sahl: Scorpio, in 23 Sahl: Sagittarius, the first degree Abu Bakr: Scorpio, the twenty-second, according to Dorotheus",
+"Longitude": "13° Sag 25'",
+"Latitude": "−13.90°",
+"Catalogue designation": "upSco",
+"Witnesses": "Gr. Intr. Fig. 88 [3] (Shaula & Lesath?) Gr. Intr. VI.20, 1, 6, fns 278, 283 Carmen IV.2, 45 (2nd ed.) Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Nebula by sting? (Scorpio): G Sco",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283)",
+"Longitude": "17° Sag 19'",
+"Latitude": "−13.53°",
+"Catalogue designation": "HR6630",
+"Witnesses": "Gr. Intr. Fig. 88 [4] (G Sco + Cglo 6441?) Gr. Intr. VI.20, 6, fns 278, 283"
+},
+{
+"Star": "Nebula by sting? (Scorpio): Cglo 6441 (NGC 6441)",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283)",
+"Longitude": "17° Sag 24'",
+"Latitude": "−13.53°",
+"Catalogue designation": "NGC 6441",
+"Witnesses": "Gr. Intr. Fig. 88 [4] (G Sco + Cglo 6441?) Gr. Intr. VI.20, 6, fns 278, 283"
+},
+{
+"Star": "Tip of Archer's arrow: γ², al-Nasl",
+"As printed": "Gr. Intr.: Sagittarius 15° 20' Sahl: Sagittarius from 6° to 9° Abu Bakr: Sagittarius, the first degree Abu Bakr: Sagittarius, the seventh, eighth and ninth",
+"Longitude": "20° Sag 40'",
+"Latitude": "−6.85°",
+"Catalogue designation": "gaSgr",
+"Witnesses": "Gr. Intr. Fig. 88 [5] Gr. Intr. VI.20, 1, 7, fn 284 Carmen IV.2, 47 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 51 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Spines of Capricorn: τ",
+"As printed": "Gr. Intr.: Capricorn 22°",
+"Longitude": "27° Cap 42'",
+"Latitude": "+3.43°",
+"Catalogue designation": "HIP 101923",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, 1, 8, fn 285"
+},
+{
+"Star": "Spines of Capricorn: υ",
+"As printed": "Gr. Intr.: Capricorn 22°",
+"Longitude": "27° Cap 04'",
+"Latitude": "+0.30°",
+"Catalogue designation": "upCap",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, 1, 8, fn 285"
+},
+{
+"Star": "Spines of Capricorn: or ε",
+"As printed": "Sahl: Capricorn from 26° to 29° Abu Bakr: Capricorn, from the twenty-sixth up to the twenty-ninth",
+"Longitude": "09° Aqu 35'",
+"Latitude": "−4.92°",
+"Catalogue designation": "epCap",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, fn 285 Rhetorius Ch. 62 Sahl I Fig. 59 (ε, κ Capricorni?) Sahl, On Nativities 6.2, 53 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Spines of Capricorn: or κ",
+"As printed": "Sahl: Capricorn from 26° to 29° Abu Bakr: Capricorn, from the twenty-sixth up to the twenty-ninth",
+"Longitude": "11° Aqu 00'",
+"Latitude": "−4.77°",
+"Catalogue designation": "HIP 107188",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, fn 285 Rhetorius Ch. 62 Sahl I Fig. 59 (ε, κ Capricorni?) Sahl, On Nativities 6.2, 53 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Pour of Aquarius: γ",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "26° Aqu 06'",
+"Latitude": "+8.28°",
+"Catalogue designation": "gaAqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Pour of Aquarius: ζ",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "28° Aqu 17'",
+"Latitude": "+8.88°",
+"Catalogue designation": "ze-1Aqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3 Sahl I Fig. 59 (ζ Aquarii?)"
+},
+{
+"Star": "Pour of Aquarius: η",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "29° Aqu 48'",
+"Latitude": "+8.19°",
+"Catalogue designation": "etAqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Pour of Aquarius: π",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "28° Aqu 00'",
+"Latitude": "+10.50°",
+"Catalogue designation": "piAqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3"
+}
+],
+"1602-01-09|3|20|-33.9|151.2": [
+{
+"Star": "Pleiades (in Taurus), esp. η (Alcyone)",
+"As printed": "Gr. Intr.: from 13° 36' Taurus to 14° 30' Sahl: Taurus from 6° to 10° Abu Bakr: Taurus, the sixth Abu Bakr: Taurus, the ninth and tenth",
+"Longitude": "24° Tau 26'",
+"Latitude": "+4.01°",
+"Catalogue designation": "etTau",
+"Witnesses": "Gr. Intr. Fig. 88 [1] Gr. Intr. VI.20, 1, 4 Carmen IV.2, 48 (2nd ed.) Rhetorius Ch. 62 (the Pleiades; Holden's note names other stars) Sahl I Fig. 59 Sahl, On Nativities 6.2, 54 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Praesepe (in Cancer): M44 or MCG 2632",
+"As printed": "Gr. Intr.: Cancer 21° 08' Sahl: Cancer, the ninth degree to the fifteenth Sahl: Cancer, from 15° to 19° Abu Bakr: Cancer, from the ninth degree up to the fifteenth",
+"Longitude": "01° Leo 39'",
+"Latitude": "+1.52°",
+"Catalogue designation": "M44",
+"Witnesses": "Gr. Intr. Fig. 88 [2] Gr. Intr. VI.20, 1, 5, fn 281 Carmen IV.2, 49 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 55, 72 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice (near Tail of Leo): α",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "03° Lib 26'",
+"Latitude": "+22.99°",
+"Catalogue designation": "alCom",
+"Witnesses": "Carmen IV.2, 44 (2nd ed.) Rhetorius Ch. 62 (the Mane of Leo; Holden's note names 7 and 15 Com) Sahl I Fig. 59 Sahl, On Nativities 6.2, 49, 70 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice (near Tail of Leo): β",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "28° Vir 55'",
+"Latitude": "+32.47°",
+"Catalogue designation": "beCom",
+"Witnesses": "Carmen IV.2, 44 (2nd ed.) Rhetorius Ch. 62 (the Mane of Leo; Holden's note names 7 and 15 Com) Sahl I Fig. 59 Sahl, On Nativities 6.2, 49, 70 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice (near Tail of Leo): γ",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "18° Vir 19'",
+"Latitude": "+28.41°",
+"Catalogue designation": "gaCom",
+"Witnesses": "Carmen IV.2, 44 (2nd ed.) Rhetorius Ch. 62 (the Mane of Leo; Holden's note names 7 and 15 Com) Sahl I Fig. 59 Sahl, On Nativities 6.2, 49, 70 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice: the nebulous mass (Melotte 111)",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "18° Vir 58'",
+"Latitude": "+25.77°",
+"Catalogue designation": "Melotte 111",
+"Witnesses": "Gr. Intr. VI.20, 3, fn 280 Rhetorius Ch. 62 (Mane of Leo)"
+},
+{
+"Star": "Forehead, eyes of Scorpio: β, Acrab/Graffias",
+"As printed": "Sahl: Scorpio, the eighth, ninth and tenth degree Sahl: Scorpio, the ninth and tenth Abu Bakr: Scorpio, the eighth, ninth and tenth, according to Dorotheus",
+"Longitude": "27° Sco 38'",
+"Latitude": "+1.06°",
+"Catalogue designation": "be-1Sco",
+"Witnesses": "Carmen IV.2, 46 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Forehead, eyes of Scorpio: δ, Dschubba",
+"As printed": "Sahl: Scorpio, the eighth, ninth and tenth degree Sahl: Scorpio, the ninth and tenth Abu Bakr: Scorpio, the eighth, ninth and tenth, according to Dorotheus",
+"Longitude": "27° Sco 01'",
+"Latitude": "−1.93°",
+"Catalogue designation": "deSco",
+"Witnesses": "Carmen IV.2, 46 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Forehead, eyes of Scorpio: π Scorpionis",
+"As printed": "Sahl: Scorpio, the eighth, ninth and tenth degree Sahl: Scorpio, the ninth and tenth Abu Bakr: Scorpio, the eighth, ninth and tenth, according to Dorotheus",
+"Longitude": "27° Sco 23'",
+"Latitude": "−5.42°",
+"Catalogue designation": "piSco",
+"Witnesses": "Carmen IV.2, 46 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Sting of Scorpio: λ, Shaula",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283) Sahl: Scorpio, in 23 Sahl: Sagittarius, the first degree Abu Bakr: Scorpio, the twenty-second, according to Dorotheus",
+"Longitude": "19° Sag 01'",
+"Latitude": "−13.73°",
+"Catalogue designation": "laSco",
+"Witnesses": "Gr. Intr. Fig. 88 [3] (Shaula & Lesath?) Gr. Intr. VI.20, 1, 6, fns 278, 283 Carmen IV.2, 45 (2nd ed.) Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3 Rhetorius Ch. 62 (Holden's note: Shaula)"
+},
+{
+"Star": "Sting of Scorpio: υ, Lesath",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283) Sahl: Scorpio, in 23 Sahl: Sagittarius, the first degree Abu Bakr: Scorpio, the twenty-second, according to Dorotheus",
+"Longitude": "18° Sag 27'",
+"Latitude": "−13.95°",
+"Catalogue designation": "upSco",
+"Witnesses": "Gr. Intr. Fig. 88 [3] (Shaula & Lesath?) Gr. Intr. VI.20, 1, 6, fns 278, 283 Carmen IV.2, 45 (2nd ed.) Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Nebula by sting? (Scorpio): G Sco",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283)",
+"Longitude": "22° Sag 21'",
+"Latitude": "−13.57°",
+"Catalogue designation": "HR6630",
+"Witnesses": "Gr. Intr. Fig. 88 [4] (G Sco + Cglo 6441?) Gr. Intr. VI.20, 6, fns 278, 283"
+},
+{
+"Star": "Nebula by sting? (Scorpio): Cglo 6441 (NGC 6441)",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283)",
+"Longitude": "22° Sag 26'",
+"Latitude": "−13.58°",
+"Catalogue designation": "NGC 6441",
+"Witnesses": "Gr. Intr. Fig. 88 [4] (G Sco + Cglo 6441?) Gr. Intr. VI.20, 6, fns 278, 283"
+},
+{
+"Star": "Tip of Archer's arrow: γ², al-Nasl",
+"As printed": "Gr. Intr.: Sagittarius 15° 20' Sahl: Sagittarius from 6° to 9° Abu Bakr: Sagittarius, the first degree Abu Bakr: Sagittarius, the seventh, eighth and ninth",
+"Longitude": "25° Sag 42'",
+"Latitude": "−6.92°",
+"Catalogue designation": "gaSgr",
+"Witnesses": "Gr. Intr. Fig. 88 [5] Gr. Intr. VI.20, 1, 7, fn 284 Carmen IV.2, 47 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 51 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Spines of Capricorn: τ",
+"As printed": "Gr. Intr.: Capricorn 22°",
+"Longitude": "02° Aqu 44'",
+"Latitude": "+3.39°",
+"Catalogue designation": "HIP 101923",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, 1, 8, fn 285"
+},
+{
+"Star": "Spines of Capricorn: υ",
+"As printed": "Gr. Intr.: Capricorn 22°",
+"Longitude": "02° Aqu 06'",
+"Latitude": "+0.26°",
+"Catalogue designation": "upCap",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, 1, 8, fn 285"
+},
+{
+"Star": "Spines of Capricorn: or ε",
+"As printed": "Sahl: Capricorn from 26° to 29° Abu Bakr: Capricorn, from the twenty-sixth up to the twenty-ninth",
+"Longitude": "14° Aqu 38'",
+"Latitude": "−4.95°",
+"Catalogue designation": "epCap",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, fn 285 Rhetorius Ch. 62 Sahl I Fig. 59 (ε, κ Capricorni?) Sahl, On Nativities 6.2, 53 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Spines of Capricorn: or κ",
+"As printed": "Sahl: Capricorn from 26° to 29° Abu Bakr: Capricorn, from the twenty-sixth up to the twenty-ninth",
+"Longitude": "16° Aqu 04'",
+"Latitude": "−4.80°",
+"Catalogue designation": "HIP 107188",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, fn 285 Rhetorius Ch. 62 Sahl I Fig. 59 (ε, κ Capricorni?) Sahl, On Nativities 6.2, 53 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Pour of Aquarius: γ",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "01° Pis 09'",
+"Latitude": "+8.26°",
+"Catalogue designation": "gaAqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Pour of Aquarius: ζ",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "03° Pis 20'",
+"Latitude": "+8.87°",
+"Catalogue designation": "ze-1Aqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3 Sahl I Fig. 59 (ζ Aquarii?)"
+},
+{
+"Star": "Pour of Aquarius: η",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "04° Pis 51'",
+"Latitude": "+8.17°",
+"Catalogue designation": "etAqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Pour of Aquarius: π",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "03° Pis 03'",
+"Latitude": "+10.49°",
+"Catalogue designation": "piAqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3"
+}
+],
+"1888-11-02|22|15|40.0|-3.7": [
+{
+"Star": "Pleiades (in Taurus), esp. η (Alcyone)",
+"As printed": "Gr. Intr.: from 13° 36' Taurus to 14° 30' Sahl: Taurus from 6° to 10° Abu Bakr: Taurus, the sixth Abu Bakr: Taurus, the ninth and tenth",
+"Longitude": "28° Tau 26'",
+"Latitude": "+4.04°",
+"Catalogue designation": "etTau",
+"Witnesses": "Gr. Intr. Fig. 88 [1] Gr. Intr. VI.20, 1, 4 Carmen IV.2, 48 (2nd ed.) Rhetorius Ch. 62 (the Pleiades; Holden's note names other stars) Sahl I Fig. 59 Sahl, On Nativities 6.2, 54 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Praesepe (in Cancer): M44 or MCG 2632",
+"As printed": "Gr. Intr.: Cancer 21° 08' Sahl: Cancer, the ninth degree to the fifteenth Sahl: Cancer, from 15° to 19° Abu Bakr: Cancer, from the ninth degree up to the fifteenth",
+"Longitude": "05° Leo 38'",
+"Latitude": "+1.55°",
+"Catalogue designation": "M44",
+"Witnesses": "Gr. Intr. Fig. 88 [2] Gr. Intr. VI.20, 1, 5, fn 281 Carmen IV.2, 49 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 55, 72 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice (near Tail of Leo): α",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "07° Lib 23'",
+"Latitude": "+22.98°",
+"Catalogue designation": "alCom",
+"Witnesses": "Carmen IV.2, 44 (2nd ed.) Rhetorius Ch. 62 (the Mane of Leo; Holden's note names 7 and 15 Com) Sahl I Fig. 59 Sahl, On Nativities 6.2, 49, 70 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice (near Tail of Leo): β",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "02° Lib 50'",
+"Latitude": "+32.50°",
+"Catalogue designation": "beCom",
+"Witnesses": "Carmen IV.2, 44 (2nd ed.) Rhetorius Ch. 62 (the Mane of Leo; Holden's note names 7 and 15 Com) Sahl I Fig. 59 Sahl, On Nativities 6.2, 49, 70 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice (near Tail of Leo): γ",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "22° Vir 19'",
+"Latitude": "+28.40°",
+"Catalogue designation": "gaCom",
+"Witnesses": "Carmen IV.2, 44 (2nd ed.) Rhetorius Ch. 62 (the Mane of Leo; Holden's note names 7 and 15 Com) Sahl I Fig. 59 Sahl, On Nativities 6.2, 49, 70 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice: the nebulous mass (Melotte 111)",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "22° Vir 58'",
+"Latitude": "+25.77°",
+"Catalogue designation": "Melotte 111",
+"Witnesses": "Gr. Intr. VI.20, 3, fn 280 Rhetorius Ch. 62 (Mane of Leo)"
+},
+{
+"Star": "Forehead, eyes of Scorpio: β, Acrab/Graffias",
+"As printed": "Sahl: Scorpio, the eighth, ninth and tenth degree Sahl: Scorpio, the ninth and tenth Abu Bakr: Scorpio, the eighth, ninth and tenth, according to Dorotheus",
+"Longitude": "01° Sag 37'",
+"Latitude": "+1.02°",
+"Catalogue designation": "be-1Sco",
+"Witnesses": "Carmen IV.2, 46 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Forehead, eyes of Scorpio: δ, Dschubba",
+"As printed": "Sahl: Scorpio, the eighth, ninth and tenth degree Sahl: Scorpio, the ninth and tenth Abu Bakr: Scorpio, the eighth, ninth and tenth, according to Dorotheus",
+"Longitude": "01° Sag 00'",
+"Latitude": "−1.97°",
+"Catalogue designation": "deSco",
+"Witnesses": "Carmen IV.2, 46 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Forehead, eyes of Scorpio: π Scorpionis",
+"As printed": "Sahl: Scorpio, the eighth, ninth and tenth degree Sahl: Scorpio, the ninth and tenth Abu Bakr: Scorpio, the eighth, ninth and tenth, according to Dorotheus",
+"Longitude": "01° Sag 22'",
+"Latitude": "−5.46°",
+"Catalogue designation": "piSco",
+"Witnesses": "Carmen IV.2, 46 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Sting of Scorpio: λ, Shaula",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283) Sahl: Scorpio, in 23 Sahl: Sagittarius, the first degree Abu Bakr: Scorpio, the twenty-second, according to Dorotheus",
+"Longitude": "23° Sag 01'",
+"Latitude": "−13.77°",
+"Catalogue designation": "laSco",
+"Witnesses": "Gr. Intr. Fig. 88 [3] (Shaula & Lesath?) Gr. Intr. VI.20, 1, 6, fns 278, 283 Carmen IV.2, 45 (2nd ed.) Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3 Rhetorius Ch. 62 (Holden's note: Shaula)"
+},
+{
+"Star": "Sting of Scorpio: υ, Lesath",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283) Sahl: Scorpio, in 23 Sahl: Sagittarius, the first degree Abu Bakr: Scorpio, the twenty-second, according to Dorotheus",
+"Longitude": "22° Sag 27'",
+"Latitude": "−13.99°",
+"Catalogue designation": "upSco",
+"Witnesses": "Gr. Intr. Fig. 88 [3] (Shaula & Lesath?) Gr. Intr. VI.20, 1, 6, fns 278, 283 Carmen IV.2, 45 (2nd ed.) Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Nebula by sting? (Scorpio): G Sco",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283)",
+"Longitude": "26° Sag 21'",
+"Latitude": "−13.61°",
+"Catalogue designation": "HR6630",
+"Witnesses": "Gr. Intr. Fig. 88 [4] (G Sco + Cglo 6441?) Gr. Intr. VI.20, 6, fns 278, 283"
+},
+{
+"Star": "Nebula by sting? (Scorpio): Cglo 6441 (NGC 6441)",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283)",
+"Longitude": "26° Sag 25'",
+"Latitude": "−13.62°",
+"Catalogue designation": "NGC 6441",
+"Witnesses": "Gr. Intr. Fig. 88 [4] (G Sco + Cglo 6441?) Gr. Intr. VI.20, 6, fns 278, 283"
+},
+{
+"Star": "Tip of Archer's arrow: γ², al-Nasl",
+"As printed": "Gr. Intr.: Sagittarius 15° 20' Sahl: Sagittarius from 6° to 9° Abu Bakr: Sagittarius, the first degree Abu Bakr: Sagittarius, the seventh, eighth and ninth",
+"Longitude": "29° Sag 42'",
+"Latitude": "−6.97°",
+"Catalogue designation": "gaSgr",
+"Witnesses": "Gr. Intr. Fig. 88 [5] Gr. Intr. VI.20, 1, 7, fn 284 Carmen IV.2, 47 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 51 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Spines of Capricorn: τ",
+"As printed": "Gr. Intr.: Capricorn 22°",
+"Longitude": "06° Aqu 44'",
+"Latitude": "+3.36°",
+"Catalogue designation": "HIP 101923",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, 1, 8, fn 285"
+},
+{
+"Star": "Spines of Capricorn: υ",
+"As printed": "Gr. Intr.: Capricorn 22°",
+"Longitude": "06° Aqu 06'",
+"Latitude": "+0.23°",
+"Catalogue designation": "upCap",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, 1, 8, fn 285"
+},
+{
+"Star": "Spines of Capricorn: or ε",
+"As printed": "Sahl: Capricorn from 26° to 29° Abu Bakr: Capricorn, from the twenty-sixth up to the twenty-ninth",
+"Longitude": "18° Aqu 38'",
+"Latitude": "−4.97°",
+"Catalogue designation": "epCap",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, fn 285 Rhetorius Ch. 62 Sahl I Fig. 59 (ε, κ Capricorni?) Sahl, On Nativities 6.2, 53 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Spines of Capricorn: or κ",
+"As printed": "Sahl: Capricorn from 26° to 29° Abu Bakr: Capricorn, from the twenty-sixth up to the twenty-ninth",
+"Longitude": "20° Aqu 05'",
+"Latitude": "−4.83°",
+"Catalogue designation": "HIP 107188",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, fn 285 Rhetorius Ch. 62 Sahl I Fig. 59 (ε, κ Capricorni?) Sahl, On Nativities 6.2, 53 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Pour of Aquarius: γ",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "05° Pis 09'",
+"Latitude": "+8.24°",
+"Catalogue designation": "gaAqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Pour of Aquarius: ζ",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "07° Pis 21'",
+"Latitude": "+8.85°",
+"Catalogue designation": "ze-1Aqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3 Sahl I Fig. 59 (ζ Aquarii?)"
+},
+{
+"Star": "Pour of Aquarius: η",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "08° Pis 50'",
+"Latitude": "+8.15°",
+"Catalogue designation": "etAqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Pour of Aquarius: π",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "07° Pis 02'",
+"Latitude": "+10.48°",
+"Catalogue designation": "piAqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3"
+}
+],
+"1955-11-05|1|21|34.1|-118.2": [
+{
+"Star": "Pleiades (in Taurus), esp. η (Alcyone)",
+"As printed": "Gr. Intr.: from 13° 36' Taurus to 14° 30' Sahl: Taurus from 6° to 10° Abu Bakr: Taurus, the sixth Abu Bakr: Taurus, the ninth and tenth",
+"Longitude": "29° Tau 23'",
+"Latitude": "+4.05°",
+"Catalogue designation": "etTau",
+"Witnesses": "Gr. Intr. Fig. 88 [1] Gr. Intr. VI.20, 1, 4 Carmen IV.2, 48 (2nd ed.) Rhetorius Ch. 62 (the Pleiades; Holden's note names other stars) Sahl I Fig. 59 Sahl, On Nativities 6.2, 54 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Praesepe (in Cancer): M44 or MCG 2632",
+"As printed": "Gr. Intr.: Cancer 21° 08' Sahl: Cancer, the ninth degree to the fifteenth Sahl: Cancer, from 15° to 19° Abu Bakr: Cancer, from the ninth degree up to the fifteenth",
+"Longitude": "06° Leo 35'",
+"Latitude": "+1.56°",
+"Catalogue designation": "M44",
+"Witnesses": "Gr. Intr. Fig. 88 [2] Gr. Intr. VI.20, 1, 5, fn 281 Carmen IV.2, 49 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 55, 72 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice (near Tail of Leo): α",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "08° Lib 20'",
+"Latitude": "+22.98°",
+"Catalogue designation": "alCom",
+"Witnesses": "Carmen IV.2, 44 (2nd ed.) Rhetorius Ch. 62 (the Mane of Leo; Holden's note names 7 and 15 Com) Sahl I Fig. 59 Sahl, On Nativities 6.2, 49, 70 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice (near Tail of Leo): β",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "03° Lib 45'",
+"Latitude": "+32.51°",
+"Catalogue designation": "beCom",
+"Witnesses": "Carmen IV.2, 44 (2nd ed.) Rhetorius Ch. 62 (the Mane of Leo; Holden's note names 7 and 15 Com) Sahl I Fig. 59 Sahl, On Nativities 6.2, 49, 70 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice (near Tail of Leo): γ",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "23° Vir 16'",
+"Latitude": "+28.40°",
+"Catalogue designation": "gaCom",
+"Witnesses": "Carmen IV.2, 44 (2nd ed.) Rhetorius Ch. 62 (the Mane of Leo; Holden's note names 7 and 15 Com) Sahl I Fig. 59 Sahl, On Nativities 6.2, 49, 70 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice: the nebulous mass (Melotte 111)",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "23° Vir 55'",
+"Latitude": "+25.77°",
+"Catalogue designation": "Melotte 111",
+"Witnesses": "Gr. Intr. VI.20, 3, fn 280 Rhetorius Ch. 62 (Mane of Leo)"
+},
+{
+"Star": "Forehead, eyes of Scorpio: β, Acrab/Graffias",
+"As printed": "Sahl: Scorpio, the eighth, ninth and tenth degree Sahl: Scorpio, the ninth and tenth Abu Bakr: Scorpio, the eighth, ninth and tenth, according to Dorotheus",
+"Longitude": "02° Sag 34'",
+"Latitude": "+1.01°",
+"Catalogue designation": "be-1Sco",
+"Witnesses": "Carmen IV.2, 46 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Forehead, eyes of Scorpio: δ, Dschubba",
+"As printed": "Sahl: Scorpio, the eighth, ninth and tenth degree Sahl: Scorpio, the ninth and tenth Abu Bakr: Scorpio, the eighth, ninth and tenth, according to Dorotheus",
+"Longitude": "01° Sag 57'",
+"Latitude": "−1.98°",
+"Catalogue designation": "deSco",
+"Witnesses": "Carmen IV.2, 46 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Forehead, eyes of Scorpio: π Scorpionis",
+"As printed": "Sahl: Scorpio, the eighth, ninth and tenth degree Sahl: Scorpio, the ninth and tenth Abu Bakr: Scorpio, the eighth, ninth and tenth, according to Dorotheus",
+"Longitude": "02° Sag 19'",
+"Latitude": "−5.47°",
+"Catalogue designation": "piSco",
+"Witnesses": "Carmen IV.2, 46 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Sting of Scorpio: λ, Shaula",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283) Sahl: Scorpio, in 23 Sahl: Sagittarius, the first degree Abu Bakr: Scorpio, the twenty-second, according to Dorotheus",
+"Longitude": "23° Sag 58'",
+"Latitude": "−13.78°",
+"Catalogue designation": "laSco",
+"Witnesses": "Gr. Intr. Fig. 88 [3] (Shaula & Lesath?) Gr. Intr. VI.20, 1, 6, fns 278, 283 Carmen IV.2, 45 (2nd ed.) Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3 Rhetorius Ch. 62 (Holden's note: Shaula)"
+},
+{
+"Star": "Sting of Scorpio: υ, Lesath",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283) Sahl: Scorpio, in 23 Sahl: Sagittarius, the first degree Abu Bakr: Scorpio, the twenty-second, according to Dorotheus",
+"Longitude": "23° Sag 23'",
+"Latitude": "−14.00°",
+"Catalogue designation": "upSco",
+"Witnesses": "Gr. Intr. Fig. 88 [3] (Shaula & Lesath?) Gr. Intr. VI.20, 1, 6, fns 278, 283 Carmen IV.2, 45 (2nd ed.) Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Nebula by sting? (Scorpio): G Sco",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283)",
+"Longitude": "27° Sag 18'",
+"Latitude": "−13.62°",
+"Catalogue designation": "HR6630",
+"Witnesses": "Gr. Intr. Fig. 88 [4] (G Sco + Cglo 6441?) Gr. Intr. VI.20, 6, fns 278, 283"
+},
+{
+"Star": "Nebula by sting? (Scorpio): Cglo 6441 (NGC 6441)",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283)",
+"Longitude": "27° Sag 22'",
+"Latitude": "−13.62°",
+"Catalogue designation": "NGC 6441",
+"Witnesses": "Gr. Intr. Fig. 88 [4] (G Sco + Cglo 6441?) Gr. Intr. VI.20, 6, fns 278, 283"
+},
+{
+"Star": "Tip of Archer's arrow: γ², al-Nasl",
+"As printed": "Gr. Intr.: Sagittarius 15° 20' Sahl: Sagittarius from 6° to 9° Abu Bakr: Sagittarius, the first degree Abu Bakr: Sagittarius, the seventh, eighth and ninth",
+"Longitude": "00° Cap 38'",
+"Latitude": "−6.98°",
+"Catalogue designation": "gaSgr",
+"Witnesses": "Gr. Intr. Fig. 88 [5] Gr. Intr. VI.20, 1, 7, fn 284 Carmen IV.2, 47 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 51 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Spines of Capricorn: τ",
+"As printed": "Gr. Intr.: Capricorn 22°",
+"Longitude": "07° Aqu 40'",
+"Latitude": "+3.35°",
+"Catalogue designation": "HIP 101923",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, 1, 8, fn 285"
+},
+{
+"Star": "Spines of Capricorn: υ",
+"As printed": "Gr. Intr.: Capricorn 22°",
+"Longitude": "07° Aqu 02'",
+"Latitude": "+0.23°",
+"Catalogue designation": "upCap",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, 1, 8, fn 285"
+},
+{
+"Star": "Spines of Capricorn: or ε",
+"As printed": "Sahl: Capricorn from 26° to 29° Abu Bakr: Capricorn, from the twenty-sixth up to the twenty-ninth",
+"Longitude": "19° Aqu 35'",
+"Latitude": "−4.97°",
+"Catalogue designation": "epCap",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, fn 285 Rhetorius Ch. 62 Sahl I Fig. 59 (ε, κ Capricorni?) Sahl, On Nativities 6.2, 53 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Spines of Capricorn: or κ",
+"As printed": "Sahl: Capricorn from 26° to 29° Abu Bakr: Capricorn, from the twenty-sixth up to the twenty-ninth",
+"Longitude": "21° Aqu 01'",
+"Latitude": "−4.84°",
+"Catalogue designation": "HIP 107188",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, fn 285 Rhetorius Ch. 62 Sahl I Fig. 59 (ε, κ Capricorni?) Sahl, On Nativities 6.2, 53 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Pour of Aquarius: γ",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "06° Pis 06'",
+"Latitude": "+8.24°",
+"Catalogue designation": "gaAqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Pour of Aquarius: ζ",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "08° Pis 17'",
+"Latitude": "+8.85°",
+"Catalogue designation": "ze-1Aqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3 Sahl I Fig. 59 (ζ Aquarii?)"
+},
+{
+"Star": "Pour of Aquarius: η",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "09° Pis 47'",
+"Latitude": "+8.15°",
+"Catalogue designation": "etAqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Pour of Aquarius: π",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "07° Pis 59'",
+"Latitude": "+10.48°",
+"Catalogue designation": "piAqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3"
+}
+],
+"2024-04-08|19|7|44.5|-73.2": [
+{
+"Star": "Pleiades (in Taurus), esp. η (Alcyone)",
+"As printed": "Gr. Intr.: from 13° 36' Taurus to 14° 30' Sahl: Taurus from 6° to 10° Abu Bakr: Taurus, the sixth Abu Bakr: Taurus, the ninth and tenth",
+"Longitude": "00° Gem 19'",
+"Latitude": "+4.05°",
+"Catalogue designation": "etTau",
+"Witnesses": "Gr. Intr. Fig. 88 [1] Gr. Intr. VI.20, 1, 4 Carmen IV.2, 48 (2nd ed.) Rhetorius Ch. 62 (the Pleiades; Holden's note names other stars) Sahl I Fig. 59 Sahl, On Nativities 6.2, 54 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Praesepe (in Cancer): M44 or MCG 2632",
+"As printed": "Gr. Intr.: Cancer 21° 08' Sahl: Cancer, the ninth degree to the fifteenth Sahl: Cancer, from 15° to 19° Abu Bakr: Cancer, from the ninth degree up to the fifteenth",
+"Longitude": "07° Leo 32'",
+"Latitude": "+1.57°",
+"Catalogue designation": "M44",
+"Witnesses": "Gr. Intr. Fig. 88 [2] Gr. Intr. VI.20, 1, 5, fn 281 Carmen IV.2, 49 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 55, 72 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice (near Tail of Leo): α",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "09° Lib 17'",
+"Latitude": "+22.98°",
+"Catalogue designation": "alCom",
+"Witnesses": "Carmen IV.2, 44 (2nd ed.) Rhetorius Ch. 62 (the Mane of Leo; Holden's note names 7 and 15 Com) Sahl I Fig. 59 Sahl, On Nativities 6.2, 49, 70 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice (near Tail of Leo): β",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "04° Lib 42'",
+"Latitude": "+32.52°",
+"Catalogue designation": "beCom",
+"Witnesses": "Carmen IV.2, 44 (2nd ed.) Rhetorius Ch. 62 (the Mane of Leo; Holden's note names 7 and 15 Com) Sahl I Fig. 59 Sahl, On Nativities 6.2, 49, 70 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice (near Tail of Leo): γ",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "24° Vir 14'",
+"Latitude": "+28.40°",
+"Catalogue designation": "gaCom",
+"Witnesses": "Carmen IV.2, 44 (2nd ed.) Rhetorius Ch. 62 (the Mane of Leo; Holden's note names 7 and 15 Com) Sahl I Fig. 59 Sahl, On Nativities 6.2, 49, 70 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Coma Berenice: the nebulous mass (Melotte 111)",
+"As printed": "Sahl: Leo, past half until she completes 18° Sahl: Libra, from 27° 36' to 28° Abu Bakr: Leo, the twenty-seventh and twenty-eighth",
+"Longitude": "24° Vir 53'",
+"Latitude": "+25.77°",
+"Catalogue designation": "Melotte 111",
+"Witnesses": "Gr. Intr. VI.20, 3, fn 280 Rhetorius Ch. 62 (Mane of Leo)"
+},
+{
+"Star": "Forehead, eyes of Scorpio: β, Acrab/Graffias",
+"As printed": "Sahl: Scorpio, the eighth, ninth and tenth degree Sahl: Scorpio, the ninth and tenth Abu Bakr: Scorpio, the eighth, ninth and tenth, according to Dorotheus",
+"Longitude": "03° Sag 31'",
+"Latitude": "+1.00°",
+"Catalogue designation": "be-1Sco",
+"Witnesses": "Carmen IV.2, 46 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Forehead, eyes of Scorpio: δ, Dschubba",
+"As printed": "Sahl: Scorpio, the eighth, ninth and tenth degree Sahl: Scorpio, the ninth and tenth Abu Bakr: Scorpio, the eighth, ninth and tenth, according to Dorotheus",
+"Longitude": "02° Sag 54'",
+"Latitude": "−1.99°",
+"Catalogue designation": "deSco",
+"Witnesses": "Carmen IV.2, 46 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Forehead, eyes of Scorpio: π Scorpionis",
+"As printed": "Sahl: Scorpio, the eighth, ninth and tenth degree Sahl: Scorpio, the ninth and tenth Abu Bakr: Scorpio, the eighth, ninth and tenth, according to Dorotheus",
+"Longitude": "03° Sag 16'",
+"Latitude": "−5.48°",
+"Catalogue designation": "piSco",
+"Witnesses": "Carmen IV.2, 46 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Sting of Scorpio: λ, Shaula",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283) Sahl: Scorpio, in 23 Sahl: Sagittarius, the first degree Abu Bakr: Scorpio, the twenty-second, according to Dorotheus",
+"Longitude": "24° Sag 55'",
+"Latitude": "−13.79°",
+"Catalogue designation": "laSco",
+"Witnesses": "Gr. Intr. Fig. 88 [3] (Shaula & Lesath?) Gr. Intr. VI.20, 1, 6, fns 278, 283 Carmen IV.2, 45 (2nd ed.) Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3 Rhetorius Ch. 62 (Holden's note: Shaula)"
+},
+{
+"Star": "Sting of Scorpio: υ, Lesath",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283) Sahl: Scorpio, in 23 Sahl: Sagittarius, the first degree Abu Bakr: Scorpio, the twenty-second, according to Dorotheus",
+"Longitude": "24° Sag 21'",
+"Latitude": "−14.01°",
+"Catalogue designation": "upSco",
+"Witnesses": "Gr. Intr. Fig. 88 [3] (Shaula & Lesath?) Gr. Intr. VI.20, 1, 6, fns 278, 283 Carmen IV.2, 45 (2nd ed.) Sahl I Fig. 59 Sahl, On Nativities 6.2, 50, 71 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Nebula by sting? (Scorpio): G Sco",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283)",
+"Longitude": "28° Sag 15'",
+"Latitude": "−13.62°",
+"Catalogue designation": "HR6630",
+"Witnesses": "Gr. Intr. Fig. 88 [4] (G Sco + Cglo 6441?) Gr. Intr. VI.20, 6, fns 278, 283"
+},
+{
+"Star": "Nebula by sting? (Scorpio): Cglo 6441 (NGC 6441)",
+"As printed": "Gr. Intr.: Scorpio 20° Gr. Intr.: Scorpio 21° 10' (both printed for the leg; Dykes's correction, fns 278, 283)",
+"Longitude": "28° Sag 19'",
+"Latitude": "−13.63°",
+"Catalogue designation": "NGC 6441",
+"Witnesses": "Gr. Intr. Fig. 88 [4] (G Sco + Cglo 6441?) Gr. Intr. VI.20, 6, fns 278, 283"
+},
+{
+"Star": "Tip of Archer's arrow: γ², al-Nasl",
+"As printed": "Gr. Intr.: Sagittarius 15° 20' Sahl: Sagittarius from 6° to 9° Abu Bakr: Sagittarius, the first degree Abu Bakr: Sagittarius, the seventh, eighth and ninth",
+"Longitude": "01° Cap 36'",
+"Latitude": "−6.99°",
+"Catalogue designation": "gaSgr",
+"Witnesses": "Gr. Intr. Fig. 88 [5] Gr. Intr. VI.20, 1, 7, fn 284 Carmen IV.2, 47 (2nd ed.) Rhetorius Ch. 62 Sahl I Fig. 59 Sahl, On Nativities 6.2, 51 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Spines of Capricorn: τ",
+"As printed": "Gr. Intr.: Capricorn 22°",
+"Longitude": "08° Aqu 37'",
+"Latitude": "+3.35°",
+"Catalogue designation": "HIP 101923",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, 1, 8, fn 285"
+},
+{
+"Star": "Spines of Capricorn: υ",
+"As printed": "Gr. Intr.: Capricorn 22°",
+"Longitude": "07° Aqu 59'",
+"Latitude": "+0.22°",
+"Catalogue designation": "upCap",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, 1, 8, fn 285"
+},
+{
+"Star": "Spines of Capricorn: or ε",
+"As printed": "Sahl: Capricorn from 26° to 29° Abu Bakr: Capricorn, from the twenty-sixth up to the twenty-ninth",
+"Longitude": "20° Aqu 32'",
+"Latitude": "−4.98°",
+"Catalogue designation": "epCap",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, fn 285 Rhetorius Ch. 62 Sahl I Fig. 59 (ε, κ Capricorni?) Sahl, On Nativities 6.2, 53 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Spines of Capricorn: or κ",
+"As printed": "Sahl: Capricorn from 26° to 29° Abu Bakr: Capricorn, from the twenty-sixth up to the twenty-ninth",
+"Longitude": "21° Aqu 58'",
+"Latitude": "−4.84°",
+"Catalogue designation": "HIP 107188",
+"Witnesses": "Gr. Intr. Fig. 88 [6] Gr. Intr. VI.20, fn 285 Rhetorius Ch. 62 Sahl I Fig. 59 (ε, κ Capricorni?) Sahl, On Nativities 6.2, 53 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Pour of Aquarius: γ",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "07° Pis 02'",
+"Latitude": "+8.23°",
+"Catalogue designation": "gaAqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Pour of Aquarius: ζ",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "09° Pis 14'",
+"Latitude": "+8.84°",
+"Catalogue designation": "ze-1Aqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3 Sahl I Fig. 59 (ζ Aquarii?)"
+},
+{
+"Star": "Pour of Aquarius: η",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "10° Pis 44'",
+"Latitude": "+8.15°",
+"Catalogue designation": "etAqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3"
+},
+{
+"Star": "Pour of Aquarius: π",
+"As printed": "Gr. Intr.: from 20° 10' Aquarius to 24° 20' Sahl: Aquarius, the tenth Sahl: Aquarius, the eighteenth and nineteenth Abu Bakr: Aquarius, the sixth Abu Bakr: Aquarius, the tenth Abu Bakr: Aquarius, the nineteenth",
+"Longitude": "08° Pis 55'",
+"Latitude": "+10.47°",
+"Catalogue designation": "piAqr",
+"Witnesses": "Gr. Intr. Fig. 88 [7] Gr. Intr. VI.20, 2, 9, fns 279, 286 Rhetorius Ch. 62 (the Pitcher; Holden's note names other stars) Sahl, On Nativities 6.2, 52 Abu Bakr, On Nativities II.7.3"
+}
+]
+}

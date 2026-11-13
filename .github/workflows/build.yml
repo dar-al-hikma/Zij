@@ -1,0 +1,401 @@
+name: Build Desktop App
+
+# Runs when a release tag (v*) is pushed, and can be started by hand from the
+# Actions tab. A push to main builds nothing: binaries are cut for releases,
+# not for every commit -- building both platforms on each push burned Actions
+# minutes and filled the account's storage with artifacts nobody downloaded.
+#
+# Two jobs. `build` makes the Windows and macOS zips and holds a read-only
+# token: it installs and runs third-party build tools, so it is given nothing
+# it could write with, and its checkout does not keep the token on disk.
+# `release` runs after both builds have succeeded, and only for a tag PUSH. It
+# is the only job that can write to the repository, and it runs no build tool:
+# it takes the two zips the builds handed over and creates one DRAFT release
+# for the tag with both attached, and SHA256SUMS, the SHA-256 of each, on
+# THIS repository, so the binary and the source it was built from are always
+# the same page (the licence requires the corresponding source to be
+# available with each binary). It writes no
+# release notes and publishes nothing: the maintainer writes the notes and
+# publishes the draft by hand. It never replaces an asset, and it refuses a
+# tag that already has a release, draft or published.
+#
+# On a manual run: the zips are kept as workflow artifacts for three days
+# for testing, and no release is made -- whatever ref the run was started on,
+# a tag included.
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+# Nothing at the top: each job asks for what it needs, and a job added
+# later without its own block gets no token permissions at all.
+permissions: {}
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false   # if the Windows build fails, still let macOS finish
+      # Windows builds on GitHub's runner. macOS builds on GitHub's runner
+      # in a public repository, where its minutes are free and where a
+      # release tag builds, and in a private one on the project's own Mac, a
+      # runner registered to the development repository alone and asked for
+      # by the one label no other runner carries: there every GitHub-hosted
+      # macOS minute is billed. That Mac has no `self-hosted` label, so it
+      # never takes the test suite's jobs. A macOS leg there waits until the
+      # Mac is on and its user logged in: the check below must see the app's
+      # window on screen, so the runner works inside that user's desktop
+      # session. The test is on visibility, not on the repository's name,
+      # which a transfer changes.
+      # The Mac is asked for by one label, not a list of them: a list an
+      # entry's expression yields is spliced into the matrix, a leg for each.
+      # GitHub's runners are asked for by the image's own name, never a
+      # `-latest` label that moves to a new image unasked: Windows Server
+      # 2025 with Visual Studio 2026 (x86-64), and macOS 26 on Apple silicon
+      # (arm64, the platform the macOS lock is resolved for; `macos-26-intel`
+      # would be x86-64). Moving to a newer image is a change made here.
+      matrix:
+        os:
+          - windows-2025-vs2026
+          - ${{ github.event.repository.private && 'colophon' || 'macos-26' }}
+    runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          # 3.14 to match the venv the pins were resolved on and the test
+          # suite runs on, to the patch release, so that every build of a
+          # commit runs the same interpreter. Keep the two workflows on the
+          # same version. Before this moves, the project's own Mac must hold
+          # the same release in its tool cache (put there by hand, as said
+          # below), or its leg fails to set up.
+          python-version: '3.14.8'
+
+      # On the project's own Mac the Python above is the machine's own and
+      # outlives the run, so a package one build installed into it would
+      # still be there for the next. The macOS build installs into an
+      # environment made from it in this job's temporary folder instead,
+      # which the runner empties after every job: each build starts from the
+      # lock alone, as it does on GitHub's runners. On GitHub's Mac the step
+      # changes nothing but where the same packages go. (That Python is put
+      # in the Mac's tool cache once by hand, from the same python.org
+      # package setup-python installs on GitHub's runners: its installer
+      # asks for an administrator's password, which no job has.)
+      - name: Start from an empty environment (macOS)
+        if: runner.os == 'macOS'
+        shell: bash
+        run: |
+          python -m venv "$RUNNER_TEMP/build-venv"
+          echo "$RUNNER_TEMP/build-venv/bin" >> "$GITHUB_PATH"
+
+      # Every package installed into the build's environment comes from this
+      # system's lock and is checked against the hashes there: the app's
+      # pins, every package pip would otherwise resolve for them,
+      # PyInstaller and its hooks. The tools pip fetches to build three of
+      # them from source do not (below). Each lock is made from
+      # requirements-desktop.txt (which includes requirements.txt) and
+      # requirements-build.txt for its system, and its header holds the one
+      # command that rewrites it; every version it shares with the set the
+      # tests run on is the same. Three packages publish no wheel for this
+      # Python and are built here from the source archives the lock hashes;
+      # the tools pip fetches to build them, each in an environment of its
+      # own, are not in the lock (docs/BUILD_NOTES.md).
+      - name: Install dependencies (Windows)
+        if: runner.os == 'Windows'
+        run: pip install --require-hashes -r requirements-build-windows.lock
+
+      - name: Install dependencies (macOS)
+        if: runner.os == 'macOS'
+        run: pip install --require-hashes -r requirements-build-macos.lock
+
+      # The place atlas is not kept in the repository: tools/fetch_atlas.py
+      # takes the zip time_zones.py names from this repository's own release,
+      # with this job's read-only token (given to this step alone), checks
+      # atlas.db against the SHA-256 time_zones.py records and only then puts
+      # it at the checkout's root, where build.spec bundles it from; a copy
+      # that does not match stops the build. GitHub's runners download it
+      # each run (no Actions cache, whose storage is billed); the project's
+      # own Mac keeps the zip in its runner's home for the next run, used
+      # only when its atlas.db matches the record. In the public repository
+      # the release is that repository's own.
+      - name: Fetch the place atlas
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ATLAS_REPO: ${{ github.repository }}
+        run: |
+          set -eu
+          if [ "$RUNNER_ENVIRONMENT" = self-hosted ]; then
+            python tools/fetch_atlas.py --repo "$ATLAS_REPO" --cache "${HOME:?}/.cache/zij-atlas"
+          else
+            python tools/fetch_atlas.py --repo "$ATLAS_REPO"
+          fi
+
+      # The suite runs on Linux only. Here each platform checks, with its own
+      # interpreter, that every errno name in the allowlist exists with the
+      # value the allowlist gives, and that the engine imports; then it runs
+      # that file's tests, among them the scan of every errno name a shipped
+      # module reads, before anything is built.
+      - name: Check the platform's errno names
+        run: python tests/test_mac1_platform_names_2026_10_14.py
+
+      - name: Scan the errno names the program reads
+        run: python -m pytest -q -p no:cacheprovider tests/test_mac1_platform_names_2026_10_14.py
+
+      # The window's download holds rely on names in pywebview's own code
+      # for macOS and for GTK (a run from source on Linux). Each platform
+      # reads both installed files as text, never importing them, and stops
+      # if pywebview is not the version they were read in or a name has
+      # moved. One step each: on Windows a step's status is its last
+      # command's.
+      - name: Check the pywebview names the macOS download hold relies on
+        run: python tests/test_macsave_downloads_2026_10_20.py
+
+      - name: Check the pywebview names the GTK download hold relies on
+        run: python tests/test_gtkhold_downloads_2026_10_20.py
+
+      # The star catalogue's rows are compared at every launch with a record,
+      # within a tolerance, as this platform's compiled library reads them.
+      # This reads that here, with the distance in the log, before anything
+      # is built.
+      - name: Read the star catalogue's rows against their record
+        run: python -m pytest -q -p no:cacheprovider tests/test_fixed_stars_page.py::test_the_recorded_rows_are_the_shipped_catalogues_read_by_file_number
+
+      # The sky's scripts are hashed as they are read, and a script that misses
+      # its hash takes the page with it while the rest of the app stands. This
+      # hashes them as this platform's checkout left them, before anything is
+      # built: a checkout that changed their line ends stops here.
+      - name: Read the sky's scripts against their pins
+        run: python -m pytest -q -p no:cacheprovider tests/test_sky_page.py::test_each_vendored_file_is_the_pinned_one
+
+      - name: Build with PyInstaller
+        run: pyinstaller build.spec
+
+      # wheel.py's name is also a package's, and setuptools holds a copy of that
+      # package. PyInstaller would take that copy for the name if it found no
+      # other, and the pictures would fail on their first import. This reads the
+      # listing of the archive just built: wheel must be a module, and setuptools'
+      # copy absent. Run by hand on a listing, the script checks that alone.
+      - name: Read the wheel module in the archive's listing
+        shell: bash
+        env:
+          PYTHONUTF8: '1'
+        run: |
+          set -eu
+          if [ "$RUNNER_OS" = Windows ]; then
+            program=dist/Zij/Zij.exe
+          else
+            program=dist/Zij.app/Contents/MacOS/Zij
+          fi
+          pyi-archive_viewer --list --recursive "$program" > "$RUNNER_TEMP/archive-listing.txt"
+          python .github/scripts/archive_check.py "$RUNNER_TEMP/archive-listing.txt"
+
+      # Every native library in the bundle must be credited: listed by a
+      # distribution with a section in THIRD_PARTY_NOTICES.txt, named in the
+      # notices, or the Python runtime's own or the program's. One nobody has
+      # credited fails here, so nothing is zipped; so does PostgreSQL's client
+      # library or a Qt SQL driver, credited or not. It reads files and starts
+      # nothing.
+      - name: Read the bundle's native libraries against its notices
+        shell: bash
+        env:
+          PYTHONUTF8: '1'
+        run: |
+          set -eu
+          if [ "$RUNNER_OS" = Windows ]; then
+            bundle=dist/Zij
+          else
+            bundle=dist/Zij.app
+          fi
+          python .github/scripts/notices_check.py "$bundle"
+
+      # The program takes its colours and its faces from this one file, at the one
+      # place its server looks, and with none it runs in Streamlit's colours and
+      # says nothing. It reads the file there, and stops unless both palettes'
+      # primary colours are the checkout's. It reads files and starts nothing.
+      - name: Read the theme file in the bundle
+        shell: bash
+        env:
+          PYTHONUTF8: '1'
+        run: |
+          set -eu
+          if [ "$RUNNER_OS" = Windows ]; then
+            bundle=dist/Zij
+          else
+            bundle=dist/Zij.app
+          fi
+          python .github/scripts/theme_check.py "$bundle"
+
+      # The catalogue holds one star twice under one name and one designation,
+      # and which row either key opens is this platform's sort's to say, so the
+      # program reads the row it keeps by its number. This reads the bundle's two
+      # catalogue files by that route, with this platform's library, and stops if
+      # the number does not open that row. It prints both keys' places and both
+      # numbers', so the log shows which way this machine's tie goes.
+      - name: Read the kept row of the tied star by its number
+        shell: bash
+        env:
+          PYTHONUTF8: '1'
+        run: |
+          set -eu
+          if [ "$RUNNER_OS" = Windows ]; then
+            bundle=dist/Zij
+          else
+            bundle=dist/Zij.app
+          fi
+          python .github/scripts/star_row_check.py "$bundle"
+
+      # One zip per platform. Windows: the CONTENTS of the onedir folder,
+      # not the folder -- Explorer's "Extract All" already makes a folder
+      # named after the zip, so zipping the folder too put the .exe two
+      # folders deep (v1.2.0); now that one folder is the app folder, with
+      # Zij.exe at its top and _internal/ beside it.
+      # macOS: the .app bundle, zipped so its executable bits and internal
+      # symlinks survive: -y stores each link as a link. Without it zip
+      # stores a copy of whatever the link points at, which duplicates the
+      # bundle's cross-linked folders and breaks the seal its signature
+      # records.
+      - name: Package (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: Compress-Archive -Path dist/Zij/* -DestinationPath Zij-windows.zip
+
+      - name: Package (macOS)
+        if: runner.os == 'macOS'
+        shell: bash
+        run: |
+          cd dist
+          zip -qry ../Zij-macos.zip Zij.app
+
+      # Each download, as built, is started from its own zip with a fresh data
+      # folder and reached (its server answers on its own local address and its
+      # window opens); its server must refuse a session under a Host rebound to
+      # this computer, and one from another site's Origin, and open one under
+      # the window's own; and its window must be seen to show the app, not the
+      # refusal: the server's own metrics must come to show files the app's
+      # page hands its window, which only a session it lets in is given, while
+      # the check opens no session that runs the app; then a session with no
+      # key, and one with a key the check makes, must each be told the one
+      # sentence a session without the key is told, and shown nothing else:
+      # the launcher hands its server the key. It is then stopped
+      # twice: once by closing its window as a reader does (Windows: a close
+      # message to the window; macOS: Quit), once by ending its launcher
+      # process alone. Then its server is
+      # started once more on its own, as the launcher starts it, with a key the
+      # check makes; a session opened as the window opens one types a place in
+      # the city search, spelt so that only the search's second, folded look
+      # finds it, and the place must be among the choices offered: the download
+      # finds its place atlas and reads it. Its first run must have drawn the
+      # example chart's Jupiter where the app draws it on the suite's system:
+      # the download's own build of Swiss Ephemeris computes as that one does.
+      # A chart of 1990 at the example's city, at its coordinates typed in the
+      # city search, and with the named zone chosen by hand, must each show
+      # the zone and offset the app shows on the suite's system and nothing
+      # else: the download reads its zone data, which it checks against the
+      # data it was built with.
+      # And a session with no key, and one with a key a letter off, must each be
+      # told the one sentence a session without the key is told, and shown
+      # nothing else. Each time no process of that launch may remain once its
+      # own bound and a margin have passed. It runs on manual runs as well as
+      # tag pushes, so it is proven before a tag exists; a failure fails this
+      # job, so nothing is uploaded and no release is drafted. A runner that
+      # cannot show the window fails it too: a check that skips is not a check.
+      - name: Start, reach and stop the download
+        timeout-minutes: 20
+        run: python .github/scripts/stop_check.py
+
+      # Tag pushes hand each platform's zip to the release job, which is the
+      # only place a release is made. Kept one day: the release job reads
+      # them within minutes, and the zips themselves live on the release.
+      - name: Hand the zip to the release job (tag pushes)
+        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: release-${{ runner.os }}
+          path: Zij-*.zip
+          if-no-files-found: error
+          retention-days: 1
+
+      # Manual runs keep the build as a short-lived artifact for testing.
+      # GitHub zips an artifact on download, so the Windows one is uploaded
+      # as the FOLDER (one zip to extract, the .exe at the top level); the
+      # macOS one has to stay a zip so the .app's executable bits and
+      # internal symlinks survive, which means one zip inside another there.
+      # The upload leaves out dot-named folders unless told otherwise, and the
+      # folder's theme file stands in one.
+      - name: Keep the build for testing (manual runs, Windows)
+        if: github.event_name == 'workflow_dispatch' && runner.os == 'Windows'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: Zij-Windows
+          path: dist/Zij/
+          include-hidden-files: true
+          retention-days: 3
+
+      - name: Keep the build for testing (manual runs, macOS)
+        if: github.event_name == 'workflow_dispatch' && runner.os == 'macOS'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: Zij-macOS
+          path: Zij-macos.zip
+          retention-days: 3
+
+      # The Windows zip is written by PowerShell's own archive writer, which
+      # has written entry names with either separator, so this reads the theme
+      # file from the zip's own bytes where the download unpacks it, and stops
+      # unless both palettes' primary colours are the checkout's. It runs last,
+      # after the test download's upload, so a false failure here cannot cost
+      # that download; a failure still fails this job, and the release job
+      # needs this one, so on a tag no release is made from a zip without the
+      # theme file. It reads the zip and starts nothing.
+      - name: Read the theme file in the Windows zip
+        if: runner.os == 'Windows'
+        shell: bash
+        env:
+          PYTHONUTF8: '1'
+        run: python .github/scripts/theme_check.py Zij-windows.zip
+
+  release:
+    # Both platforms must have built: a failed leg means no release at all,
+    # rather than a release with one zip missing.
+    needs: build
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write     # gh release create
+    # Two runs for one tag (a re-run, a tag pushed again) wait for each other
+    # here instead of both reaching the create.
+    concurrency:
+      group: release-${{ github.ref }}
+      cancel-in-progress: false
+
+    steps:
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          pattern: release-*
+          merge-multiple: true
+
+      - name: Create the draft release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          tag="${GITHUB_REF_NAME}"
+          # Create only: a tag that already has a release, draft or
+          # published, is refused, so nothing published is ever replaced.
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo "::error::$tag already has a release; nothing was changed."
+            exit 1
+          fi
+          # The SHA-256 of each zip as this job received it, made once the
+          # last of them has arrived; a zip missing stops the step here.
+          sha256sum Zij-windows.zip Zij-macos.zip > SHA256SUMS
+          # A draft, with no notes: the maintainer writes them and publishes.
+          # The two zips and their checksums are its only files.
+          gh release create "$tag" Zij-windows.zip Zij-macos.zip SHA256SUMS --draft --verify-tag --title "Zīj (زِيج) $tag" --notes ""

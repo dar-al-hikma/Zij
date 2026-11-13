@@ -1,0 +1,62 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# PyInstaller build output (CI regenerates these -- don't commit them)
+build/
+dist/
+*.spec.bak
+
+# The place atlas: not kept in the repository but published as a release
+# file and put here by tools/fetch_atlas.py, checked against the SHA-256
+# time_zones.py records
+/atlas.db
+
+# Personal saved-chart data (generated at runtime, not project source)
+saved_charts.json
+# The data folder's other files, should one sit inside a checkout: the
+# preferences (the home place among them), the copies kept of a file that
+# could not be read or of a save cut short, the last versions of the saved
+# charts kept before each write over them, the mark left once the store
+# beside the program was brought in, the temporary files of a write or of a
+# version killed before it ended (and the one name every write used before),
+# and the locks held while a write is made
+preferences.json
+saved_charts.json.unreadable-*
+saved_charts.json.recovered-*
+preferences.json.unreadable-*
+preferences.json.recovered-*
+saved_charts.json.previous-*
+saved_charts.json.imported-from-beside-the-program
+saved_charts.json.[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].tmp
+preferences.json.[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].tmp
+saved_charts.json.previous.[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].tmp
+saved_charts.json.tmp
+saved_charts.lock
+preferences.lock
+
+# The desktop window's log: written in the app's data folder now, and never
+# a file of the project wherever an older launcher left it
+webview_debug.log
+
+# Editor/OS cruft
+.DS_Store
+.idea/
+.vscode/
+Python-*.tar.xz
+
+# Test scratch (saved-charts redirect during pytest)
+tests/.xdg-scratch/
+
+# Agent tooling (skills, agent definitions, launch config, notes): the
+# maintainer's own working setup, not part of the app
+.claude/
+.agents/
+.codex/
+AGENTS.md
+CLAUDE.local.md
+GEMINI.md
+.cursorrules
+copilot-instructions.md

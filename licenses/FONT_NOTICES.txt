@@ -1,0 +1,64 @@
+The page fonts
+==============
+
+Each face below is a subset of the font it names, made by tools/house_style/build_fonts.py;
+IBM Plex's are renamed, since its licence reserves the name. A licence file named here is in
+this folder, verbatim, unless its path is given. The symbol font's notice and licence are
+fonts/OFL.txt; so are those of Zij Interface Marks, embedded in house_style.py.
+saved_faces.py holds some of these faces again, compressed, for what leaves the app.
+
+eb-garamond-400.ttf (EB Garamond, weight 400, normal)
+    Design: EB Garamond, Version 1.002; ttfautohint (v1.8.4.16-eb64)
+    Copyright: Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/EBGaramond12)
+    Licence: eb-garamond-OFL.txt
+
+eb-garamond-400-italic.ttf (EB Garamond, weight 400, italic)
+    Design: EB Garamond, Version 1.001; ttfautohint (v1.8.4.16-eb64)
+    Copyright: Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/EBGaramond12)
+    Licence: eb-garamond-OFL.txt
+
+eb-garamond-600.ttf (EB Garamond, weight 600, normal)
+    Design: EB Garamond, Version 1.002; ttfautohint (v1.8.4.16-eb64)
+    Copyright: Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/EBGaramond12)
+    Licence: eb-garamond-OFL.txt
+
+zij-interface-400.ttf (Zij Interface, weight 400, normal)
+    Design: IBM Plex Sans Condensed, Version 3.000
+    Copyright: Copyright 2019 IBM Corp. All rights reserved.
+    Licence: ibm-plex-sans-condensed-OFL.txt
+
+zij-interface-600.ttf (Zij Interface, weight 600, normal)
+    Design: IBM Plex Sans Condensed, Version 3.000
+    Copyright: Copyright 2019 IBM Corp. All rights reserved.
+    Licence: ibm-plex-sans-condensed-OFL.txt
+
+zij-numeric-400.ttf (Zij Numeric, weight 400, normal)
+    Design: IBM Plex Mono, Version 2.005
+    Copyright: Copyright 2017 IBM Corp. All rights reserved.
+    Licence: ibm-plex-mono-OFL.txt
+
+dejavu-sans-400.ttf (DejaVu Sans, weight 400, normal)
+    Design: DejaVu Sans, Version 2.37
+    Copyright: Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved.
+Copyright (c) 2006 by Tavmjong Bah. All Rights Reserved.
+DejaVu changes are in public domain
+
+    Licence: dejavu-Bitstream-Arev-DejaVu.txt
+
+embedded in house_style.py (Zij Interface Marks, weight 400, normal)
+    Design: IBM Plex Sans Condensed, Version 3.000
+    Copyright: Copyright 2019 IBM Corp. All rights reserved.
+    Licence: fonts/OFL.txt
+
+embedded in house_style.py (Zij Interface Marks, weight 600, normal)
+    Design: IBM Plex Sans Condensed, Version 3.000
+    Copyright: Copyright 2019 IBM Corp. All rights reserved.
+    Licence: fonts/OFL.txt
+
+embedded in glyph_font.py and house_style.py (TAE Symbols, weight 400, normal)
+    Design: DejaVu Sans, Version 2.37
+    Copyright: Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved.
+Copyright (c) 2006 by Tavmjong Bah. All Rights Reserved.
+DejaVu changes are in public domain
+
+    Licence: dejavu-Bitstream-Arev-DejaVu.txt

@@ -1,0 +1,40 @@
+The Sky page's files, and the stars of the catalogue this program adds
+
+vendor/sphere-world.js and vendor/tower-view.js
+  Dār al-Ḥikma, under the GNU Affero General Public License, version 3 (LICENSE). The files are held
+  byte for byte, their comments as they stand.
+
+vendor/three.r128.js
+  three.js r128, Three.js Authors, under the MIT License: licenses/three-MIT.txt.
+
+vendor/figures.js
+  The figures' lines, Olaf Frohn, under the BSD 3-Clause License; its notice is the file's own first
+  lines, and follows:
+
+  Copyright (c) 2015, Olaf Frohn
+  All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+  2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+  3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+vendor/tower-physical.js and ephe/sefstars_added.txt
+  Not under this program's licence. The magnitudes (Johnson V) and B-V colour indices come from:
+  ESA (1997), The Hipparcos and Tycho Catalogues, ESA SP-1200, as distributed by the Strasbourg
+  astronomical Data Centre (CDS) as catalogue I/239. License: CC-BY-NC-3.0 IGO,
+  https://creativecommons.org/licenses/by-nc/3.0/igo/ . Used under these terms, with attribution
+  and this notice. ESA does not endorse this program or this use of its data.
+  Positions and proper motions: van Leeuwen (2007), Hipparcos new reduction, CDS I/311; its ReadMe
+  states no licence. Others of the magnitudes: Hoffleit & Warren (1991), Bright Star Catalogue, 5th
+  revised edition, CDS V/50. Cluster centres: the SIMBAD astronomical database, CDS, Strasbourg,
+  coordinate reference 2021A&A...647A..19T; no broader licence is inferred.
+
+data/fixed_star_lists.tsv, data/sky_source_ids.tsv, and the names in ephe/sefstars_added.txt
+  Catalogue numbers (Hipparcos, New General Catalogue, Messier, Melotte), Bayer letters, Flamsteed
+  numbers and traditional names, which identify the stars above; the same credits stand for them.
